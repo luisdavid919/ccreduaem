@@ -3,7 +3,6 @@ body {
   }
 
 .container{
-    position: fixed;
     position:relative;
   }
   /* Logo FCAeI */
@@ -31,44 +30,169 @@ h1{
   font-family:cursive;
   text-align: center;
   margin-top: 45px;
+  margin-left: 20%
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 
+/*Subtítulos*/
   h2{
-    position: relative;
     font-size: 300%;
-    margin-left: 12%;
-    margin-right: 10%;
     color: #085394;
     font-family:cursive;
     text-align: center;
-    margin-top: 45px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    }
+.form-control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*Caja Form*/
 form{
-margin-top: 150px;
+margin-top: 40px;
 }
 
 /*Posición de Caja de Texto (Centrado)*/
 .form-group{
-  margin-left: 35%;
-  margin-right: 35%;
+  margin-left: 38%;
   text-align: center;
+  align-items: center;
   width: 350px;
+
 }
 
 /* Tamaño del Texto */
 label{
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 195%;
   color: #085394;
   font-family:cursive;
   text-align: center;
+  align-items: center;
 }
 
 /* Botón (Centrado)*/
 .boton{
   text-align: center;
-  margin-left: 43%;
-  margin-right: 40%;
+}
+
+/*Color de Boton*/
+.btn-primary{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+}
+
+
+/*------------------------------ADMIN------------------------------*/
+
+
+/* Logos Principales */
+.imglogo1{
+position: fixed;
+top: 200px;
+left: 200px;
+width:220px;
+}
+
+.imglogo2{
+position: fixed;
+top: 200px;
+left: 640px;
+width:220px;
+}
+
+.imglogo3{
+position: fixed;
+top: 200px;
+left: 1120px;
+width:220px;
+}
+
+.imglogo4{
+position: fixed;
+bottom: 50px;
+left: 640px;
+width:220px;
+}
+
+.imglogo5{
+position: fixed;
+bottom: 80px;
+right: 30px;
+width:100px;
+}
+
+.fijo{
+  background-attachment: fixed;
+  position: absolute;
+}
+
+/*Posición de Botones*/
+
+.btn-primary1{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 420px;
+  left: 200px;
+  width:220px;
+}
+
+.btn-primary2{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 420px;
+  left: 640px;
+  width:220px;
+}
+
+.btn-primary3{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 430px;
+  left: 1120px;
+  width:220px;
+}
+
+.btn-primary4{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  left: 640px;
+  width:220px;
+}
+
+.btn-primary5{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width:125px;
 }

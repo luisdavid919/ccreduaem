@@ -11,7 +11,7 @@ body {
   top: 0px;
   left: 10px;
   width:250px;
-  height:150;
+  height:180;
 }
 
 /* Logo UAEM*/
@@ -45,7 +45,6 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-
     }
 .form-control{
   display: flex;
@@ -53,6 +52,7 @@ h1{
   align-items: center;
 }
 /*Caja Form*/
+
 form{
 margin-top: 40px;
 }
@@ -92,8 +92,16 @@ label{
 
 
 /*------------------------------ADMIN------------------------------*/
-
-
+/*Título Principal*/
+h3{
+  font-size: 300%;
+  color: #2b78e4;
+  font-family:cursive;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 /* Logos Principales */
 .imglogo1{
 position: fixed;
@@ -195,4 +203,148 @@ width:100px;
   bottom: 20px;
   right: 30px;
   width:125px;
+}
+/*------------------------------ADMIN (Equipos)------------------------------*/
+
+/* Logo y Botón Regresar*/
+.imglogo6{
+position: fixed;
+bottom: 80px;
+left: 50px;
+width:50px;
+}
+
+.btn-primary6{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width:100px;
+}
+
+/* Posición de Botones (Lateral Derecha)*/
+.btn-primary7{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 250px;
+  right: 90px;
+  width:200px;
+}
+
+.btn-primary8{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 310px;
+  right: 90px;
+  width:200px;
+}
+
+.btn-primary9{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 370px;
+  right: 90px;
+  width:200px;
+}
+
+.btn-primary10{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 430px;
+  right: 90px;
+  width:200px;
+}
+
+.btn-primary11{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 490px;
+  right: 90px;
+  width:200px;
+}
+
+.btn-primary12{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 550px;
+  right: 90px;
+  width:200px;
+}
+
+/* Posición de Botones (Inferior)*/
+
+.btn-primary13{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  bottom: 50px;
+  left:400px;
+  width:150px;
+}
+
+.btn-primary14{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  bottom: 50px;
+  left:600px;
+  width:150px;
+}
+
+.btn-primary15{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  bottom: 50px;
+  left:800px;
+  width:150px;
+}
+
+.btn-primary16{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  bottom: 50px;
+  left:1000px;
+  width:150px;
 }

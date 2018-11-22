@@ -348,3 +348,116 @@ width:50px;
   left:1000px;
   width:150px;
 }
+
+/*-----------BOTÓN ADMINSTRADOR (USUARIOS)-----------*/
+
+.btn-primary17{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  bottom: 50px;
+  left: 640px;
+  width:200px;
+}
+
+/*-----------BOTÓN IMPRIMIR-----------*/
+.btn-primary18{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 610px;
+  right: 90px;
+  width:200px;
+}
+
+/* Posición de Botones "Control de Equipos" (Lateral Derecha)*/
+.btn-primary19{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 230px;
+  right: 70px;
+  width:200px;
+}
+
+.btn-primary20{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 320px;
+  right: 70px;
+  width:200px;
+}
+
+.btn-primary21{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 410px;
+  right: 70px;
+  width:200px;
+}
+
+.btn-primary22{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 500px;
+  right: 70px;
+  width:200px;
+}
+
+/* Posición de Botones "Control de Impresiones" (Lateral Derecha)*/
+.btn-primary23{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 290px;
+  right: 70px;
+  width:200px;
+}
+
+.btn-primary24{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 400px;
+  right: 70px;
+  width:200px;
+}
+
+.btn-primary25{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  position: fixed;
+  top: 510px;
+  right: 70px;
+  width:200px;
+}

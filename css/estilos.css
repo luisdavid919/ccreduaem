@@ -143,7 +143,7 @@ width:100px;
   position: absolute;
 }
 
-/*Posición de Botones*/
+/*Posición de Botones (PRINCIPALES)*/
 
 .btn-primary1{
   color: #b6d7a8;
@@ -215,10 +215,10 @@ width:50px;
 }
 
 .btn-primary6{
-  color: #b6d7a8;
+  color: #000DFF;
   font-family: cursive;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #085394;
+  background-color: #FFF90D;
   border: none;
   position: fixed;
   bottom: 30px;
@@ -228,10 +228,10 @@ width:50px;
 
 /* Posición de Botones (Lateral Derecha)*/
 .btn-primary7{
-  color: #b6d7a8;
+  color: #000DFF;
   font-family: cursive;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #085394;
+  background-color: #089000;
   border: none;
   position: fixed;
   top: 250px;
@@ -240,10 +240,10 @@ width:50px;
 }
 
 .btn-primary8{
-  color: #b6d7a8;
+  color: #000DFF;
   font-family: cursive;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #085394;
+  background-color: #0DFF44;
   border: none;
   position: fixed;
   top: 310px;
@@ -255,7 +255,7 @@ width:50px;
   color: #b6d7a8;
   font-family: cursive;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #085394;
+  background-color: #E31000;
   border: none;
   position: fixed;
   top: 370px;
@@ -264,10 +264,10 @@ width:50px;
 }
 
 .btn-primary10{
-  color: #b6d7a8;
+  color: #000DFF;
   font-family: cursive;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #085394;
+  background-color: #F08300;
   border: none;
   position: fixed;
   top: 430px;
@@ -276,10 +276,10 @@ width:50px;
 }
 
 .btn-primary11{
-  color: #b6d7a8;
+  color: #000DFF;
   font-family: cursive;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #085394;
+  background-color: #FFC80D;
   border: none;
   position: fixed;
   top: 490px;
@@ -291,7 +291,7 @@ width:50px;
   color: #b6d7a8;
   font-family: cursive;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #085394;
+  background-color: #AC0C00;
   border: none;
   position: fixed;
   top: 550px;
@@ -365,10 +365,10 @@ width:50px;
 
 /*-----------BOTÓN IMPRIMIR-----------*/
 .btn-primary18{
-  color: #b6d7a8;
+  color: #000DFF;
   font-family: cursive;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #085394;
+  background-color: #FF4D00;
   border: none;
   position: fixed;
   top: 610px;

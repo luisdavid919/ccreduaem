@@ -23,7 +23,7 @@ body {
   height:150;
 }
 
-/* Títulos */
+/* Títulos*/
 h1{
   font-size: 320%;
   color: #085394;
@@ -46,50 +46,6 @@ h1{
     justify-content: center;
     align-items: center;
     }
-.form-control{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/*Caja Form*/
-
-form{
-margin-top: 40px;
-}
-
-/*Posición de Caja de Texto (Centrado)*/
-.form-group{
-  margin-left: 38%;
-  text-align: center;
-  align-items: center;
-  width: 350px;
-
-}
-
-/* Tamaño del Texto */
-label{
-  margin-top: 30px;
-  font-size: 195%;
-  color: #085394;
-  font-family:cursive;
-  text-align: center;
-  align-items: center;
-}
-
-/* Botón (Centrado)*/
-.boton{
-  text-align: center;
-}
-
-/*Color de Boton*/
-.btn-primary{
-  color: #b6d7a8;
-  font-family: cursive;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #085394;
-  border: none;
-}
-
 
 /*------------------------------ADMIN------------------------------*/
 /*Título Principal*/
@@ -460,4 +416,40 @@ width:50px;
   top: 510px;
   right: 70px;
   width:200px;
+}
+/* -----------FORMULARIOS-------------*/
+.form-control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Caja Form*/
+form{
+margin-top: 40px;
+}
+/*Posición de Caja de Texto (Centrado)*/
+.form-group{
+  margin-left: 38%;
+  text-align: center;
+  align-items: center;
+  width: 350px;
+}
+/* Tamaño del Texto */
+label{
+  margin-top: 20px;
+  font-size: 195%;
+  color: #085394;
+  font-family:cursive;
+  text-align: center;
+  align-items: center;
+}
+
+/*Color de Boton*/
+.btn-primary{
+  color: #b6d7a8;
+  font-family: cursive;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #085394;
+  border: none;
+  margin-left: 47%;
 }

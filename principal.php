@@ -97,13 +97,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <!--Título Principal y Cuerpo de la Página Por Toni R -->
 
 <div class="col-12">
-      <h1 class="display-12">Centro de Cómputo Redes FCAeI</h1>
+      <h1>Centro de Cómputo Redes FCAeI</h1>
   </div>
-  <div class="col-12" style="margin-top:100px;"><h2>Iniciar Sesión</h2></div>
+  <div class="col-12 sm-8" style="margin-top:110px;"><h2>Iniciar Sesión</h2></div>
 </div>
 </div>
 <!---FORMULARIO USUARIO----------->
 <div class="container-fluid" id="formulario">
+  <div class="row">
+    <div class="col-12">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label><strong>Usuario:</strong></label>
@@ -118,6 +120,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-success" value="Iniciar">
             </div>
+       </div>
+      </div>
     </div>
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>

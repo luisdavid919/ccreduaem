@@ -79,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Centro de Cómputo Redes FCAeI</title>
+  <title>Centro De Cómputo Redes FCAeI</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -97,7 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <!--Título Principal y Cuerpo de la Página Por Toni R -->
 
 <div class="col-12">
-      <h1>Centro de Cómputo Redes FCAeI</h1>
+      <h1>Centro De Cómputo Redes FCAeI</h1>
   </div>
   <div class="col-12 sm-8" style="margin-top:110px;"><h2>Iniciar Sesión</h2></div>
 </div>

@@ -8,7 +8,6 @@ define('DB_NAME', 'sistema_inventario_bd');
 
 /* Attempt to connect to MySQL database */
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
 // Check connection
 if($link === false){
     die("ERROR: La conexión ha fallado" . mysqli_connect_error());

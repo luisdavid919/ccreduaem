@@ -15,18 +15,21 @@ if (!$connection) {
     die("Error en la conexión" . mysqli_error());
 }
 
-mysqli_select_db($connection,"bitacora");
+mysqli_select_db($connection,"dispositivos");
 if(isset($_REQUEST['iniciar']))
 {
 
   $ID=$_REQUEST["ID"];
-  $Fecha = $_REQUEST["Fecha"];
-  $Entrada = $_REQUEST["Entrada"];
-  $Actividad = $_REQUEST["Actividad"];
-  $Salida = $_REQUEST["Salida"];
-  $Horas = $_REQUEST["Horas"];
+  $IP = $_REQUEST["IP"];
+  $IP_Server = $_REQUEST["IP Server"];
+  $Mac = $_REQUEST["Mac"];
+  $Mac_Server = $_REQUEST["Mac Server"];
+  $Serial = $_REQUEST["Serial"];
+  $Modelo = $_REQUEST["Modelo"];
+  $Marca = $_REQUEST["Marca"];
+  $Estado = $_REQUEST["Estado"];
 
-$query="insert into bitacora (ID,Fecha,Entrada,Actividad,Salida,Horas) values ('$ID','$Fecha','$Entrada','$Actividad','$Salida','$Horas')";
+$query="insert into dispositivos (ID,IP,IP Server,Mac,Mac Server,Serial,Modelo,Marca,Estado) values ('$ID','$IP','$IP_Server','$Mac','$Mac_Server','$Serial','$Modelo','$Marca','$Estado')";
 $dato=mysqli_query($connection,$query);
 if(!$dato)
 	echo "No se insertaron los datos";
@@ -34,7 +37,7 @@ else
 mysqli_close($connection);
 echo '<script type="text/javascript">
 alert("Información enviada correctamente");
-window.location.href="admin_usuario.php";
+window.location.href="dispositivos.php";
 </script>';
 }
   ?>

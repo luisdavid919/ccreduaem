@@ -31,7 +31,7 @@ if(isset($_REQUEST['iniciar']))
   $Usuario = $_REQUEST["Usuario"];
   $Password = $_REQUEST["Password"];
 
-$query="insert into usuario (ID,Nombre,Apellidos,Edad,Carrera,Matricula,Periodo,Semestre,Turno,Usuario,Password) values ('$ID','$Nombre', '$Apellidos','$Edad','$Carrera','$Matricula','$Periodo','$Semestre','$Turno','$Usuario','$Password')";
+$query="insert into usuario (ID,Nombre,Apellidos,Edad,Carrera,Matricula,Periodo,Semestre,Turno,Usuario,Password) values ('$ID','$Nombre','$Apellidos','$Edad','$Carrera','$Matricula','$Periodo','$Semestre','$Turno','$Usuario','$Password')";
 $dato=mysqli_query($connection,$query);
 if(!$dato)
 	echo "No se insertaron los datos";

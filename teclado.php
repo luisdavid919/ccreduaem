@@ -15,18 +15,17 @@ if (!$connection) {
     die("Error en la conexión" . mysqli_error());
 }
 
-mysqli_select_db($connection,"bitacora");
+mysqli_select_db($connection,"teclado");
 if(isset($_REQUEST['iniciar']))
 {
 
   $ID=$_REQUEST["ID"];
-  $Fecha = $_REQUEST["Fecha"];
-  $Entrada = $_REQUEST["Entrada"];
-  $Actividad = $_REQUEST["Actividad"];
-  $Salida = $_REQUEST["Salida"];
-  $Horas = $_REQUEST["Horas"];
+  $Serial = $_REQUEST["Serial"];
+  $Modelo = $_REQUEST["Modelo"];
+  $Marca = $_REQUEST["Marca"];
+  $Estado = $_REQUEST["Estado"];
 
-$query="insert into bitacora (ID,Fecha,Entrada,Actividad,Salida,Horas) values ('$ID','$Fecha','$Entrada','$Actividad','$Salida','$Horas')";
+$query="insert into teclado (ID,Serial,Modelo,Marca,Estado) values ('$ID','$Serial','$Modelo','$Marca','$Estado')";
 $dato=mysqli_query($connection,$query);
 if(!$dato)
 	echo "No se insertaron los datos";
@@ -34,7 +33,7 @@ else
 mysqli_close($connection);
 echo '<script type="text/javascript">
 alert("Información enviada correctamente");
-window.location.href="admin_usuario.php";
+window.location.href="teclado.php";
 </script>';
 }
   ?>

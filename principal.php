@@ -73,37 +73,33 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
 ?>
-
 <!doctype html>
-
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Centro De Cómputo Redes FCAeI</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-  <div class="container-fluid">
-<!---LOGOS PRINCIPALES----------->
-    <div class="row">
-  <div class="col-4">
-<img class='imglogo img-fluid' src="images\fcaei_logo.png"/>
+ <!--*****************LOGOS PRINCIPALES*****************-->
+<div class="container-fluid">
+  <div class="row justify-content-between">
+    <div class="col col-md-2 align-self-start d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block">
+      <img class="img img-fluid" src="images\fcaei_logo.png"/>
+    </div>
+    <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
+      <h1>Centro De Cómputo De Redes FCAeI</h1>
+    </div>
+    <div class="col col-md-2 d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mt-3">
+      <img class="img img-fluid" id"logo" src="images\uaem_logo.png"/>
+    </div>
   </div>
-  <div class="col-4">
-  <img class= 'imglogos img-fluid' src="images\uaem_logo.png"/>
-  </div>
-  <!--Título Principal y Cuerpo de la Página Por Toni R -->
+</div>
 
-<div class="col-12">
-      <h1>Centro De Cómputo Redes FCAeI</h1>
-  </div>
-  <div class="col-12 sm-8" style="margin-top:110px;"><h2>Iniciar Sesión</h2></div>
-</div>
-</div>
 <!---FORMULARIO USUARIO----------->
-<div class="container-fluid" id="formulario">
+<!--<div class="container-fluid" id="formulario">
   <div class="row">
     <div class="col-12">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -122,9 +118,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
        </div>
       </div>
-    </div>
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
+    </div>-->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

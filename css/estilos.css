@@ -2,35 +2,13 @@ body {
   background-color: #b6d7a8;
   }
 
-.container{
-    position:relative;
-  }
-  /* Logo FCAeI */
-.imglogo{
-  position: fixed;
-  top: 0px;
-  left: 10px;
-  width:250px;
-  height:180;
-}
-
-/* Logo UAEM*/
-.imglogos{
-  position: fixed;
-  top: 15px;
-  right: 10px;
-  width:250px;
-  height:150;
-}
-
 /* Títulos*/
 h1{
   font-size: 320%;
   color: #085394;
   font-family:cursive;
   text-align: center;
-  margin-top: 45px;
-  margin-left: 20%
+  margin-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;

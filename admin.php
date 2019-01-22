@@ -7,31 +7,30 @@ header("location: principal.php");
 exit; }
 ?>
 
-
 <!doctype html>
-
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Centro De Cómputo Redes FCAeI</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-  <div class="container-fluid">
-<!---LOGOS PRINCIPALES----------->
-    <div class="row">
-  <div class="col-4">
-    <img class='imglogo img-fluid' src="images\fcaei_logo.png"/>
-      </div>
-      <div class="col-4">
-      <img class= 'imglogos img-fluid' src="images\uaem_logo.png"/>
-      </div>
-  <!--Título Principal y Cuerpo de la Página Por Toni R -->
-  <div class="col-12">
-      <h1 class="display-12">Centro De Cómputo Redes FCAeI</h1>
-  </div>
+  <!--*****************LOGOS PRINCIPALES*****************-->
+<div class="container-fluid">
+<div class="row justify-content-between">
+<div class="col col-md-2 align-self-start d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block">
+<img class="img img-fluid" src="images\fcaei_logo.png"/>
+</div>
+<div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
+<h1>Centro De Cómputo De Redes FCAeI</h1>
+</div>
+<div class="col col-md-2 d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mt-3">
+<img class="img img-fluid" id"logo" src="images\uaem_logo.png"/>
+</div>
+</div>
+</div>
   <!---INICIO PRINCIPAL PARA EL ADMINISTRADOR----------->
 </div>
     </div>
@@ -68,8 +67,7 @@ exit; }
       </div>
     </div>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
-</body>
-
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>

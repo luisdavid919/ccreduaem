@@ -16,7 +16,7 @@ h1{
 
 /*Subtítulos*/
   h2{
-    font-size: 300%;
+    font-size: 280%;
     color: #085394;
     font-family:cursive;
     text-align: center;
@@ -25,6 +25,22 @@ h1{
     align-items: center;
     }
 
+/*------------------------------Estilo para Formulario------------------------------*/
+    /* Tamaño del Texto */
+    label{
+      font-size: 20px;
+      color: #085394;
+      font-family:cursive;
+    }
+
+    /*Color de Boton*/
+    .btn{
+      color: #b6d7a8;
+      font-family: cursive;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+      background-color: #085394;
+      border: none;
+    }
 /*------------------------------ADMIN------------------------------*/
 /*Título Principal*/
 h3{
@@ -395,44 +411,9 @@ width:50px;
   right: 70px;
   width:200px;
 }
-/* -----------FORMULARIOS-------------*/
-.form-control{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/*Caja Form*/
-form{
-margin-top: 40px;
-}
-/*Posición de Caja de Texto (Centrado)*/
-.form-group{
-  margin-left: 38%;
-  text-align: center;
-  align-items: center;
-  width: 350px;
 
-}
-/* Tamaño del Texto */
-label{
-  font-size: 20px;
-  color: #085394;
-  font-family:cursive;
-  text-align: center;
-  align-items: center;
-}
 
-/*Color de Boton*/
-.btn{
-  color: #b6d7a8;
-  font-family: cursive;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #085394;
-  border: none;
-  margin-left: 5%;
-}
-
-/*CONTROL DE FORMULARIOs PARA CENTRAR Y ENFOCAR SU POSICIÓN*/
+/*CONTROL DE FORMULARIOS PARA CENTRAR Y ENFOCAR SU POSICIÓN*/
 .formulario {
     position: fixed;
     margin-top: 10px;

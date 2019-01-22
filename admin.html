@@ -1,3 +1,12 @@
+<?php
+// Initialize the session
+session_start();
+//If session variable is not set it will redirect to login page
+if(!isset($_SESSION['Usuario']) || empty($_SESSION['Usuario'])){
+header("location: principal.php");
+exit; }
+?>
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -28,7 +37,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-        <h3>PRACTICANTE</h3>
+        <h3>ADMINISTRADOR</h3>
       </div>
     </div>
   </div>
@@ -41,21 +50,28 @@
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\monitor.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-      <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_monitor.html" role="button">Equipos</a>
+      <a class="btn btn-primary" href="http://localhost/ccreduaem/admin_equipos.html" role="button">Equipos</a>
       </div>
       </div>
 <!--*****************DISPOSITIVOS*****************-->
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\printer.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-      <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_impresiones.html" role="button">Impresiones</a>
+      <a class="btn btn-primary" href="http://localhost/ccreduaem/admin_dispositivos.html" role="button">Dispositivos</a>
+      </div>
+      </div>
+<!--*****************USUARIOS*****************-->
+      <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
+        <img class= "imglogo img-fluid" src="images\user.png"/>
+        <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
+        <a class="btn btn-primary" href="http://localhost/ccreduaem/admin_admin.html" role="button">Usuarios</a>
       </div>
       </div>
 <!--*****************BITÁCORA*****************-->
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\bitacora.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-        <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_bitacora.html" role="button">Bitácora</a>
+        <a class="btn btn-primary" href="http://localhost/ccreduaem/admin_bitacora.html" role="button">Bitácora</a>
       </div>
       </div>
     </div>

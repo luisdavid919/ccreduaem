@@ -1,30 +1,37 @@
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Centro De Cómputo Redes FCAeI</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-  <div class="container-fluid">
-<!---LOGOS PRINCIPALES----------->
-    <div class="row">
-      <img class='imglogo img-fluid' src="images\fcaei_logo.png"/>
-        </div>
-        <div class="col-4">
-        <img class= 'imglogos img-fluid' src="images\uaem_logo.png"/>
-        </div>
-  <!--Título Principal y Cuerpo de la Página Por Toni R -->
-  <div class="col-12">
-      <h1 class="display-12">Centro De Cómputo Redes FCAeI</h1>
-  </div>
+  <!--*****************LOGOS PRINCIPALES*****************-->
+<div class="container-fluid">
+<div class="row justify-content-between">
+<div class="col col-md-2 align-self-start d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block">
+<img class="img img-fluid" src="images\fcaei_logo.png"/>
+</div>
+<div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
+<h1>Centro De Cómputo De Redes FCAeI</h1>
+</div>
+<div class="col col-md-2 d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mt-3">
+<img class="img img-fluid" src="images\uaem_logo.png"/>
+</div>
+</div>
 </div>
 
-<div class="row">
-<div class="col-lg-12"><h3>Equipos Teclados</h3>
-</div>
-</div>
+  <!--*****************INICIO PRINCIPAL EQUIPOS TECLADO*****************-->
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
+        <h3>Equipos Teclados</h3>
+      </div>
+    </div>
+  </div>
 <!---BOTONES----------->
    <div class='boton' >
       <button type="submit" class="btn btn-primary7" >Agregar</button>
@@ -56,12 +63,7 @@
                 <div class='boton' >
                   <a class="btn btn-primary16" href="http://localhost/ccreduaem/admin_mouse.html" role="button">Mouse's</a>
                   </div>
-                  <div class="col-4">
-                    <img class= 'imglogo6 img-fluid' src="images\back.png"/>
-                    </div>
-                    <div class='boton' >
-                      <a class="btn btn-primary6" href="http://localhost/ccreduaem/admin.html" role="button">Regresar</a>
-                      </div>
+
 <!--- FORMULARIO---------->
   <div class="formulario2 col-12">
    <div class=" container">
@@ -84,8 +86,17 @@
   </div>
 </div>
 
+<!--*****************Regresar*****************-->
+<div class="container-fluid">
+  <div class="row justify-content-start fixed-bottom ml-3 mb-3">
+    <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
+    <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/admin.php" role="button">Regresar</a>
+      <img class= "imglogo imglogo2 img-fluid" src="images\back.png"/>
+    </div>
+  </div>
+</div>
+
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
 </body>
-
 </html>

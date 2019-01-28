@@ -32,88 +32,112 @@
       </div>
     </div>
   </div>
-<!---BOTONES----------->
-   <div class='boton' >
-      <button type="submit" class="btn btn-primary7" >Agregar</button>
-      </div>
-        <div class='boton' >
-      <button type="submit" class="btn btn-primary8" >Dar Alta</button>
-      </div>
-    <div class='boton' >
-      <button type="submit" class="btn btn-primary9" >Dar Baja</button>
-      </div>
-    <div class='boton' >
-      <button type="submit" class="btn btn-primary10" >Modificar</button>
-      </div>
-    <div class='boton' >
-        <button type="submit" class="btn btn-primary11" >Eliminar</button>
-        </div>
-    <div class='boton' >
-      <button type="submit" class="btn btn-primary12" >Eliminar Todo</button>
-    </div>
-      <div class='boton' >
-        <a class="btn btn-primary13" href="http://localhost/ccreduaem/admin_equipos.html" role="button">PC</a>
-        </div>
-        <div class='boton' >
-          <a class="btn btn-primary14" href="http://localhost/ccreduaem/admin_monitor.html" role="button">Monitores</a>
-        </div>
-        <div class='boton' >
-            <a class="btn btn-primary15" href="http://localhost/ccreduaem/admin_teclados.html" role="button">Teclados</a>
-        </div>
-        <div class='boton' >
-            <a class="btn btn-primary16" href="http://localhost/ccreduaem/admin_mouse.html" role="button">Mouse's</a>
-          </div>
 
-<!--- FORMULARIO---------->
-<div class="formulario col-12">
-  <div class=" container">
-    <div class="row">
-      <div class="col-2">
-        <div class="form-group">
-        <label>Equipo:</label>
-        <input type="text" class="form-control">
-        <label>Clave UAEM:</label>
-        <input type="text" class="form-control">
-        <label>IP:</label>
-        <input type="text" class="form-control">
-        <label>IP Server:</label>
-        <input type="text" class="form-control">
-        <label>Mac:</label>
-        <input type="text" class="form-control">
-        <label>Mac Server:</label>
-        <input type="text" class="form-control">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="formulario1 col-12">
+<!--*****************FORMULARIO*****************-->
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-2">
-        <div class="form-group">
-          <div class="col"><label>Estado:</label></div>
-          <input type="text" class="form-control">
-          <label>Modelo:</label>
-          <input type="text" class="form-control">
-          <label>Marca:</label>
-          <input type="text" class="form-control">
-          <label>S.O:</label>
-          <input type="text" class="form-control">
-          <label>Express Service Code:</label>
-          <input type="text" class="form-control">
-          <label>Service Tag:</label>
-          <input type="text" class="form-control">
-        </div>
+      <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block">
+        <form action="">
+          <div class="form-group row mt-2">
+            <div class="col col-6">
+              <label for="equipo">Equipo:</label>
+              <input type="text" class="form-control" name="equipo" id="equipo">
+            </div>
+            <div class="col col-6">
+              <label for="clave">Clave UAEM:</label>
+              <input type="text" class="form-control" name="clave" id="clave">
+            </div>
+            <div class="col col-6 mt-2">
+              <label for="ip">IP:</label>
+              <input type="text" class="form-control" name="ip" id="ip">
+            </div>
+            <div class="col col-6 mt-2">
+              <label for="ipserver">IP Server:</label>
+              <input type="text" class="form-control" name="ipserver" id="ipserver">
+            </div>
+            <div class="col col-6 mt-2">
+              <label for="mac">MAC:</label>
+              <input type="text" class="form-control" name="mac" id="mac">
+            </div>
+            <div class="col col-6 mt-2">
+              <label for="macserver">MAC Server:</label>
+              <input type="text" class="form-control" name="macserver" id="macserver">
+          </div>
+          <div class="col col-6 mt-2">
+              <label for="estado">Estado:</label>
+              <input type="text" class="form-control" name="estado" id="estado">
+          </div>
+          <div class="col col-6 mt-2">
+              <label for="modelo">Modelo:</label>
+              <input type="text" class="form-control" name="modelo" id="modelo">
+          </div>
+          <div class="col col-6 mt-2">
+              <label for="marca">Marca:</label>
+              <input type="text" class="form-control" name="marca" id="marca">
+          </div>
+          <div class="col col-6 mt-2">
+              <label for="turno">S.O:</label>
+              <input type="so" class="form-control" name="so" id="so">
+          </div>
+          <div class="col col-6 mt-2">
+              <label for="express">Express Service Code:</label>
+              <input type="text" class="form-control" name="express" id="express">
+          </div>
+          <div class="col col-6 mt-2">
+              <label for="servicetag">Service Tag:</label>
+              <input type="text" class="form-control" name="servicetag" id="servicetag">
+          </div>
+        </form>
+      </div>
+      </div>
       </div>
     </div>
   </div>
+
+  <!--*****************BOTONES*****************-->
+<div class="container">
+  <div class="row justify-content-center mt-2">
+    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
+      <a class="btn btn-info btn-lg" href="" role="button">Agregar</a>
+    </div>
+    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
+      <a class="btn btn-success btn-lg" href="" role="button">Dar Alta</a>
+    </div>
+    <div class="col col-sm-3 col-md-2 m-2">
+      <a class="btn btn-danger btn-lg" href="" role="button">Dar Baja</a>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-2">
+    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
+      <a class="btn btn-secondary btn-lg" href="" role="button">Modificar</a>
+    </div>
+    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
+      <a class="btn btn-warning btn-lg" href="" role="button">Eliminar</a>
+    </div>
+    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
+      <a class="btn btn-danger btn-lg" href="" role="button">Borrar Todo</a>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3 mb-3">
+    <div class="col col-sm-12 col-md-2">
+      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_equipos.html" role="button">Equipos</a>
+    </div>
+    <div class="col col-sm-12 col-md-2">
+      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_monitor.html" role="button">Monitores</a>
+    </div>
+    <div class="col col-sm-12 col-md-2">
+      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_teclados.html" role="button">Teclados</a>
+    </div>
+    <div class="col col-sm-12 col-md-2">
+      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_mouse.html"  role="button">Mouse's</a>
+    </div>
+  </div>
 </div>
+
 
 <!--*****************Regresar*****************-->
 <div class="container-fluid">
-  <div class="row justify-content-start fixed-bottom ml-3 mb-3">
+  <div class="row justify-content-start">
     <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
     <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/admin.php" role="button">Regresar</a>
       <img class= "imglogo imglogo2 img-fluid" src="images\back.png"/>

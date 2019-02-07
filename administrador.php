@@ -26,11 +26,11 @@ if(isset($_REQUEST['iniciar']))
   $Profesion = $_REQUEST["Profesion"];
   $Periodo = $_REQUEST["Periodo"];
   $Turno = $_REQUEST["Turno"];
-  $Permisos = $_REQUEST["Permisos"];
   $usuario = $_REQUEST["Usuario"];
   $Password = $_REQUEST["Password"];
+  $Permisos = $_REQUEST["Permisos"];
 
-$query="insert into administrador (ID,Nombre,Apellidos,Edad,Profesion,Periodo,Turno,Permisos,Usuario,Password) values ('$ID','$Nombre','$Apellidos','$Edad','$Profesion','$Periodo','$Turno','$Permisos','$Usuario','$Password')";
+$query="insert into administrador (ID,Nombre,Apellidos,Edad,Profesion,Periodo,Turno,Permisos,Usuario,Contraseña) values ('$ID','$Nombre','$Apellidos','$Edad','$Profesion','$Periodo','$Turno','$Usuario','$Password','$Permisos')";
 $dato=mysqli_query($connection,$query);
 if(!$dato)
 	echo "No se insertaron los datos";

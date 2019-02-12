@@ -26,7 +26,7 @@ if(isset($_REQUEST['iniciar']))
   $Profesion = $_REQUEST["Profesion"];
   $Periodo = $_REQUEST["Periodo"];
   $Turno = $_REQUEST["Turno"];
-  $usuario = $_REQUEST["Usuario"];
+  $Usuario = $_REQUEST["Usuario"];
   $Password = $_REQUEST["Password"];
   $Permisos = $_REQUEST["Permisos"];
 

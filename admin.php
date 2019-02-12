@@ -1,10 +1,10 @@
 <?php
-// Initialize the session
+// Iniciando Sesión
 session_start();
-//If session variable is not set it will redirect to login page
-if(!isset($_SESSION['Usuario']) || empty($_SESSION['Usuario'])){
+//Si la sesión está cerrada e Intenta acceder, Se redigirirá a la página de login
+if(isset($_SESSION['usuario']) || empty($_SESSION['usuario'])){
 header("location: principal.php");
-exit; }
+}
 ?>
 
 <!doctype html>

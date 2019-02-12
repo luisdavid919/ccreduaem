@@ -1,4 +1,4 @@
-<?php
+<!--?php
 // Include config file
 require_once 'config.php';
 
@@ -71,7 +71,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($link);
 }
-?>
+?-->
 <!doctype html>
 <html lang="es">
 <head>
@@ -104,26 +104,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block mt-5">
         <h2>Iniciar Sesión</h2>
         <p class="form-text text-center"><strong>Por favor Ingrese el Usuario y la Contraseña que se le asignó.</strong></p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div class="form-group row justify-content-center <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" name="login">
+        <div class="form-group row justify-content-center">
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center mt-2">
-            <label for="username"><strong>Usuario:</strong></label>
-            <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
-            <span class="help-block alerta"><?php echo $username_err; ?></span>
+            <label for="usuario"><strong>Usuario:</strong></label>
+            <input type="text" name="usuario"class="form-control" placeholder="Usuario">
           </div>
         </div>
-        <div class="form-group row justify-content-center <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+        <div class="form-group row justify-content-center">
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center mt-2">
             <label for="password"><strong>Contraseña:</strong></label>
-            <input type="password" name="password" class="form-control">
-            <span class="help-block alerta"><?php echo $password_err; ?></span>
+            <input type="password" name="password" class="form-control" placeholder="Contraseña">
           </div>
         </div>
         <div class="form-group row justify-content-center">
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-            <input type="submit" class="btn btn-success" value="Iniciar Sesión">
+            <input type="submit" class="btn btn-success" value="Iniciar Sesión" onclick="login.submit()">
           </div>
         </div>
+        <?php if(!empty($errores)):?>
+          .<div class="error">
+            <?php echo $errores; ?>
+          </div>
+        <?php endif; ?>
       </form>
     </div>
   </div>

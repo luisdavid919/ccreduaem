@@ -2,9 +2,9 @@
 // Iniciando Sesión
 session_start();
 //Si la sesión está cerrada e Intenta acceder, Se redigirirá a la página de login
-if(isset($_SESSION['usuario']) || empty($_SESSION['usuario'])){
-header("location: principal.php");
-}
+if(!isset($_SESSION["session_usuario"])) {
+header("location:index.php");
+} else {
 ?>
 
 <!doctype html>

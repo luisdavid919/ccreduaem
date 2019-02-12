@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
           }
 //VERIFICANDO SI EL USUARIO ESTÁ REGISTRADO O DE LO CONTRARIO SE REGISTARÁ Y DARÁ ACCESO AL LOGEAR
     $statement $conexion->prepare('
-    SELECT * FROM login WHERE usuario= .$usuario AND password= .$password'
+    SELECT * FROM login WHERE usuario= :usuario AND password= :password'
   );
     $statement->execute(array(
       ':usuario'=> $usuario,
@@ -36,6 +36,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   }
 }
 
-require 'principal.php';
+require 'index.php';
 
  ?>

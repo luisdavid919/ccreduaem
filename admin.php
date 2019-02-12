@@ -1,12 +1,3 @@
-<?php
-// Iniciando Sesión
-session_start();
-//Si la sesión está cerrada e Intenta acceder, Se redigirirá a la página de login
-if(!isset($_SESSION["session_usuario"])) {
-header("location:index.php");
-} else {
-?>
-
 <!doctype html>
 <html lang="es">
 <head>
@@ -81,7 +72,7 @@ header("location:index.php");
 <div class="container-fluid">
   <div class="row justify-content-end fixed-bottom mb-3">
     <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-      <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/principal.php" role="button">Cerrar Sesión</a>
+      <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/index.php" role="button">Cerrar Sesión</a>
       <img class= "imglogo1 img-fluid" src="images\out.png"/>
     </div>
   </div>

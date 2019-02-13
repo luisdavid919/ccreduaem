@@ -1,12 +1,12 @@
 <?php
 
-require_once("config.php");
+//require_once("config.php");
 // Initialize the session
-session_start();
-if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
-  header("location: admin.php");
-    exit;
-  }
+//session_start();
+//if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+  //header("location: admin.php");
+    //exit;
+  //}
 
 // 1. Create a database connection
 $connection = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_NAME);

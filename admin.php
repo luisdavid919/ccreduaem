@@ -1,3 +1,12 @@
+<?php
+session_start();
+    if (isset($_SESSION['usuario'])){
+          header('location:login.php');
+    } else {
+      header('location: index.php');
+    }
+ ?>
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -72,7 +81,7 @@
 <div class="container-fluid">
   <div class="row justify-content-end fixed-bottom mb-3">
     <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-      <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/index.php" role="button">Cerrar Sesión</a>
+      <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/cerrar.php" role="button">Cerrar Sesión</a>
       <img class= "imglogo1 img-fluid" src="images\out.png"/>
     </div>
   </div>

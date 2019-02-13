@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-02-2019 a las 02:32:39
--- Versión del servidor: 10.1.36-MariaDB
--- Versión de PHP: 7.2.11
+-- Tiempo de generación: 13-02-2019 a las 23:58:18
+-- Versión del servidor: 10.1.34-MariaDB
+-- Versión de PHP: 7.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -117,6 +117,13 @@ CREATE TABLE `login` (
   `usuario` varchar(50) NOT NULL,
   `password` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `login`
+--
+
+INSERT INTO `login` (`ID`, `usuario`, `password`) VALUES
+(2, 'tono', '$2y$10$dmnJLytiZCGPWBDiaa85eOqtWpcCE/Y1ZfxCjYy.rXN/THjyDfd6e');
 
 -- --------------------------------------------------------
 

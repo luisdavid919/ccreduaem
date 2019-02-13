@@ -30,29 +30,26 @@
     <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block mt-5">
         <h2>Iniciar Sesión</h2>
         <p class="form-text text-center"><strong>Por favor Ingrese el Usuario y la Contraseña que se le asignó.</strong></p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-        <div class="form-group row justify-content-center">
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center mt-2">
-            <label for="usuario"><strong>Usuario:</strong></label>
-            <input type="text" id="usuario" name="usuario"class="form-control" placeholder="Usuario" required>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+          <div class="form-group row justify-content-center <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center mt-2">
+              <label><strong>Usuario:</strong></label>
+              <input type="text" name="usuario" class="form-control" placeholder="Usario" required value="<?php echo $username; ?>">
+              <span class="help-block"><?php echo $username_err; ?></span>
+            </div>
           </div>
-        </div>
-        <div class="form-group row justify-content-center">
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center mt-2">
-            <label for="password"><strong>Contraseña:</strong></label>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
-          </div>
-        </div>
-        <?php if(!empty($error)):?>
-          <div class="error">
-            <?php echo $error; ?>
-          </div>
-        <?php endif; ?>
-        <div class="form-group row justify-content-center">
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-            <input type="submit" class="btn btn-success" value="Iniciar Sesión">
-          </div>
-        </div>
+            <div class="form-group row justify-content-center <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center mt-2">
+                <label><strong>Contraseña:</strong></label>
+                <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                <span class="help-block"><?php echo $password_err; ?></span>
+              </div>
+            </div>
+              <div class="form-group row justify-content-center">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                <input type="submit" class="btn btn-success" value="Iniciar Sesión">
+              </div>
+            </div>
       </form>
     </div>
   </div>

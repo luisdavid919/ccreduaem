@@ -71,8 +71,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         }
                     }
                 } else{
-                    // Display an error message if username doesn't exist
-                    $username_err = "No existe cuenta relacionada";
+                    // Mensaje en Caso de que no exista el usuario
+                    $username_err = "¡Usted No Está Registrado!";
                 }
             } else{
                 echo "Oops! Algo falló";
@@ -139,7 +139,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               </div>
             </div>
       </form>
-      <p class="form-text text-center"><strong>Por favor Ingrese el Usuario y la Contraseña que se le asignó.</strong></p>
+      <p class="form-text text-center"><strong>Si Usted No Está Registrado</strong></p>
+      <p class="form-text text-center"></p>
     </div>
   </div>
 </div>

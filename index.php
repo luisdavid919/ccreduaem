@@ -138,9 +138,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-success" value="Iniciar Sesión">
               </div>
             </div>
+            <br>
       </form>
-      <p class="form-text text-center"><strong>Si Usted No Está Registrado, Por Favor Regístrese de Acuerdo a su servicio</strong></p>
-      <p class="form-text text-center"></p>
+        <p class="form-text text-center"><strong>Si Usted No Está Registrado, Por Favor Regístrese de Acuerdo a su servicio</p></strong>
+        <p class="text-center"><strong><a href="registrarme.php">¡Registrarme!</a></strong></p>
     </div>
   </div>
 </div>

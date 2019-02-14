@@ -1,7 +1,15 @@
 <?php
-try{
-  $conexion = new PDO('mysql:host=localhost;dbname=sistema_inventario_bd', 'root', '');
-} catch(PDOException $prueba_error){
-  echo "Error: " . $prueba_error->getMessage();
+/* Database credentials. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', "");
+define('DB_NAME', 'sistema_inventario_bd');
+
+/* Attempt to connect to MySQL database */
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+// Check connection
+if($link === false){
+    die("ERROR: La conexión ha fallado" . mysqli_connect_error());
 }
 ?>

@@ -9,7 +9,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
 
 // Include config file
-require_once "config.php";
+require_once "conexion.php";
 
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -122,14 +122,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <div class="form-group row justify-content-center <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center mt-2">
               <label><strong>Usuario:</strong></label>
-              <input type="text" name="usuario" class="form-control" placeholder="Usuario" required value="<?php echo $username; ?>">
+              <input type="text" name="usuario" class="form-control text-center" placeholder="Usuario" required value="<?php echo $username; ?>">
               <span class="help-block"><?php echo $username_err; ?></span>
             </div>
           </div>
             <div class="form-group row justify-content-center <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center mt-2">
                 <label><strong>Contraseña:</strong></label>
-                <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                <input type="password" name="password" class="form-control text-center" placeholder="Contraseña" required>
                 <span class="help-block"><?php echo $password_err; ?></span>
               </div>
             </div>
@@ -139,7 +139,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               </div>
             </div>
       </form>
-      <p class="form-text text-center"><strong>Si Usted No Está Registrado</strong></p>
+      <p class="form-text text-center"><strong>Si Usted No Está Registrado, Por Favor Regístrese de Acuerdo a su servicio</strong></p>
       <p class="form-text text-center"></p>
     </div>
   </div>

@@ -1,4 +1,15 @@
-<!doctype html>
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: index.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -116,7 +127,7 @@
   <div class="container-fluid">
     <div class="row justify-content-start">
       <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-      <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/admin_admin.html" role="button">Regresar</a>
+      <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/admin_admin.php" role="button">Regresar</a>
         <img class= "imglogo imglogo2 img-fluid" src="images\back.png"/>
       </div>
     </div>

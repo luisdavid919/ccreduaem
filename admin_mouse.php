@@ -1,4 +1,15 @@
-<!doctype html>
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: index.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -92,16 +103,16 @@
   </div>
   <div class="row justify-content-center mt-3 mb-3">
     <div class="col col-sm-12 col-md-2">
-      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_equipos.html" role="button">Equipos</a>
+      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_equipos.php" role="button">Equipos</a>
     </div>
     <div class="col col-sm-12 col-md-2">
-      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_monitor.html" role="button">Monitores</a>
+      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_monitor.php" role="button">Monitores</a>
     </div>
     <div class="col col-sm-12 col-md-2">
-      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_teclado.html" role="button">Teclados</a>
+      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_teclado.php" role="button">Teclados</a>
     </div>
     <div class="col col-sm-12 col-md-2">
-      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_mouse.html"  role="button">Mouse's</a>
+      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_mouse.php"  role="button">Mouse's</a>
     </div>
   </div>
 </div>

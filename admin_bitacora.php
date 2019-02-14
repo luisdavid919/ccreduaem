@@ -1,4 +1,15 @@
-<!doctype html>
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: index.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -23,12 +34,12 @@
 </div>
 </div>
 
-  <!--*****************INICIO PRINCIPAL TECLADOS*****************-->
+  <!--*****************INICIO PRINCIPAL BITÁCORA*****************-->
 
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-        <h3>Equipos Teclados</h3>
+        <h3>Bitácora</h3>
       </div>
     </div>
   </div>
@@ -40,24 +51,24 @@
         <form action="">
           <div class="form-group row mt-2">
             <div class="col col-6">
-              <label for="monitor">Teclado:</label>
-              <input type="text" class="form-control" name="monitor" id="monitor">
+              <label for="fecha">Fecha:</label>
+              <input type="text" class="form-control" name="fecha" id="fecha">
             </div>
             <div class="col col-6">
-              <label for="serial">Serial:</label>
-              <input type="text" class="form-control" name="serial" id="serial">
+              <label for="entrada">Hora De Entrada:</label>
+              <input type="text" class="form-control" name="entrada" id="entrada">
             </div>
             <div class="col col-6 mt-2">
-              <label for="marca">Marca:</label>
-              <input type="text" class="form-control" name="marca" id="marca">
+              <label for="actividad">Actividades:</label>
+              <input type="text" class="form-control" name="actividad" id="activida">
             </div>
             <div class="col col-6 mt-2">
-              <label for="modelo">Modelo:</label>
-              <input type="text" class="form-control" name="modelo" id="modelo">
+              <label for="horas">Hora De Salida:</label>
+              <input type="text" class="form-control" name="hora" id="horas">
             </div>
             <div class="col col-6 mt-2">
-              <label for="estado">Estado:</label>
-              <input type="text" class="form-control" name="estado" id="estado">
+              <label for="total">Número De Horas:</label>
+              <input type="text" class="form-control" name="total" id="total">
             </div>
         </form>
       </div>
@@ -92,16 +103,7 @@
   </div>
   <div class="row justify-content-center mt-3 mb-3">
     <div class="col col-sm-12 col-md-2">
-      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_equipos.html" role="button">Equipos</a>
-    </div>
-    <div class="col col-sm-12 col-md-2">
-      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_monitor.html" role="button">Monitores</a>
-    </div>
-    <div class="col col-sm-12 col-md-2">
-      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_teclado.html" role="button">Teclados</a>
-    </div>
-    <div class="col col-sm-12 col-md-2">
-      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_mouse.html"  role="button">Mouse's</a>
+      <a class="btn btn-primary btn-lg" href="" role="button">Imprimir</a>
     </div>
   </div>
 </div>

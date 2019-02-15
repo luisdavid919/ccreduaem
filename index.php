@@ -94,6 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <title>Centro De Cómputo Redes FCAeI</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/fontello.css">
 </head>
 
 <body>
@@ -135,7 +136,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
               <div class="form-group row justify-content-center">
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                <input type="submit" class="btn btn-success" value="Iniciar Sesión">
+              <input type="submit" class="btn btn-success" value="Iniciar Sesión">
               </div>
             </div>
             <br>

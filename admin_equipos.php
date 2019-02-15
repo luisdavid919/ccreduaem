@@ -15,6 +15,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <title>Centro De Cómputo Redes FCAeI</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/fontello.css">
 </head>
 
 <body>
@@ -144,13 +145,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </div>
 </div>
 
-
 <!--*****************Regresar*****************-->
 <div class="container-fluid">
-  <div class="row justify-content-start">
+  <div class="row justify-content-start ml-3 mb-3">
     <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-    <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/admin.php" role="button">Regresar</a>
-      <img class= "imglogo imglogo2 img-fluid" src="images\back.png"/>
+      <a href="http://localhost/ccreduaem/admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
     </div>
   </div>
 </div>

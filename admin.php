@@ -16,6 +16,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <title>Centro De Cómputo Redes FCAeI</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/fontello.css">
 </head>
 
 <body>
@@ -81,10 +82,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <!--*****************CERRAR SESIÓN*****************-->
 <div class="container-fluid">
-  <div class="row justify-content-end fixed-bottom mb-3">
+  <div class="row justify-content-end fixed-bottom mb-2">
     <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-      <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/cerrar.php" role="button">Cerrar Sesión</a>
-      <img class= "imglogo1 img-fluid" src="images\out.png"/>
+      <a href="http://localhost/ccreduaem/cerrar.php"><i class="icon-user-times"data-toggle="tooltip" data-placement="top" title="Salir"></i></a>
     </div>
   </div>
 </div>

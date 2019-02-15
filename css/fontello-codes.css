@@ -1,0 +1,19 @@
+
+.icon-list-alt:before { content: '\e800'; } /* '' */
+.icon-ok:before { content: '\e801'; } /* '' */
+.icon-back:before { content: '\e802'; } /* '' */
+.icon-cancel:before { content: '\e803'; } /* '' */
+.icon-up-outline:before { content: '\e804'; } /* '' */
+.icon-down-outline:before { content: '\e805'; } /* '' */
+.icon-help:before { content: '\e806'; } /* '' */
+.icon-arrows-cw:before { content: '\e807'; } /* '' */
+.icon-mouse:before { content: '\e808'; } /* '' */
+.icon-list-add:before { content: '\e809'; } /* '' */
+.icon-download:before { content: '\f02e'; } /* '' */
+.icon-upload:before { content: '\f02f'; } /* '' */
+.icon-hdd:before { content: '\f0a0'; } /* '' */
+.icon-desktop:before { content: '\f108'; } /* '' */
+.icon-keyboard:before { content: '\f11c'; } /* '' */
+.icon-trash:before { content: '\f1f8'; } /* '' */
+.icon-user-plus:before { content: '\f234'; } /* '' */
+.icon-user-times:before { content: '\f235'; } /* '' */

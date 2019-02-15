@@ -10,18 +10,18 @@ $username_err = $password_err = $confirm_password_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Validate username
-    if(empty(trim($_POST["username"]))){
+    if(empty(trim($_POST["usuario"]))){
         $username_err = "Porfavor ingresa un nombre de usuario";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE username = ?";
+        $sql = "SELECT id FROM users WHERE usuario = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
 
             // Set parameters
-            $param_username = trim($_POST["username"]);
+            $param_username = trim($_POST["usuario"]);
 
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     $username_err = "Este nombre de usuario ya existe";
                 } else{
-                    $username = trim($_POST["username"]);
+                    $username = trim($_POST["usuario"]);
                 }
             } else{
                 echo "Oops! Algo falló. Por favor intenta de nuevo";
@@ -65,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
 
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+        $sql = "INSERT INTO users (usuario, password) VALUES (?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -102,7 +102,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/fontello.css">
 </head>
-
+<script>
+var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirmar').value) {
+    document.getElementById('mensaje').style.color = 'green';
+    document.getElementById('mensaje').innerHTML = 'Coincide';
+  } else {
+    document.getElementById('mensaje').style.color = 'red';
+    document.getElementById('mensaje').innerHTML = 'No coincide';
+  }
+}
+</script>
 
 
 <body>
@@ -128,7 +139,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block">
         <h2>Registrarme</h2>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-      <div class="form-group row justify-content-center">
+      <div class="form-group row justify-content-center <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 m-2">
           <label><strong>Control/Matrícula:</strong></label>
           <input type="text" name="usuario" class="form-control text-center" required>
@@ -155,19 +166,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   </div>
 </div>
                                   <!--*****************Finaliza Formulario*****************-->
-                                  <script>
-                                  var check = function() {
-                                    if (document.getElementById('password').value ==
-                                      document.getElementById('confirmar').value) {
-                                      document.getElementById('mensaje').style.color = 'green';
-                                      document.getElementById('mensaje').innerHTML = 'Coincide';
-                                    } else {
-                                      document.getElementById('mensaje').style.color = 'red';
-                                      document.getElementById('mensaje').innerHTML = 'No coincide';
-                                    }
-                                  }
-                                  </script>
-
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   </body>

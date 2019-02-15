@@ -1,4 +1,15 @@
-<!doctype html>
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: index.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -24,12 +35,12 @@
 </div>
 </div>
 
-  <!--*****************INICIO PRINCIPAL IMPRESIONES*****************-->
+  <!--*****************INICIO PRINCIPAL BITÁCORA*****************-->
 
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-        <h3>Impresiones</h3>
+        <h3>Bitácora</h3>
       </div>
     </div>
   </div>
@@ -41,28 +52,24 @@
         <form action="">
           <div class="form-group row mt-2">
             <div class="col col-6">
-              <label for="equipo">Equipo:</label>
-              <input type="text" class="form-control" name="equipo" id="equipo">
+              <label for="fecha">Fecha:</label>
+              <input type="text" class="form-control" name="fecha" id="fecha">
             </div>
             <div class="col col-6">
-              <label for="ipequipo">IP Equipo</label>
-              <input type="text" class="form-control" name="ipequipo" id="ipequipo">
+              <label for="entrada">Hora De Entrada:</label>
+              <input type="text" class="form-control" name="entrada" id="entrada">
             </div>
             <div class="col col-6 mt-2">
-              <label for="archivo">Nombre del Archivo:</label>
-              <input type="text" class="form-control" name="archivo" id="archivo">
+              <label for="actividad">Actividades:</label>
+              <input type="text" class="form-control" name="actividad" id="activida">
             </div>
             <div class="col col-6 mt-2">
-              <label for="formato">Formato:</label>
-              <input type="text" class="form-control" name="formato" id="formato">
+              <label for="horas">Hora De Salida:</label>
+              <input type="text" class="form-control" name="hora" id="horas">
             </div>
             <div class="col col-6 mt-2">
-              <label for="hojas">Número De Hojas:</label>
-              <input type="text" class="form-control" name="hojas" id="hojas">
-            </div>
-            <div class="col col-6 mt-2">
-              <label for="hora">Hora de Impresión:</label>
-              <input type="text" class="form-control" name="hora" id="hora">
+              <label for="total">Número De Horas:</label>
+              <input type="text" class="form-control" name="total" id="total">
             </div>
         </form>
       </div>
@@ -75,13 +82,29 @@
 <div class="container">
   <div class="row justify-content-center mt-2">
     <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-info btn-lg" href="" role="button">Guardar</a>
+      <a class="btn btn-info btn-lg" href="" role="button">Agregar</a>
     </div>
     <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-success btn-lg" href="" role="button">Imprimir</a>
+      <a class="btn btn-success btn-lg" href="" role="button">Dar Alta</a>
     </div>
     <div class="col col-sm-3 col-md-2 m-2">
-      <a class="btn btn-danger btn-lg" href="" role="button">Cancelar</a>
+      <a class="btn btn-danger btn-lg" href="" role="button">Dar Baja</a>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-2">
+    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
+      <a class="btn btn-secondary btn-lg" href="" role="button">Modificar</a>
+    </div>
+    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
+      <a class="btn btn-warning btn-lg" href="" role="button">Eliminar</a>
+    </div>
+    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
+      <a class="btn btn-danger btn-lg" href="" role="button">Borrar Todo</a>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3 mb-3">
+    <div class="col col-sm-12 col-md-2">
+      <a class="btn btn-primary btn-lg" href="" role="button">Imprimir</a>
     </div>
   </div>
 </div>

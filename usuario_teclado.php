@@ -1,4 +1,15 @@
-<!doctype html>
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: index.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -29,7 +40,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-        <h3>Control de Equipos</h3>
+        <h3>Control de Equipos Teclado</h3>
       </div>
     </div>
   </div>
@@ -60,7 +71,7 @@
   </div>
 </div>
 
- <!--*****************Regresar*****************-->
+ <!--*****************CERRAR SESIÓN*****************-->
  <div class="container-fluid">
    <div class="row justify-content-start fixed-bottom ml-3 mb-3">
      <div class="col col-4 col-sm-4 col-md-2 col-lg-2">

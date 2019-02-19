@@ -95,6 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/fontello.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/fcaei.ico">
 </head>
 
 <body>
@@ -104,8 +105,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="col col-md-2 align-self-start d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block">
       <img class="img img-fluid" src="images\fcaei_logo.png"/>
     </div>
-    <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
+    <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-none d-xs-none d-sm-none d-md-block d-lg-block d-xl-block text-center">
       <h1>Centro De Cómputo De Redes FCAeI</h1>
+    </div>
+    <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-xs-block d-sm-block d-md-none d-lg-none d-xl-none text-center">
+      <h1><small>Centro De Cómputo De Redes FCAeI</small></h1>
     </div>
     <div class="col col-md-2 d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mt-3">
       <img class="img img-fluid" id"logo" src="images\uaem_logo.png"/>

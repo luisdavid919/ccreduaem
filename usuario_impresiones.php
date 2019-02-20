@@ -101,15 +101,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <!--*****************Regresar*****************-->
 <div class="container-fluid">
-  <div class="row justify-content-start">
-    <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-    <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/usuario.html" role="button">Regresar</a>
-      <img class= "imglogo imglogo2 img-fluid" src="images\back.png"/>
+  <div class="row justify-content-start mt-3">
+    <div class="col align-self-center">
+      <a href="http://localhost/ccreduaem/usuario.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
     </div>
   </div>
 </div>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
-</body>
+<!--*****************Finaliza Formulario*****************-->
+      <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>

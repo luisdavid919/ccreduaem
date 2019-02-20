@@ -41,49 +41,106 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-        <h3>Control de Equipos Teclado</h3>
+        <h3>Consulta de Teclados</h3>
       </div>
     </div>
   </div>
 
-  <!--*****************BOTONES*****************-->
-<div class="container">
-  <div class="row mt-5">
-    <div class="col col-xs-8 flex-last">
-      <a class="btn btn-primary btn-sm" href="http://localhost/ccreduaem/usuario_equipos.html" role="button">Equipos</a>
-    </div>
-  </div>
-  <div class="row mt-3">
-    <div class="col col-xs-8">
-      <a class="btn btn-primary btn-sm" href="http://localhost/ccreduaem/usuario_monitor.html" role="button">Monitor</a>
-    </div>
-  </div>
-  <div class="row mt-3">
-    <div class="col col-xs-8">
-      <a class="btn btn-primary btn-sm" href="http://localhost/ccreduaem/usuario_teclado.html" role="button">Teclado</a>
-    </div>
-  </div>
-  <div class="row mt-3">
-    <div class="col col-xs-8">
-      <a class="btn btn-primary btn-sm" href="http://localhost/ccreduaem/usuario_mouse.html" role="button">Mouse</a>
-    </div>
-  </div>
+  <div class="container">
+    <div class="row">
+      <!--*****************CONSULTA*****************-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="form-group row">
+                <table class="table table-striped table-success table-hover">
+                  <thead class="thead-dark text-center">
+                    <th>Serial</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Estado</th>
+                  </thead>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+<!--*****************BOTONES*****************-->
+        <div class="col-xs-4 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="form-group row justify-content-center">
+                <div class="col col-xs-8 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
+                  <a class="btn btn-primary btn-lg w-100" href="http://localhost/ccreduaem/usuario_equipos.php" role="button">CPU</a>
+                </div>
+                <div class="col col-xs-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
+                  <a class="btn btn-primary btn-lg w-100" href="http://localhost/ccreduaem/usuario_monitor.php" role="button">Monitor</a>
+                </div>
+                <div class="col col-xs-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
+                  <a class="btn btn-primary btn-lg w-100" href="http://localhost/ccreduaem/usuario_teclado.php" role="button">Teclado</a>
+                </div>
+                <div class="col col-xs-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
+                  <a class="btn btn-primary btn-lg w-100" href="http://localhost/ccreduaem/usuario_mouse.php" role="button">Mouse</a>
+                </div>
+              </div>
+            </div>
+
+<!--*****************Regresar*****************-->
+<div class="container-fluid">
+  <div class="row justify-content-start">
+    <div class="col align-self-center">
+      <a href="http://localhost/ccreduaem/usuario.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
     </div>
   </div>
 </div>
 
- <!--*****************CERRAR SESIÓN*****************-->
- <div class="container-fluid">
-   <div class="row justify-content-start fixed-bottom ml-3 mb-3">
-     <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-       <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/usuario.html" role="button">Regresar</a>
-       <img class= "imglogo imglogo2 img-fluid" src="images\back.png"/>
-     </div>
-   </div>
- </div>
+<!--*****************Regresar*****************-->
+<div class="container-fluid">
+  <div class="row justify-content-start mt-3">
+    <div class="col align-self-center">
+      <a href="http://localhost/ccreduaem/usuario.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
+    </div>
+  </div>
+</div>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
-</body>
-
+<!--*****************Finaliza Formulario*****************-->
+      <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>

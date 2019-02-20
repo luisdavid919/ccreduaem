@@ -54,35 +54,34 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\monitor.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-      <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_equipos.html" role="button">Equipos</a>
+      <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_equipos.php" role="button">Equipos</a>
       </div>
       </div>
 <!--*****************DISPOSITIVOS*****************-->
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\printer.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-      <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_impresiones.html" role="button">Impresiones</a>
+      <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_impresiones.php" role="button">Impresiones</a>
       </div>
       </div>
 <!--*****************BITÁCORA*****************-->
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\bitacora.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-        <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_bitacora.html" role="button">Bitácora</a>
+        <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_bitacora.php" role="button">Bitácora</a>
       </div>
       </div>
     </div>
   </div>
 
-<!--*****************CERRAR SESIÓN*****************-->
-<div class="container-fluid">
-  <div class="row justify-content-end fixed-bottom mb-3">
-    <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-      <a class="btn btn-danger btn-sm" href="http://localhost/ccreduaem/principal.php" role="button">Cerrar Sesión</a>
-      <img class= "imglogo1 img-fluid" src="images\out.png"/>
+  <!--*****************CERRAR SESIÓN*****************-->
+  <div class="container-fluid">
+    <div class="row justify-content-end fixed-bottom mb-2">
+      <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
+        <a href="http://localhost/ccreduaem/cerrar.php"><i class="icon-user-times"data-toggle="tooltip" data-placement="top" title="Salir"></i></a>
+      </div>
     </div>
   </div>
-</div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

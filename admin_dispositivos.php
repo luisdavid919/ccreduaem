@@ -47,90 +47,85 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </div>
 
 <!--*****************FORMULARIO*****************-->
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block">
-        <form action="">
-          <div class="form-group row mt-2">
-            <div class="col col-6">
-              <label for="dispositivo">Dispositivo:</label>
-              <input type="text" class="form-control" name="dispositivo" id="dispositivo">
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+      <form action="">
+        <div class="form-group">
+          <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <label for="dispositivo">Dispositivo:</label>
+            <input type="text" class="form-control" name="dispositivo" id="dispositivo">
             </div>
-            <div class="col col-6">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="ip">IP:</label>
               <input type="text" class="form-control" name="ip" id="ip">
             </div>
-            <div class="col col-6 mt-2">
-              <label for="ipserver">IP Server:</label>
-              <input type="text" class="form-control" name="ipserver" id="ipserver">
-            </div>
-            <div class="col col-6 mt-2">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="mac">MAC:</label>
               <input type="text" class="form-control" name="mac" id="mac">
             </div>
-            <div class="col col-6 mt-2">
-              <label for="macserver">MAC Server:</label>
-              <input type="text" class="form-control" name="macserver" id="macserver">
-            </div>
-            <div class="col col-6 mt-2">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="serial">Serial:</label>
               <input type="text" class="form-control" name="serial" id="serial">
-          </div>
-          <div class="col col-6 mt-2">
-              <label for="modelo">Modelo:</label>
-              <input type="text" class="form-control" name="modelo" id="modelo">
-          </div>
-          <div class="col col-6 mt-2">
+            </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-4 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+      <form action="">
+        <div class="form-group">
+        <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label for="modelo">Modelo:</label>
+          <input type="text" class="form-control" name="modelo" id="modelo">
+            </div>
+            <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="marca">Marca:</label>
               <input type="text" class="form-control" name="marca" id="marca">
-          </div>
-          <div class="col col-6 mt-2">
+            </div>
+            <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="estado">Estado:</label>
               <input type="text" class="form-control" name="estado" id="estado">
+            </div>
           </div>
         </form>
       </div>
+      <!--*****************BOTONES*****************-->
+        <div class="col-xs-4 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+          <div class="form-group row justify-content-center">
+            <div class="col col-xs-8 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-info btn-lg w-100" href="" role="button">Agregar</a>
+            </div>
+            <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-success btn-lg w-100" href="" role="button">Dar Alta</a>
+            </div>
+            <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-danger btn-lg w-100" href="" role="button">Dar Baja</a>
+            </div>
+            <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-secondary btn-lg w-100" href="" role="button">Modificar</a>
+            </div>
+            <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-warning btn-lg w-100" href="" role="button">Eliminar</a>
+            </div>
+            <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-danger btn-lg w-100" href="" role="button">Borrar Todo</a>
+            </div>
+          </div>
+        </div>
+
+    <!--*****************Regresar*****************-->
+    <div class="container-fluid">
+      <div class="row justify-content-start mt-3">
+        <div class="col align-self-center">
+          <a href="http://localhost/ccreduaem/admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
+        </div>
       </div>
-      </div>
     </div>
-  </div>
+    
+    <!--*****************Finaliza Formulario*****************-->
 
-  <!--*****************BOTONES*****************-->
-<div class="container">
-  <div class="row justify-content-center mt-2">
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-info btn-lg" href="" role="button">Agregar</a>
-    </div>
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-success btn-lg" href="" role="button">Dar Alta</a>
-    </div>
-    <div class="col col-sm-3 col-md-2 m-2">
-      <a class="btn btn-danger btn-lg" href="" role="button">Dar Baja</a>
-    </div>
-  </div>
-  <div class="row justify-content-center mt-2">
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-secondary btn-lg" href="" role="button">Modificar</a>
-    </div>
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-warning btn-lg" href="" role="button">Eliminar</a>
-    </div>
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-danger btn-lg" href="" role="button">Borrar Todo</a>
-    </div>
-  </div>
-</div>
-
-<!--*****************Regresar*****************-->
-<div class="container-fluid">
-  <div class="row justify-content-start ml-3 mb-3">
-    <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-      <a href="http://localhost/ccreduaem/admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
-    </div>
-  </div>
-</div>
-
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
-</body>
-</html>
+          <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+      </body>
+    </html>

@@ -46,95 +46,96 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
   </div>
   <!--*****************FORMULARIO*****************-->
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block">
-          <form action="">
-            <div class="form-group row mt-2">
-              <div class="col col-6">
-                <label for="nombre">Nombre:</label>
-                <input type="text" class="form-control" name="name" id="nombre">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+        <form action="">
+          <div class="form-group">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <label for="nombre">Nombre:</label>
+              <input type="text" class="form-control" name="name" id="nombre">
               </div>
-              <div class="col col-6">
+              <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <label for="apellidos">Apellidos:</label>
                 <input type="text" class="form-control" name="apellidos" id="apellidos">
               </div>
-              <div class="col col-6 mt-2">
+              <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <label for="edad">Edad:</label>
                 <input type="text" class="form-control" name="edad" id="edad">
               </div>
-              <div class="col col-6 mt-2">
+              <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <label for="carrera">Carrera:</label>
                 <input type="text" class="form-control" name="carrera" id="carrera">
               </div>
-              <div class="col col-6 mt-2">
+              <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <label for="matricula">Matrícula:</label>
                 <input type="text" class="form-control" name="matricula" id="matricula">
               </div>
-              <div class="col col-6 mt-2">
-                <label for="periodo">Periodo:</label>
-                <input type="text" class="form-control" name="periodo" id="periodo">
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-4 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+        <form action="">
+          <div class="form-group">
+          <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <label for="periodo">Periodo:</label>
+            <input type="text" class="form-control" name="periodo" id="periodo">
               </div>
-              <div class="col col-6 mt-2">
+              <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <label for="semestre">Semestre:</label>
                 <input type="text" class="form-control" name="semestre" id="semestre">
               </div>
-              <div class="col col-6 mt-2">
+              <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <label for="turno">Turno:</label>
-                <input type="text" class="form-control" name="profesion" id="profesion">
+                <input type="text" class="form-control" name="turno" id="turno">
               </div>
-              <div class="col col-6 mt-2">
+              <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <label for="username">Usuario:</label>
                 <input type="text" class="form-control" name="username" id="username">
               </div>
-              <div class="col col-6 mt-2">
+              <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <label for="password">Contraseña:</label>
                 <input type="text" class="form-control" name="password" id="password">
               </div>
             </div>
           </form>
         </div>
+                          <!--*****************BOTONES*****************-->
+      <div class="col-xs-4 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+        <div class="form-group row justify-content-center">
+            <div class="col col-xs-8 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-info btn-lg w-100" href="" role="button">Agregar</a>
+            </div>
+            <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-success btn-lg w-100" href="" role="button">Dar Alta</a>
+            </div>
+            <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-danger btn-lg w-100" href="" role="button">Dar Baja</a>
+            </div>
+            <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-secondary btn-lg w-100" href="" role="button">Modificar</a>
+            </div>
+            <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-warning btn-lg w-100" href="" role="button">Eliminar</a>
+            </div>
+            <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
+              <a class="btn btn-danger btn-lg w-100" href="" role="button">Borrar Todo</a>
+              </div>
         </div>
+      </div>
+
+    <!--*****************Regresar*****************-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col justify-content-start mt-5">
+          <a href="http://localhost/ccreduaem/admin_admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
         </div>
       </div>
     </div>
+    <!--*****************Finaliza Formulario*****************-->
 
-    <!--*****************BOTONES*****************-->
-  <div class="container">
-    <div class="row justify-content-center mt-2">
-      <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-        <a class="btn btn-info btn-lg" href="" role="button">Agregar</a>
-      </div>
-      <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-        <a class="btn btn-success btn-lg" href="" role="button">Dar Alta</a>
-      </div>
-      <div class="col col-sm-3 col-md-2 m-2">
-        <a class="btn btn-danger btn-lg" href="" role="button">Dar Baja</a>
-      </div>
-    </div>
-    <div class="row justify-content-center mt-2">
-      <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-        <a class="btn btn-secondary btn-lg" href="" role="button">Modificar</a>
-      </div>
-      <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-        <a class="btn btn-warning btn-lg" href="" role="button">Eliminar</a>
-      </div>
-      <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-        <a class="btn btn-danger btn-lg" href="" role="button">Borrar Todo</a>
-      </div>
-    </div>
-  </div>
-
-  <!--*****************Regresar*****************-->
-  <div class="container-fluid">
-    <div class="row justify-content-start ml-3 mb-3">
-      <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-        <a href="http://localhost/ccreduaem/admin_admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
-      </div>
-    </div>
-  </div>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-  </body>
-  </html>
+          <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+      </body>
+    </html>

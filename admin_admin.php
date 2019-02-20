@@ -48,117 +48,96 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <!--*****************FORMULARIO*****************-->
 
-
 <div class="container">
-    <div class="row">
-    <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-        <form action="">
-          <div class="form-group row">
-            <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+  <div class="row">
+    <div class="col-xs-4 col-sm-12 col-md-4 col-lg-5 col-xl-5">
+      <form action="">
+        <div class="form-group">
+          <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="Nombre">Nombre:</label>
               <input type="text" class="form-control" name="Nombre" id="Nombre">
             </div>
-            <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="Apellidos">Apellidos:</label>
               <input type="text" class="form-control" name="Apellidos" id="Apellidos">
             </div>
-            <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="Edad">Edad:</label>
               <input type="text" class="form-control" name="edad" id="Edad">
             </div>
-            <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="Profesion">Profesión:</label>
               <input type="text" class="form-control" name="Profesion" id="Profesion">
             </div>
-            <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-4 col-sm-12 col-md-4 col-lg-5 col-xl-5">
+      <form action="">
+        <div class="form-group">
+        <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="Periodo">Periodo:</label>
               <input type="text" class="form-control" name="Periodo" id="Periodo">
             </div>
-            <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="Turno">Turno:</label>
               <input type="text" class="form-control" name="Turno" id="Turno">
             </div>
-            <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="Usuario">Usuario:</label>
               <input type="text" class="form-control" name="Usuario" id="Usuario">
             </div>
-            <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <label for="Password">Contraseña:</label>
               <input type="text" class="form-control" name="Password" id="Password">
             </div>
-            <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-              <label for="Permisos">Permisos Asignados:</label>
-              <input type="text" class="form-control" name="Permisos" id="Permisos">
-            </div>
-            </div>
-          </form>
-        </div>
-        <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-          <div class="form-group row justify-content-center">
-          <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-10 col-xl-8 m-2">
+          </div>
+        </form>
+      </div>
+                        <!--*****************BOTONES*****************-->
+    <div class="col-xs-4 col-sm-12 col-md-4 col-lg-2 col-xl-2">
+      <div class="form-group row justify-content-center">
+          <div class="col col-xs-8 col-sm-4 col-md-8 col-lg-12 col-xl-12 m-2">
             <a class="btn btn-info btn-lg w-100" href="" role="button">Agregar</a>
           </div>
-          <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-10 col-xl-8 m-2">
+          <div class="col col-xs-2 col-sm-4 col-md-8 col-lg-12 col-xl-12 m-2">
             <a class="btn btn-success btn-lg w-100" href="" role="button">Dar Alta</a>
           </div>
-          <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-10 col-xl-8 m-2">
+          <div class="col col-xs-2 col-sm-4 col-md-8 col-lg-12 col-xl-12 m-2">
             <a class="btn btn-danger btn-lg w-100" href="" role="button">Dar Baja</a>
           </div>
-          <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-10 col-xl-8 m-2">
+          <div class="col col-xs-2 col-sm-4 col-md-8 col-lg-12 col-xl-12 m-2">
             <a class="btn btn-secondary btn-lg w-100" href="" role="button">Modificar</a>
           </div>
-          <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-10 col-xl-8 m-2">
+          <div class="col col-xs-2 col-sm-4 col-md-8 col-lg-12 col-xl-12 m-2">
             <a class="btn btn-warning btn-lg w-100" href="" role="button">Eliminar</a>
           </div>
-          <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-10 col-xl-8 m-2">
+          <div class="col col-xs-2 col-sm-4 col-md-8 col-lg-12 col-xl-12 m-2">
             <a class="btn btn-danger btn-lg w-100" href="" role="button">Borrar Todo</a>
             </div>
-          </div>
-        </div>
+      </div>
     </div>
-  </div>
 
-  <!--*****************BOTONES*****************-->
-<!--<div class="container">
-  <div class="row justify-content-center mt-2">
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-info btn-lg" href="" role="button">Agregar</a>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_usuarios.php" role="button">Ir a Usuarios</a>
+        </div>
+      </div>
     </div>
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-success btn-lg" href="" role="button">Dar Alta</a>
-    </div>
-    <div class="col col-sm-3 col-md-2 m-2">
-      <a class="btn btn-danger btn-lg" href="" role="button">Dar Baja</a>
-    </div>
-  </div>
-  <div class="row justify-content-center mt-2">
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-secondary btn-lg" href="" role="button">Modificar</a>
-    </div>
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-warning btn-lg" href="" role="button">Eliminar</a>
-    </div>
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-danger btn-lg" href="" role="button">Borrar Todo</a>
-    </div>
-  </div>
-  <div class="row justify-content-center mt-3 mb-3">
-    <div class="col col-sm-12 col-md-2">
-      <a class="btn btn-primary btn-lg" href="http://localhost/ccreduaem/admin_usuarios.php" role="button">Ir a Usuarios</a>
-    </div>
-  </div>
-</div>-->
 
 <!--*****************Regresar*****************-->
-<div class="container">
-  <div class="row justify-content-start mb-3">
-    <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
+<div class="container-fluid">
+  <div class="row justify-content-start mt-3">
+    <div class="col align-self-center">
       <a href="http://localhost/ccreduaem/admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
     </div>
   </div>
 </div>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
-</body>
+<!--*****************Finaliza Formulario*****************-->
+
+      <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>

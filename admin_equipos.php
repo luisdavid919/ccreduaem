@@ -99,9 +99,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <!--*****************BOTONES*****************-->
           <div class="col-xs-4 col-sm-12 col-md-12 col-lg-2 col-xl-2">
             <div class="form-group row justify-content-center">
-              <div class="col col-xs-8 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
-                <a class="btn btn-info btn-lg w-100" href="" role="button">Agregar</a>
-              </div>
               <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-12 col-xl-12 m-2">
                 <a class="btn btn-success btn-lg w-100" href="" role="button">Dar Alta</a>
               </div>
@@ -142,7 +139,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <div class="container-fluid">
             <div class="row justify-content-start mt-3">
               <div class="col align-self-center">
-                <a href="http://localhost/ccreduaem/admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
+                <a href="http://localhost/ccreduaem/consulta_cpuad.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 <?php
 // Initialize the session
 session_start();
@@ -107,16 +108,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="col-xs-4 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="form-group row justify-content-center">
                 <div class="col col-xs-8 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-primary btn-lg w-100" href="http://localhost/ccreduaem/usuario_equipos.php" role="button">CPU</a>
+                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/usuario_equipos.php" role="button">CPU</a>
                 </div>
                 <div class="col col-xs-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-primary btn-lg w-100" href="http://localhost/ccreduaem/usuario_monitor.php" role="button">Monitor</a>
+                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/usuario_monitor.php" role="button">Monitor</a>
                 </div>
                 <div class="col col-xs-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-primary btn-lg w-100" href="http://localhost/ccreduaem/usuario_teclado.php" role="button">Teclado</a>
+                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/usuario_teclado.php" role="button">Teclado</a>
                 </div>
                 <div class="col col-xs-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-primary btn-lg w-100" href="http://localhost/ccreduaem/usuario_mouse.php" role="button">Mouse</a>
+                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/usuario_mouse.php" role="button">Mouse</a>
                 </div>
               </div>
             </div>

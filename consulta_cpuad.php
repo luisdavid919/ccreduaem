@@ -1,3 +1,4 @@
+
 <?php
 // Initialize the session
 session_start();
@@ -41,7 +42,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-        <h3>Consulta de Teclados</h3>
+        <h3>Consulta de CPU</h3>
       </div>
     </div>
   </div>
@@ -51,8 +52,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <!--*****************CONSULTA*****************-->
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="form-group row">
-                <table class="table table-striped table-success table-hover">
-                  <thead class="thead-dark text-center">
+                <table class="table table-striped table-success table-hover text-center">
+                  <thead class="thead-dark">
                     <th>Serial</th>
                     <th>Marca</th>
                     <th>Modelo</th>
@@ -106,29 +107,33 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <!--*****************BOTONES*****************-->
         <div class="col-xs-4 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="form-group row justify-content-center">
-                <div class="col col-xs-8 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/usuario_equipos.php" role="button">CPU</a>
+                <div class="col col-xs-8 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
+                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/consulta_cpuad.php" role="button">CPU</a>
                 </div>
-                <div class="col col-xs-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/usuario_monitor.php" role="button">Monitor</a>
+                <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
+                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/consulta_monitorad.php" role="button">Monitor</a>
                 </div>
-                <div class="col col-xs-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/usuario_teclado.php" role="button">Teclado</a>
+                <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
+                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/consulta_tecladoad.php" role="button">Teclado</a>
                 </div>
-                <div class="col col-xs-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/usuario_mouse.php" role="button">Mouse</a>
+                <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
+                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/consulta_mousead.php" role="button">Mouse</a>
+                </div>
+                <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
+                  <a class="btn btn-info btn-lg w-100" href="http://localhost/ccreduaem/admin_equipos.php" role="button">Agregar</a>
                 </div>
               </div>
             </div>
 
-          <!--*****************Regresar*****************-->
-          <div class="container-fluid">
-            <div class="row justify-content-start mt-3">
-              <div class="col">
-                <a href="http://localhost/ccreduaem/usuario.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
-              </div>
-            </div>
-          </div>
+
+<!--*****************Regresar*****************-->
+<div class="container-fluid">
+  <div class="row justify-content-start">
+    <div class="col align-self-center">
+      <a href="http://localhost/ccreduaem/admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
+    </div>
+  </div>
+</div>
 
 <!--*****************Finaliza Formulario*****************-->
       <script src="js/jquery-3.3.1.min.js"></script>

@@ -47,66 +47,58 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </div>
 
 <!--*****************FORMULARIO*****************-->
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block">
-        <form action="">
-          <div class="form-group row mt-2">
-            <div class="col col-6">
-              <label for="equipo">Equipo:</label>
-              <input type="text" class="form-control" name="equipo" id="equipo">
-            </div>
-            <div class="col col-6">
-              <label for="ipequipo">IP Equipo</label>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+      <form action="">
+        <div class="form-group">
+          <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+             <label for="ipequipo">IP CPU</label>
               <input type="text" class="form-control" name="ipequipo" id="ipequipo">
             </div>
-            <div class="col col-6 mt-2">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
               <label for="archivo">Nombre del Archivo:</label>
               <input type="text" class="form-control" name="archivo" id="archivo">
             </div>
-            <div class="col col-6 mt-2">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
               <label for="formato">Formato:</label>
               <input type="text" class="form-control" name="formato" id="formato">
             </div>
-            <div class="col col-6 mt-2">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
               <label for="hojas">Número De Hojas:</label>
               <input type="text" class="form-control" name="hojas" id="hojas">
             </div>
-            <div class="col col-6 mt-2">
-              <label for="hora">Hora de Impresión:</label>
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+             <label for="hora">Hora de Impresión:</label>
               <input type="text" class="form-control" name="hora" id="hora">
             </div>
-        </form>
-      </div>
-      </div>
-      </div>
+        </div>
+      </form>
     </div>
-  </div>
 
-  <!--*****************BOTONES*****************-->
-<div class="container">
-  <div class="row justify-content-center mt-2">
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-info btn-lg" href="" role="button">Guardar</a>
+                        <!--*****************BOTONES*****************-->
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 align-self-center">
+      <div class="form-group row justify-content-center">
+          <div class="col col-xs-8 col-sm-10 col-md-8 col-lg-8 col-xl-6 m-2">
+            <a class="btn btn-info btn-lg w-100" href="" role="button">Guardar</a>
+          </div>
+          <div class="col col-xs-8 col-sm-10 col-md-8 col-lg-8 col-xl-6 m-2">
+            <a class="btn btn-success btn-lg w-100" href="" role="button">Imprimir</a>
+          </div>
+          <div class="col col-xs-8 col-sm-10 col-md-8 col-lg-8 col-xl-6 m-2">
+            <a class="btn btn-danger btn-lg w-100" href="" role="button">Cancelar</a>
+          </div>
+      </div>
     </div>
-    <div class="col col-xs-1 col-sm-3 col-md-2 m-2">
-      <a class="btn btn-success btn-lg" href="" role="button">Imprimir</a>
-    </div>
-    <div class="col col-sm-3 col-md-2 m-2">
-      <a class="btn btn-danger btn-lg" href="" role="button">Cancelar</a>
-    </div>
-  </div>
-</div>
 
-
-<!--*****************Regresar*****************-->
-<div class="container-fluid">
-  <div class="row justify-content-start mt-3">
-    <div class="col align-self-center">
-      <a href="http://localhost/ccreduaem/usuario.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
-    </div>
-  </div>
-</div>
+          <!--*****************Regresar*****************-->
+          <div class="container-fluid">
+            <div class="row justify-content-start mt-3">
+              <div class="col">
+                <a href="http://localhost/ccreduaem/usuario.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
+              </div>
+            </div>
+          </div>
 
 <!--*****************Finaliza Formulario*****************-->
       <script src="js/jquery-3.3.1.min.js"></script>

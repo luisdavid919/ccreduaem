@@ -121,23 +121,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               </div>
             </div>
 
-<!--*****************Regresar*****************-->
-<div class="container-fluid">
-  <div class="row justify-content-start">
-    <div class="col align-self-center">
-      <a href="http://localhost/ccreduaem/usuario.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
-    </div>
-  </div>
-</div>
-
-<!--*****************Regresar*****************-->
-<div class="container-fluid">
-  <div class="row justify-content-start mt-3">
-    <div class="col align-self-center">
-      <a href="http://localhost/ccreduaem/usuario.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
-    </div>
-  </div>
-</div>
+            
+          <!--*****************Regresar*****************-->
+          <div class="container-fluid">
+            <div class="row justify-content-start mt-3">
+              <div class="col">
+                <a href="http://localhost/ccreduaem/usuario.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
+              </div>
+            </div>
+          </div>
 
 <!--*****************Finaliza Formulario*****************-->
       <script src="js/jquery-3.3.1.min.js"></script>

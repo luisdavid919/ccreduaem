@@ -51,8 +51,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <!--*****************CONSULTA*****************-->
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="form-group row">
-                <table class="table table-striped table-success table-hover">
-                  <thead class="thead-dark text-center">
+                <table class="table table-striped table-success table-hover text-center">
+                  <thead class="thead-dark">
                     <th>Serial</th>
                     <th>Marca</th>
                     <th>Modelo</th>

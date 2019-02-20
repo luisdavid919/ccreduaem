@@ -61,14 +61,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\printer.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-      <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_impresiones.php" role="button">Impresiones</a>
+      <a class="btn btn-primary" href="http://localhost/ccreduaem/consulta_impresiones.php" role="button">Impresiones</a>
       </div>
       </div>
 <!--*****************BITÁCORA*****************-->
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\bitacora.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-        <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_bitacora.php" role="button">Bitácora</a>
+        <a class="btn btn-primary" href="http://localhost/ccreduaem/consulta_bituser.php" role="button">Bitácora</a>
       </div>
       </div>
     </div>

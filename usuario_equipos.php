@@ -54,9 +54,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <div class="form-group row">
                 <table class="table table-striped table-success table-hover text-center">
                   <thead class="thead-dark">
-                    <th>Serial</th>
-                    <th>Marca</th>
+                    <th>Clave Resguardo Patrimonial</th>
+                    <th>IP</th>
+                    <th>MAC</th>
                     <th>Modelo</th>
+                    <th>Marca</th>
+                    <th>Sistema Operativo</th>
+                    <th>Express Service Code</th>
+                    <th>Service Tag</th>
                     <th>Estado</th>
                   </thead>
                   <tr>
@@ -64,14 +69,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
-                  </tr>
-                  <tr>
                     <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                  </tr>
-                  <tr>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
@@ -82,20 +80,62 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
-                  </tr>
-                  <tr>
                     <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                  </tr>
-                  <tr>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                   </tr>
                   <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                  </tr>
+                  <tr>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
+                    <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>

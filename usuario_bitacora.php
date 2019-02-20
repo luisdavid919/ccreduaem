@@ -105,7 +105,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <div class="container-fluid">
   <div class="row justify-content-start mt-3">
     <div class="col align-self-center">
-      <a href="http://localhost/ccreduaem/usuario.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
+      <a href="http://localhost/ccreduaem/consulta_bituser.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
     </div>
   </div>
 </div>

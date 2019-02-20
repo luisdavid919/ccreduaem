@@ -104,7 +104,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <div class="container-fluid">
             <div class="row justify-content-start mt-5">
               <div class="col">
-                <a href="http://localhost/ccreduaem/admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
+                <a href="http://localhost/ccreduaem/consulta_bitad.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
               </div>
             </div>
           </div>

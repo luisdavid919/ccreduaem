@@ -42,7 +42,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-        <h3>Consulta de CPU</h3>
+        <h3>Bitácora</h3>
       </div>
     </div>
   </div>
@@ -54,15 +54,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <div class="form-group row">
                 <table class="table table-striped table-success table-hover text-center">
                   <thead class="thead-dark">
-                    <th>Clave Resguardo Patrimonial</th>
-                    <th>IP</th>
-                    <th>MAC</th>
-                    <th>Modelo</th>
-                    <th>Marca</th>
-                    <th>Sistema Operativo</th>
-                    <th>Express Service Code</th>
-                    <th>Service Tag</th>
-                    <th>Estado</th>
+                    <th>Fecha</th>
+                    <th>Hora de Entrada</th>
+                    <th>Actividades</th>
+                    <th>Hora de Salida</th>
+                    <th>Número de Horas</th>
                   </thead>
                   <tr>
                     <td>Prueba Consulta</td>
@@ -70,16 +66,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
                   </tr>
                   <tr>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
@@ -92,16 +80,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
                   </tr>
                   <tr>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
@@ -114,10 +94,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
                   </tr>
                   <tr>
                     <td>Prueba Consulta</td>
@@ -125,16 +101,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
                   </tr>
                   <tr>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
-                    <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
                     <td>Prueba Consulta</td>
@@ -147,20 +115,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <!--*****************BOTONES*****************-->
         <div class="col-xs-4 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="form-group row justify-content-center">
-                <div class="col col-xs-8 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/consulta_cpuad.php" role="button">CPU</a>
-                </div>
                 <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/consulta_monitorad.php" role="button">Monitor</a>
-                </div>
-                <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/consulta_tecladoad.php" role="button">Teclado</a>
-                </div>
-                <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-success btn-lg w-100" href="http://localhost/ccreduaem/consulta_mousead.php" role="button">Mouse</a>
-                </div>
-                <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-info btn-lg w-100" href="http://localhost/ccreduaem/admin_equipos.php" role="button">Agregar</a>
+                  <a class="btn btn-info btn-lg w-100" href="http://localhost/ccreduaem/admin_bitacora.php" role="button">Agregar</a>
                 </div>
               </div>
             </div>

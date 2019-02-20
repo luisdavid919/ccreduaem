@@ -72,10 +72,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <input type="text" class="form-control" name="marca" id="marca">
             </div>
         </div>
-      </form>
     </div>
     <div class="col-xs-4 col-sm-12 col-md-6 col-lg-5 col-xl-5">
-      <form action="">
         <div class="form-group">
         <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <label for="turno">Sistema Operativo:</label>

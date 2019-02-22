@@ -118,9 +118,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
   </div>
 
-<!--*****************Finaliza Formulario*****************-->
-
+  <!--*****************Finaliza Formulario*****************-->
       <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+    </body>
+  </html>

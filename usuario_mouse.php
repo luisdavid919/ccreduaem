@@ -121,7 +121,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               </div>
             </div>
 
-            
+
           <!--*****************Regresar*****************-->
           <div class="container-fluid">
             <div class="row justify-content-start mt-3">
@@ -130,9 +130,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               </div>
             </div>
           </div>
-
-<!--*****************Finaliza Formulario*****************-->
-      <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+          <!--*****************Finaliza Formulario*****************-->
+              <script src="js/jquery-3.3.1.min.js"></script>
+              <script src="js/popper.min.js"></script>
+              <script src="js/bootstrap.min.js"></script>
+            </body>
+          </html>

@@ -240,8 +240,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
   </div>
 </div>
-                                  <!--*****************Finaliza Formulario*****************-->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<!--*****************Finaliza Formulario*****************-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

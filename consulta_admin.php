@@ -17,6 +17,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <link rel="stylesheet" href="css/fontello.css">
   <link rel="shortcut icon" type="image/x-icon" href="images/fcaei.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script type="text/javascript">
+$(document).ready(function(){
+    $("#hide").on('click', function() {
+        $("#element").hide();
+        return false;
+    });
+    
+    $("#show").on('click', function() {
+        $("#element").show();
+        return false;
+    });
+});
+</script>
 </head>
 <body>
       <!--*****************LOGOS PRINCIPALES*****************-->
@@ -45,14 +58,23 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </div>
   <div class="container">
     <div class="content">
-      <form class="form-inline m-3" role="search" id="buscar">
-      <div class="form-group">
-        <input type="text" name="s" class="form-control" placeholder="Buscar">
+
+      <!--*****************BUSCADOR*****************-->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+                <form class="form-inline" id="search" role="search" name="buscador" method="post" action="search.php"> 
+                 <input id="search" name="buscar" type="search" placeholder="Buscar aquí..." autofocus >
+                <button type="submit" class="btn btn-secondary ml-3" id="search" name="search">&nbsp;<i class="fas fa-search"></i>&nbsp;</i></button>
+                <a href="http://localhost/ccreduaem/consulta_usuarios.php" class="btn btn-info ml-3 mr-3">Usuarios</a>
+              <a href="http://localhost/ccreduaem/add.php" class="btn btn-info">Agregar</a>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <button type="submit" class="btn btn-secondary ml-2 mr-2 ">&nbsp;<i class="fas fa-search"></i>&nbsp;</button>
-  <a href="http://localhost/ccreduaem/add.php" class="btn btn-info">Agregar</a>
-    </form>
- 
+
       <?php
       if(isset($_GET['aksi']) == 'delete'){
         // escaping, additionally removing everything that could be (html/javascript-) code
@@ -63,14 +85,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         }else{
           $delete = mysqli_query($con, "DELETE FROM consult WHERE id='$nik'");
           if($delete){
-            echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Datos eliminado correctamente.</div>';
+            //echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Datos eliminado correctamente.</div>';
           }else{
             echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
           }
         }
       }
+
       ?>
- 
+                                  <!--*****************TABLA*****************-->
       <div class="table-responsive">
       <table class="table table-striped table-success table-hover text-center">
         <thead class="thead-dark">
@@ -83,6 +106,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <th>Turno</th>
           <th></th>
         </thead>
+
         <?php
         if($filter){
           $sql = mysqli_query($con, "SELECT * FROM consult WHERE id='$filter' ORDER BY id ASC");
@@ -107,7 +131,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <td>
  
                 <a href="edit.php?nik='.$row['id'].'" title="Editar" class="btn btn-secondary"><span class="glyphicon glyphicon-edit" aria-hidden="true"><i class="fas fa-edit"></i></span></a>
-                <a href="index.php?aksi=delete&nik='.$row['id'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['name'].'?\')" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"><i class="fas fa-trash-alt"></i></span></a>
+                <a href="consulta_admin.php?aksi=delete&nik='.$row['id'].'" title="Eliminar" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"><i class="fas fa-trash-alt"></i></span></a>
               </td>
             </tr>
             ';
@@ -120,23 +144,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
   </div>
 
-  <!--*****************BOTONES*****************-->
-        <div class="col-xs-4 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="form-group row justify-content-center">
-                <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-info btn-lg w-100" href="http://localhost/ccreduaem/consulta_usuarios.php" role="button">Ir a Usuarios</a>
-                </div>
-                <div class="col col-xs-2 col-sm-4 col-md-4 col-lg-2 col-xl-2 m-2">
-                  <a class="btn btn-info btn-lg w-100" href="http://localhost/ccreduaem/add.php" role="button">Agregar</a>
-                </div>
-              </div>
-            </div>
-
   <!--*****************Regresar*****************-->
-<div class="container">
+<div class="container fixed-bottom">
   <div class="row justify-content-start mt-5">
     <div class="col align-self-center">
-      <a href="http://localhost/ccreduaem/admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="icon-back"></i></a>
+      <a href="http://localhost/ccreduaem/admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="fas fa-chevron-left"></i></a>
     </div>
   </div>
 </div>

@@ -51,45 +51,38 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <div class="container">
   <div class="row">
     <div class="col-xs-4 col-sm-12 col-md-4 col-lg-5 col-xl-5">
-      <form action="">
+      <form action="agregar.php" method="post">
         <div class="form-group">
           <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label for="Nombre">Nombre:</label>
-              <input type="text" class="form-control" name="Nombre" id="Nombre">
+              <label for="nombre">Nombre:</label>
+              <input type="text" class="form-control" name="nombre" id="nombre">
             </div>
             <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label for="Apellidos">Apellidos:</label>
-              <input type="text" class="form-control" name="Apellidos" id="Apellidos">
+              <label for="apellidos">Apellidos:</label>
+              <input type="text" class="form-control" name="apellidos" id="apellidos">
             </div>
             <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label for="Edad">Edad:</label>
-              <input type="text" class="form-control" name="edad" id="Edad">
-            </div>
-            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label for="Profesion">Profesión:</label>
-              <input type="text" class="form-control" name="Profesion" id="Profesion">
+              <label for="edad">Edad:</label>
+              <input type="text" class="form-control" name="edad" id="edad">
             </div>
         </div>
     </div>
     <div class="col-xs-4 col-sm-12 col-md-4 col-lg-5 col-xl-5">
         <div class="form-group">
+          <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <label for="profesion">Profesión:</label>
+            <input type="text" class="form-control" name="profesion" id="profesion">
+          </div>
         <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label for="Periodo">Periodo:</label>
-              <input type="text" class="form-control" name="Periodo" id="Periodo">
+              <label for="periodo">Periodo:</label>
+              <input type="text" class="form-control" name="periodo" id="periodo">
             </div>
             <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label for="Turno">Turno:</label>
-              <input type="text" class="form-control" name="Turno" id="Turno">
-            </div>
-            <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label for="Usuario">Usuario:</label>
-              <input type="text" class="form-control" name="Usuario" id="Usuario">
-            </div>
-            <div class="col col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label for="Password">Contraseña:</label>
-              <input type="text" class="form-control" name="Password" id="Password">
+              <label for="turno">Turno:</label>
+              <input type="text" class="form-control" name="turno" id="turno">
             </div>
           </div>
+          <input type="submit" name="enviar" value="Enviar">
         </form>
       </div>
                         <!--*****************BOTONES*****************-->

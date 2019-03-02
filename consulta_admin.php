@@ -175,7 +175,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           if($delete){
             echo '<div class="alert bg-warning alert-dismissable text-center"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Datos Eliminados Correctamente</strong></div>';
           }else{
-            echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
+            echo '<div class="alert bg-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
           }
         }
       }
@@ -201,11 +201,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             echo '<div class="alert bg-warning alert-dismissable text-center"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Datos Almacenados Correctamente</strong></div>';
             
             }else{
-              echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error. No se pudo guardar los datos !</div>';
+              echo '<div class="alert bg-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error. No se pudo guardar los datos !</div>';
             }
            
         }else{
-          echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error. código existente!</div>';
+          echo '<div class="alert bg-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error. código existente!</div>';
         }
       }
       ?>
@@ -248,9 +248,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               </td>
               <td>
  
-                <a href="edit.php?nik='.$row['id'].'" title="Editar" name="editar" class="btn btn-warning"><span aria-hidden="true"><i class="fas fa-edit"></i></span></a>
+                <a href="edit.php?nik='.$row['id'].'" title="Editar" name="editar" class="btn bg-warning"><span aria-hidden="true"><i class="fas fa-edit"></i></span></a>
 
-                <a href="consulta_admin.php?aksi=delete&nik='.$row['id'].'" title="Eliminar" onclick="return confirm(\'¿Desea borrar los datos '.$row['name'].'?\')"  class="btn btn-danger btn-sm"><span aria-hidden="true"><i class="fas fa-trash-alt"></i></span></a>
+                <a href="consulta_admin.php?aksi=delete&nik='.$row['id'].'" title="Eliminar" onclick="return confirm(\'¿Desea borrar los datos '.$row['name'].'?\')"  class="btn bg-danger btn-sm"><span aria-hidden="true"><i class="fas fa-trash-alt"></i></span></a>
               </td>
             </tr>
             ';

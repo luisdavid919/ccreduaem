@@ -1,12 +1,16 @@
 <?php
-/*Datos de conexion a la base de datos*/
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "sistema_inventario_bd";
- 
-$con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
- 
-if(mysqli_connect_errno()){
-	echo 'No se pudo conectar a la base de datos : '.mysqli_connect_error();
-}
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=sistema_inventario_bd", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Conectado Correctamente"; 
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+?>

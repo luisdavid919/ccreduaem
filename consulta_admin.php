@@ -1,6 +1,5 @@
 <?php
 include("conexion.php");
-$filter="";
 session_start();
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: index.php");
@@ -43,7 +42,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-        <h3>Datos Administradores</h3>
+        <h3>Administradores</h3>
       </div>
     </div>
   </div>
@@ -53,12 +52,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <div class="col">
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add"><i class="fas fa-plus-square">  Agregar Datos</i></button>
                     </div> 
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert text-center">
-                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                        <button type="button text-center" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>                 
+                    <!--CREAR ALERTA CON PHP-->
+            <?php if(isset($_SESSION['response'])){ ?>
+                <div class="alert text-center alert-<?= $_SESSION['res_type']; ?> alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <?= $_SESSION['response']; ?>
+                </div>
+            <?php } unset($_SESSION['response']); ?>                
                 </div>
             </div>
 
@@ -66,57 +66,40 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="container">
         <div class="row">
           <div class="col mt-3">
-    <div class="table-responsive">                  
-                                <?php
-                    // Include config file
-                    require_once "conexion.php";
-                    
-                    // Attempt select query execution
-                    $sql = "SELECT * FROM consult";
-                    if($result = $mysqli->query($sql)){
-                        if($result->num_rows > 0){
-                            echo "<table class='table table-striped table-success table-hover text-center'>";
-                                echo "<thead class='thead-dark'>";
-                                    echo "<tr>";
-                                        echo "<th>Nombre</th>";
-                                        echo "<th>Apellidos</th>";
-                                        echo "<th>Edad</th>";
-                                        echo "<th>Profesión</th>";
-                                        echo "<th>Periodo</th>";
-                                        echo "<th>Turno</th>";
-                                        echo "<th>Action</th>";
-                                    echo "</tr>";
-                                echo "</thead>";
-                                echo "<tbody>";
-                                while($row = $result->fetch_assoc()){
-                                    echo "<tr>";
-                                        echo "<td>" . $row['name'] . "</td>";
-                                        echo "<td>" . $row['lastname'] . "</td>";
-                                        echo "<td>" . $row['age'] . "</td>";
-                                        echo "<td>" . $row['profession'] . "</td>";
-                                        echo "<td>" . $row['period'] . "</td>";
-                                        echo "<td>" . $row['turn'] . "</td>";
-                                        echo "<td>";
-                                           
-                                            echo"<a href='#edit' class='edit' data-toggle='modal'><i class='far fa-edit m-2 btn btn-warning' style='color:black;' data-toggle='tooltip' title='Editar Datos'></i></a>";
-                                            echo"<a href='#delete' class='delete' data-toggle='modal'><i class='fas fa-trash-alt m-2 btn bg-danger' style='color:black;' data-toggle='tooltip' title='Eliminar Datos'></i></a>";
-                                        echo "</td>";
-                                    echo "</tr>";
-                                }
-                                echo "</tbody>";                            
-                            echo "</table>";
-                            // Free result set
-                            $result->free();
-                        } else{
-                            echo "<p class='lead'><em>No records were found.</em></p>";
-                        }
-                    } else{
-                        echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
+        <div class="table-responsive">
+        <table class="table table-striped table-success table-hover text-center">
+            <thead class="thead-dark">
+
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th>Profesión</th>
+                    <th>Periodo</th>
+                    <th>Turno</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+            <?php foreach ($conn->query('SELECT * FROM consult') as $row){ ?> 
+                    <tr>
+                        <td><?php echo $row['name'] ?></td>
+                        <td><?php echo $row['lastname'] ?></td>
+                        <td><?php echo $row['age'] ?></td>
+                        <td><?php echo $row['profession'] ?></td>
+                        <td><?php echo $row['period'] ?></td>
+                        <td><?php echo $row['turn'] ?></td>
+                        <td>
+                            <a href='#edit' id="edit" class='edit' data-toggle='modal'><i class='far fa-edit m-2 btn btn-warning' style='color:black;' data-toggle='tooltip' title='Editar Datos'></i></a>
+                            <a href='#delete' id="delete" class='delete' data-toggle='modal'><i class='fas fa-trash-alt m-2 btn bg-danger' style='color:black;' data-toggle='tooltip' title='Eliminar Datos'></i></a>
+                        </td>
+                    </tr>
+            <?php
                     }
-                    
-                    // Close connection
-                    $mysqli->close();
-                    ?>
+                ?>
+            </table>
+</body>
+</html>
     </div>
 </div>
 </div>
@@ -126,52 +109,51 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div id="add" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="" method="POST">
+                <form action="action.php" method="POST">
                     <div class="modal-header">                      
                         <h4 class="modal-title">Agregar Datos</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">                    
                         <div class="form-group">
-                            <label>Nombre:</label>
-                            <input type="text" class="form-control" required>
+                            <label for="name">Nombre:</label>
+                            <input type="text" class="form-control" name="name" id="name" required>
                         </div>
                         <div class="form-group">
-                            <label>Apellidos:</label>
-                            <input type="text" class="form-control" required>
+                            <label for="lastname">Apellidos:</label>
+                            <input type="text" class="form-control" name="lastname" id="lastname" required>
                         </div>
                         <div class="form-group">
-                            <label>Edad:</label>
-                            <input type="text" class="form-control" required>
+                            <label for="age">Edad:</label>
+                            <input type="text" class="form-control" name="age" id="age" required>
                         </div>
                         <div class="form-group">
-                            <label>Profesión:</label>
-                            <input type="text" class="form-control" required>
+                            <label for="profession">Profesión:</label>
+                            <input type="text" class="form-control" name="profession" id="profession" required>
                         </div>
                         <div class="form-group">
-                            <label>Periodo:</label>
-                            <input type="text" class="form-control" required>
+                            <label for="period">Periodo:</label>
+                            <input type="text" class="form-control" name="period" id="period" required>
                         </div>
                         <div class="form-group">
-                            <label>Turno</label>
-                            <input type="text" class="form-control" required>
+                            <label for="turn">Turno</label>
+                            <input type="text" class="form-control" name="turn" id="turn" required>
                         </div>                  
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-info" data-dismiss="modal" value="Cancelar">
-                        <input type="submit" class="btn btn-success" value="Agregar">
+                        <input type="submit" class="btn btn-success" name="adding" value="Agregar">
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-
     <!-- Edit Modal HTML -->
     <div id="edit" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="" method="POST">
+                <form action="action.php" method="POST">
                     <div class="modal-header">                      
                         <h4 class="modal-title">Editar Datos</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -199,7 +181,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         </div>
                         <div class="form-group">
                             <label>Turno</label>
-                            <input type="text" value="<?php echo $row ['turn']; ?>" class="form-control" required>
+                            <input type="text" class="form-control" required>
                         </div>                  
                     </div>
                     <div class="modal-footer">
@@ -215,14 +197,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div id="delete" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form>
+                <form id="delete" action="delete.php">
                     <div class="modal-header">                      
                         <h4 class="modal-title">Eliminar Datos</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">                    
                         <p>¿Estás Seguro de Eliminar Esos Datos?</p>
-                        <p class="text-warning"><small>This action cannot be undone.</small></p>
+                        <p class="text-danger"><small>Se Borrarán Los Datos De Manera Permanente</small></p>
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-info" data-dismiss="modal" value="Cancelar">
@@ -232,7 +214,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </div>
         </div>
     </div>
-
+   
      <!--*****************Regresar*****************-->
 <div class="container fixed-bottom">
   <div class="row justify-content-start mt-5">

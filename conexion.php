@@ -1,16 +1,16 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+/* Database credentials. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', "");
+define('DB_NAME', 'sistema_inventario_bd');
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=sistema_inventario_bd", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //echo "Conectado Correctamente"; 
-    }
-catch(PDOException $e)
-    {
-    echo "Connection failed: " . $e->getMessage();
-    }
+/* Attempt to connect to MySQL database */
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+// Check connection
+if($link === false){
+    die("ERROR: La conexión ha fallado" . mysqli_connect_error());
+}
 ?>

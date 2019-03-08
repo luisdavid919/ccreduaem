@@ -98,8 +98,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     }
                 ?>
             </table>
-</body>
-</html>
     </div>
 </div>
 </div>

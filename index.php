@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Prepare a select statement
         $sql = "SELECT id, usuario, password FROM administrador WHERE usuario = ?";
 
-        if($stmt = mysqli_prepare($con, $sql)){
+        if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
 
@@ -84,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Close connection
-    mysqli_close($con);
+    mysqli_close($link);
 }
 ?>
 
@@ -152,6 +152,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   </div>
 </div>
                                   <!--*****************Finaliza Formulario*****************-->
+
+                                  <footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>

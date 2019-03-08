@@ -56,7 +56,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   		<?php 
 	if(isset($_SESSION['message'])){
 		?>
-		<div class="alert alert-warning text-center alert-dismissible fade show mt-3" role="alert">
+		<div class="alert alert-warning text-center alert-dismissible fade show mt-3" role="alert" id="mensaje">
   		<strong><?php echo $_SESSION['message']; ?></strong>
   		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
     	<span aria-hidden="true">&times;</span>
@@ -134,6 +134,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			</div>
 
 <?php include('AgregarModal.php'); ?>
+<script>
+setTimeout(function() {
+    $('#mensaje').fadeOut('fast');
+}, 3000);
+</script>
+
+
 	<script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

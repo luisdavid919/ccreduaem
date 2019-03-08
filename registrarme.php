@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $email = trim($_POST['correo']);
     }
     // Validate email
-    if(empty(trim($_POST["correo"]))){
+    if(empty(trim($_POST['correo']))){
         $email_err = "Por Favor Ingrese Su Correo";
     } else{
         // Prepare a select statement
@@ -62,7 +62,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
 
     // Validate username
-    if(empty(trim($_POST["usuario"]))){
+    if(empty(trim($_POST['usuario']))){
         $username_err = "Por favor ingresa un nombre de usuario";
     } else{
         // Prepare a select statement
@@ -73,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_bind_param($stmt, "s", $param_username);
 
             // Set parameters
-            $param_username = trim($_POST["usuario"]);
+            $param_username = trim($_POST['usuario']);
 
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -83,7 +83,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     $username_err = "Este nombre de usuario ya existe";
                 } else{
-                    $username = trim($_POST["usuario"]);
+                    $username = trim($_POST['usuario']);
                       }
                   } else{
                 echo "Oops! Algo falló. Por favor intenta de nuevo";
@@ -104,7 +104,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate confirm password
-    if(empty(trim($_POST["confirmar"]))){
+    if(empty(trim($_POST['confirmar']))){
         $confirm_password_err = 'Reingresa el password';
     } else{
         $confirm_password = trim($_POST['confirmar']);

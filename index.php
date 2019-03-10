@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, usuario, password FROM administrador WHERE usuario = ?";
+        $sql = "SELECT id, usuario, password FROM login WHERE usuario = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -97,6 +97,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/fontello.css">
   <link rel="shortcut icon" type="image/x-icon" href="images/fcaei.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -124,6 +127,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <div class="row justify-content-center">
     <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block mt-5">
         <h2>Iniciar Sesión</h2>
+        <?php 
+  if(isset($_SESSION['message'])){
+    ?>
+    <div class="alert alert-info text-center alert-dismissible fade show mt-3" role="alert" id="mensaje">
+      <strong><?php echo $_SESSION['message']; ?></strong>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+    <?php
+
+    unset($_SESSION['message']);
+  }
+?>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
           <div class="form-group row justify-content-center <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-6 text-center mt-2">
@@ -147,13 +164,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <br>
       </form>
         <p class="form-text text-center"><strong>Si Usted No Está Registrado, Por Favor Regístrese de Acuerdo a su servicio</p></strong>
-        <p class="text-center"><strong><a href="registrarme.php">¡Registrarme!</a></strong></p>
+        <p class="text-center"><strong><a href="#registrar" data-toggle="modal">¡Registrarme!</a></strong></p>
     </div>
   </div>
 </div>
                                   <!--*****************Finaliza Formulario*****************-->
 
-                                  <footer class="page-footer font-small blue">
+                                  <footer class="page-footer font-small">
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">
@@ -162,6 +179,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <!-- Copyright -->
 
 </footer>
+<?php include('RegistrarmeModal.php'); ?>
+<script>
+setTimeout(function() {
+    $('#mensaje').fadeOut('fast');
+}, 3000);
+</script>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>

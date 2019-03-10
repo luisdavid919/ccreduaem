@@ -28,17 +28,37 @@
                             <label class="control-label" for="enroll">Matrícula:</label>
                             <input type="text" class="form-control" name="enroll" value="<?php echo $row['enroll']; ?>">
                         </div>
-                <div class="form-group">
-                            <label class="control-label" for="period">Periodo:</label>
-                            <input type="text" class="form-control" name="period" value="<?php echo $row['period']; ?>">
-                        </div>
                         <div class="form-group">
-                            <label class="control-label" for="sem">Semestre:</label>
-                            <input type="text" class="form-control" name="sem" value="<?php echo $row['sem']; ?>">
+                             <label class="control-label" for="period">Periodo:</label>
+                             <select id="period" class="form-control" name="period" value="<?php echo $row['period']; ?>">
+                                <option selected>Enero-Junio 2019</option>
+                                <option>Agosto-Diciembre 2019</option>
+                                <option>Enero-Junio 2020</option>
+                                <option>Agosto-Diciembre 2020</option>
+                                <option>Enero-Junio 2021</option>
+                                <option>Agosto-Diciembre 2021</option>
+                                <option>Enero-Junio 2022</option>
+                                <option>Agosto-Diciembre 2022</option>
+                                <option>Enero-Junio 2023</option>
+                                </select>
+                        </div> 
+                <div class="form-group">
+                             <label class="control-label" for="sem">Semestre:</label>
+                             <select id="sem" class="form-control" name="sem" value="<?php echo $row['sem']; ?>">
+                                <option selected>4° Semestre</option>
+                                <option>5° Semestre</option>
+                                <option>6° Semestre</option>
+                                <option>7° Semestre</option>
+                                <option>8° Semestre</option>
+                                <option>Egresado</option>
+                                </select>
                         </div>
                 <div class="form-group">
-                            <label class="control-label" for="turn">Turno:</label>
-                            <input type="text" class="form-control" name="turn" value="<?php echo $row['turn']; ?>">
+                             <label class="control-label" for="turn">Turno:</label>
+                             <select id="turn" class="form-control" name="turn" value="<?php echo $row['turn']; ?>">
+                                <option selected>Matutino</option>
+                                <option>Vespertino</option>
+                                </select>
                         </div>
 			</div>
             <div class="modal-footer">
@@ -65,7 +85,7 @@
 				<h4 class="text-center"><?php echo $row['name']; ?></h4>
 			</div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-info" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>
                 <a href="BorrarRegistro.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Eliminar</a>
             </div>
 

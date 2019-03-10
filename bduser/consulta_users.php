@@ -56,7 +56,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   		<?php 
 	if(isset($_SESSION['message'])){
 		?>
-		<div class="alert alert-warning text-center alert-dismissible fade show mt-3" role="alert">
+		<div class="alert alert-warning text-center alert-dismissible fade show mt-3" role="alert" id="mensaje">
   		<strong><?php echo $_SESSION['message']; ?></strong>
   		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
     	<span aria-hidden="true">&times;</span>
@@ -83,6 +83,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<th>Periodo</th>
 		<th>Semestre</th>
 		<th>Turno</th>
+		<th>Servicios</th>
 		<th></th>
 	</thead>
 	<tbody>
@@ -105,6 +106,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<td><?php echo $row['period']; ?></td>
 						<td><?php echo $row['sem']; ?></td>
 						<td><?php echo $row['turn']; ?></td>
+						<td><?php echo $row['services']; ?></td>
 						<td>
 							<a href="#edit_<?php echo $row['id']; ?>" data-toggle="modal"><i class="far fa-edit m-2 btn btn-warning" style="color:black;" data-toggle="tooltip" title="Editar Datos"></i></a>
 							<a href="#delete_<?php echo $row['id']; ?>" data-toggle="modal"><i class="fas fa-trash-alt m-2 btn bg-danger" style='color:black;' data-toggle="tooltip" title="Eliminar Datos"></i></a>
@@ -138,6 +140,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			</div>
 
 <?php include('AgregarModal.php'); ?>
+<script>
+setTimeout(function() {
+    $('#mensaje').fadeOut('fast');
+}, 3000);
+</script>
 	<script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

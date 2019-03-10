@@ -29,17 +29,37 @@
                             <input type="text" class="form-control" name="enroll" id="enroll" required>
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="period">Periodo:</label>
-                            <input type="text" class="form-control" name="period" id="period" required>
+                             <label class="control-label" for="period">Periodo:</label>
+                             <select id="period" class="form-control" name="period" required>
+                                <option selected>Enero-Junio 2019</option>
+                                <option>Agosto-Diciembre 2019</option>
+                                <option>Enero-Junio 2020</option>
+                                <option>Agosto-Diciembre 2020</option>
+                                <option>Enero-Junio 2021</option>
+                                <option>Agosto-Diciembre 2021</option>
+                                <option>Enero-Junio 2022</option>
+                                <option>Agosto-Diciembre 2022</option>
+                                <option>Enero-Junio 2023</option>
+                                </select>
+                        </div> 
+                        <div class="form-group">
+                             <label class="control-label" for="sem">Semestre:</label>
+                             <select id="sem" class="form-control" name="sem" required>
+                                <option selected>4° Semestre</option>
+                                <option>5° Semestre</option>
+                                <option>6° Semestre</option>
+                                <option>7° Semestre</option>
+                                <option>8° Semestre</option>
+                                <option>Egresado</option>
+                                </select>
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="sem">Semestre:</label>
-                            <input type="text" class="form-control" name="sem" id="sem" required>
-                        </div> 
-				<div class="form-group">
-                            <label class="control-label" for="turn">Turno:</label>
-                            <input type="text" class="form-control" name="turn" id="turn" required>
-                        </div> 
+                             <label class="control-label" for="turn">Turno:</label>
+                             <select id="turn" class="form-control" name="turn" required>
+                                <option selected>Matutino</option>
+                                <option>Vespertino</option>
+                                </select>
+                        </div>
             </div> 
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>

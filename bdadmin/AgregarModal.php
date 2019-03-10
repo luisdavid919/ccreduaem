@@ -25,13 +25,26 @@
                             <input type="text" class="form-control" name="profession" id="profession" required>
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="period">Periodo:</label>
-                            <input type="text" class="form-control" name="period" id="period" required>
+                             <label class="control-label" for="period">Periodo:</label>
+                             <select id="period" class="form-control" name="period" required>
+                                <option selected>Enero-Junio 2019</option>
+                                <option>Agosto-Diciembre 2019</option>
+                                <option>Enero-Junio 2020</option>
+                                <option>Agosto-Diciembre 2020</option>
+                                <option>Enero-Junio 2021</option>
+                                <option>Agosto-Diciembre 2021</option>
+                                <option>Enero-Junio 2022</option>
+                                <option>Agosto-Diciembre 2022</option>
+                                <option>Enero-Junio 2023</option>
+                                </select>
                         </div> 
-				<div class="form-group">
-                            <label class="control-label" for="turn">Turno:</label>
-                            <input type="text" class="form-control" name="turn" id="turn" required>
-                        </div> 
+				        <div class="form-group">
+                             <label class="control-label" for="turn">Turno:</label>
+                             <select id="turn" class="form-control" name="turn" required>
+                                <option selected>Matutino</option>
+                                <option>Vespertino</option>
+                                </select>
+                        </div>
             </div> 
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>

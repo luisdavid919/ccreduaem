@@ -3,7 +3,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">                      
-                        <h4 class="modal-title" id="myModalLabel">Editar Datos</h4>
+                        <h4 class="modal-title" id="myModalLabel">Agregar Datos</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
             <div class="modal-body">
@@ -24,7 +24,11 @@
                             <label class="control-label" for="profession">Profesión:</label>
                             <input type="text" class="form-control" name="profession" value="<?php echo $row['profession']; ?>">
                         </div>
-                <div class="form-group">
+                        <div class="form-group">
+                            <label class="control-label" for="enroll">Matrícula:</label>
+                            <input type="text" class="form-control" name="enroll" value="<?php echo $row['enroll']; ?>">
+                        </div>
+                        <div class="form-group">
                              <label class="control-label" for="period">Periodo:</label>
                              <select id="period" class="form-control" name="period" value="<?php echo $row['period']; ?>">
                                 <option selected>Enero-Junio 2019</option>
@@ -36,6 +40,17 @@
                                 <option>Enero-Junio 2022</option>
                                 <option>Agosto-Diciembre 2022</option>
                                 <option>Enero-Junio 2023</option>
+                                </select>
+                        </div> 
+                <div class="form-group">
+                             <label class="control-label" for="sem">Semestre:</label>
+                             <select id="sem" class="form-control" name="sem" value="<?php echo $row['sem']; ?>">
+                                <option selected>4° Semestre</option>
+                                <option>5° Semestre</option>
+                                <option>6° Semestre</option>
+                                <option>7° Semestre</option>
+                                <option>8° Semestre</option>
+                                <option>Egresado</option>
                                 </select>
                         </div>
                 <div class="form-group">

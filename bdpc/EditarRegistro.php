@@ -7,16 +7,17 @@
 		$db = $database->open();
 		try{
 			$id = $_GET['id'];
-			$name=$_POST['name'];
-			$lastname=$_POST['lastname'];
-			$age=$_POST['age'];
-			$profession=$_POST['profession'];
-			$enroll=$_POST['enroll'];
-			$period=$_POST['period'];
-			$sem=$_POST['sem'];
-			$turn=$_POST['turn'];
+			$clave=$_POST['clave'];
+			$ip=$_POST['ip'];
+			$mac=$_POST['mac'];
+			$model=$_POST['model'];
+			$marc=$_POST['marc'];
+			$so=$_POST['so'];
+			$express=$_POST['express'];
+			$tag=$_POST['tag'];
+			$estado=$_POST['estado'];
 
-			$sql = "UPDATE estudiante SET name = '$name', lastname = '$lastname', age = '$age', profession = '$profession', enroll = '$enroll', period = '$period', sem = '$sem', turn = '$turn' WHERE id = '$id'";
+			$sql = "UPDATE pc SET clave = '$clave', ip = '$ip', mac = '$mac', model = '$model', marc = '$marc', so = '$so', express = '$express', tag = '$tag', estado = '$estado' WHERE id = '$id'";
 			//if-else statement in executing our query
 			$_SESSION['message'] = ( $db->exec($sql) ) ? '¡Datos Actualizados Correctamente!' : 'No se Actualizaron Los Datos';
 
@@ -32,6 +33,6 @@
 		$_SESSION['message'] = 'Complete el formulario de edición';
 	}
 
-	header('location: consulta_users.php');
+	header('location: consulta_pc.php');
 
 ?>

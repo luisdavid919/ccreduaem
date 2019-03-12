@@ -81,7 +81,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<th>Profesión</th>
 		<th>Periodo</th>
 		<th>Turno</th>
-		<th></th>
+		<th colspan="2">Acciones</th>
 	</thead>
 	<tbody>
 		<?php
@@ -103,6 +103,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<td><?php echo $row['turn']; ?></td>
 						<td>
 							<a href="#edit_<?php echo $row['id']; ?>" data-toggle="modal"><i class="far fa-edit m-2 btn btn-warning" style="color:black;" data-toggle="tooltip" title="Editar Datos"></i></a>
+						</td>
+						<td>
 							<a href="#delete_<?php echo $row['id']; ?>" data-toggle="modal"><i class="fas fa-trash-alt m-2 btn bg-danger" style='color:black;' data-toggle="tooltip" title="Eliminar Datos"></i></a>
 						</td>
 						<?php include('BorrarEditarModal.php'); ?>

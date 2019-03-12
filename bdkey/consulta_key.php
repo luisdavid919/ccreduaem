@@ -42,8 +42,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-      	<h3>Servicios y Prácticas</h3>
-      	<h5>Estudiantes que aportarán su experiencia.</h5>
+      	<h3>EQUIPOS</h3>
+      	<h2>Teclados</h2>
 	</div>
     </div>
   </div>
@@ -52,7 +52,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   	<div class="row">
   		<div class="col">
   			<a href="#addnew" class="btn btn-success" data-toggle="modal"><i class="fas fa-plus-square"></i> Agregar Datos</a>
-  			<a href="http://localhost/ccreduaem/bdadmin/consulta_admin.php" class="btn btn-info" role="button"><i class="fas fa-users"></i> Ver Aministradores</a>
+  			<a href="http://localhost/ccreduaem/bdpc/consulta_pc.php" class="btn btn-info bg-primary" role="button"><i class="fas fa-hdd"></i> CPU</a>
+  			<a href="http://localhost/ccreduaem/bdmonitor/consulta_monitor.php" class="btn btn-dark" role="button"><i class="fas fa-desktop"></i> Monitores</a>
+  			<a href="http://localhost/ccreduaem/bdmouse/consulta_mouse.php" class="btn btn-light" role="button"><i class="fas fa-mouse-pointer"></i> Mouse's</a>
   		<?php 
 	if(isset($_SESSION['message'])){
 		?>
@@ -134,7 +136,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			<div class="container-fluid fixed-bottom">
 			  <div class="row m-5">
 			    <div class="col">
-			      <a href="http://localhost/ccreduaem/bdadmin/consulta_admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="fas fa-chevron-left fa-2x" style="color:black;"></i></a>
+			      <a href="http://localhost/ccreduaem/admin.php" data-toggle="tooltip" data-placement="right" title="Regresar"><i class="fas fa-chevron-left fa-2x" style="color:black;"></i></a>
 			    </div>
 			  </div>
 			</div>

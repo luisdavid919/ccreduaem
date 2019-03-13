@@ -94,6 +94,7 @@ textarea {
 		<th>Express</th>
 		<th>Tag</th>
 		<th>Estado</th>
+		<th>Descripción</th>
 		<th colspan="2">Acciones</th>
 	</thead>
 	<tbody>
@@ -117,6 +118,7 @@ textarea {
 						<td><?php echo $row['express']; ?></td>
 						<td><?php echo $row['tag']; ?></td>
 						<td><?php echo $row['estado']; ?></td>
+						<td><?php echo $row['descrip']; ?></td>
 						<td>
 							<a href="#edit_<?php echo $row['id']; ?>" data-toggle="modal"><i class="far fa-edit m-2 btn btn-warning" style="color:black;" data-toggle="tooltip" title="Editar Datos"></i></a>
 							</td>
@@ -166,6 +168,18 @@ function show2(){
 function show3(){
   document.getElementById('div1').style.display = 'block';
 }
+</script>
+<script>
+function ver1(){
+  document.getElementById('div2').style.display ='none';
+}
+function ver2(){
+  document.getElementById('div2').style.display = 'none';
+}
+function ver3(){
+  document.getElementById('div2').style.display = 'block';
+}
+
 </script>
 
 	<script src="../js/jquery-3.3.1.min.js"></script>

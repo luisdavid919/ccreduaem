@@ -36,10 +36,8 @@ h1{
     /*Color de Boton*/
     .btn-primary{
       font-size: 18px;
-      color: #b6d7a8;
       font-family: italic;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-      background-color: #085394;
       border: none;
       margin-top: 10px;
       width: 105px;

@@ -16,9 +16,8 @@
 			$express=$_POST['express'];
 			$tag=$_POST['tag'];
 			$estado=$_POST['estado'];
-			$descrip=$_POST['descrip'];
 
-			$sql = "UPDATE pc SET clave = '$clave', ip = '$ip', mac = '$mac', model = '$model', marc = '$marc', so = '$so', express = '$express', tag = '$tag', estado = '$estado', descrip = '$descrip' WHERE id = '$id'";
+			$sql = "UPDATE pc SET clave = '$clave', ip = '$ip', mac = '$mac', model = '$model', marc = '$marc', so = '$so', express = '$express', tag = '$tag', estado = '$estado' WHERE id = '$id'";
 			//if-else statement in executing our query
 			$_SESSION['message'] = ( $db->exec($sql) ) ? '¡Datos Actualizados Correctamente!' : 'No se Actualizaron Los Datos';
 

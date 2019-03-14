@@ -22,6 +22,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	.hide {
+  display: none;
+}
+textarea {
+  resize: none;
+}
+</style>
 </head>
 <body>
 	 <!--*****************LOGOS PRINCIPALES*****************-->
@@ -76,7 +84,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="row">
           <div class="col mt-2">
         <table class="table table-striped table-info table-hover text-center">
-            <thead class="thead-light">
+            <thead class="bg-warning">
 		<th>Nombre</th>
 		<th>Apellidos</th>
 		<th>Edad</th>
@@ -142,11 +150,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			</div>
 
 <?php include('AgregarModal.php'); ?>
-<!--script>
+<script>
 setTimeout(function() {
     $('#mensaje').fadeOut('fast');
 }, 3000);
-</script-->
+
+function show1(){
+  document.getElementById('div1').style.display ='none';
+}
+function show2(){
+  document.getElementById('div1').style.display = 'none';
+}
+function show3(){
+  document.getElementById('div1').style.display = 'block';
+}
+</script>
+
 	<script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

@@ -55,13 +55,9 @@
                         </div>
                         <div class="form-group col-lg-6">
                         <label for="estado" class="control-label">Estado:</label>
-                        <label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno" onclick="show1();" />Bueno</label>
-                        <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular" onclick="show2();" />Regular</label>
-                        <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo" onclick="show3();" />Malo</label>
-                            <div id="div1" class="hide">
-                            <label>Explique su situacion con ese Equipo:</label>
-                            <textarea name="textarea" cols="100" id="descrip" name="descrip">&nbsp;</textarea>
-                            </div>
+                        <label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno">Bueno</label>
+                        <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular">Regular</label>
+                        <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo">Malo</label>
                         </div>
                     </div>
             </div> 

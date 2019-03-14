@@ -55,13 +55,9 @@
                         </div>
                         <div class="form-group col-lg-6">
                         <label for="estado" class="control-label">Estado:</label>
-                        <label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno" value="<?php echo $row['estado']; ?>" onclick="ver1();" />Bueno</label>
-                        <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular" value="<?php echo $row['estado']; ?>" onclick="ver2();" />Regular</label>
-                        <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo" value="<?php echo $row['estado']; ?>" onclick="ver3();" />Malo</label>
-                            <div id="div2" class="hide">
-                            <label for="descrip" class="control-label">Explique su situacion con ese Equipo:</label>
-                            <textarea name="textarea" cols="100" id="descrip" name="descrip" value="<?php echo $row['descrip']; ?>" onclick="ver3();">&nbsp;</textarea>
-                            </div>
+                        <label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno" value="<?php echo $row['estado']; ?>">Bueno</label>
+                        <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular" value="<?php echo $row['estado']; ?>">Regular</label>
+                        <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo" value="<?php echo $row['estado']; ?>">Malo</label>
                         </div>
                     </div>
 			</div>

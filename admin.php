@@ -57,28 +57,28 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\monitor.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-      <a class="btn btn-primary" href="http://localhost/ccreduaem/bdpc/consulta_pc.php" role="button">Equipos</a>
+      <a class="btn btn-primary bg-primary" href="http://localhost/ccreduaem/bdpc/consulta_pc.php" role="button">Equipos</a>
       </div>
       </div>
 <!--*****************DISPOSITIVOS*****************-->
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\printer.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-      <a class="btn btn-primary" href="http://localhost/ccreduaem/consulta_dispad.php" role="button">Dispositivos</a>
+      <a class="btn btn-primary bg-primary" href="http://localhost/ccreduaem/consulta_dispad.php" role="button">Dispositivos</a>
       </div>
       </div>
 <!--*****************USUARIOS*****************-->
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\user.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-        <a class="btn btn-primary" href="http://localhost/ccreduaem/bdadmin/consulta_admin.php" role="button">Usuarios</a>
+        <a class="btn btn-primary bg-primary" href="http://localhost/ccreduaem/bdadmin/consulta_admin.php" role="button">Usuarios</a>
       </div>
       </div>
 <!--*****************BITÁCORA*****************-->
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\bitacora.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-        <a class="btn btn-primary" href="http://localhost/ccreduaem/consulta_bitad.php" role="button">Bitácora</a>
+        <a class="btn btn-primary bg-primary" href="http://localhost/ccreduaem/consulta_bitad.php" role="button">Bitácora</a>
       </div>
       </div>
     </div>

@@ -6,9 +6,9 @@
 		$database = new Connection();
 		$db = $database->open();
 		try{
-			$sql = "DELETE FROM estudiante WHERE id = '".$_GET['id']."'";
+			$sql = "DELETE FROM monitor WHERE id = '".$_GET['id']."'";
 			//if-else statement in executing our query
-			$_SESSION['message'] = ( $db->exec($sql) ) ? 'Datos Eliminados' : 'Hubo un error al borrar empleado';
+			$_SESSION['message'] = ( $db->exec($sql) ) ? 'Datos Eliminados' : 'Hubo un error al borrar los datos';
 		}
 		catch(PDOException $e){
 			$_SESSION['message'] = $e->getMessage();
@@ -22,6 +22,6 @@
 		$_SESSION['message'] = 'Seleccionar miembro para eliminar primero';
 	}
 
-	header('location: consulta_users.php');
+	header('location: consulta_monitor.php');
 
 ?>

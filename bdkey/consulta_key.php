@@ -43,7 +43,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
       	<h3>EQUIPOS</h3>
-      	<h2>Teclados</h2>
+      	<h2>Monitores</h2>
 	</div>
     </div>
   </div>
@@ -52,8 +52,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   	<div class="row">
   		<div class="col">
   			<a href="#addnew" class="btn btn-success" data-toggle="modal"><i class="fas fa-plus-square"></i> Agregar Datos</a>
+  			<a href="#addreport" class="btn btn-warning" data-toggle="modal"><i class="fas fa-plus-square"></i> Crear Reporte</a>
   			<a href="http://localhost/ccreduaem/bdpc/consulta_pc.php" class="btn btn-info bg-primary" role="button"><i class="fas fa-hdd"></i> CPU</a>
-  			<a href="http://localhost/ccreduaem/bdmonitor/consulta_monitor.php" class="btn btn-dark" role="button"><i class="fas fa-desktop"></i> Monitores</a>
+  			<a href="http://localhost/ccreduaem/bdkey/consulta_key.php" class="btn btn-dark" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
   			<a href="http://localhost/ccreduaem/bdmouse/consulta_mouse.php" class="btn btn-light" role="button"><i class="fas fa-mouse-pointer"></i> Mouse's</a>
   		<?php 
 	if(isset($_SESSION['message'])){
@@ -76,15 +77,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="row">
           <div class="col mt-2">
         <table class="table table-striped table-info table-hover text-center">
-            <thead class="thead-light">
-		<th>Nombre</th>
-		<th>Apellidos</th>
-		<th>Edad</th>
-		<th>Carrera</th>
-		<th>Matrícula</th>
-		<th>Periodo</th>
-		<th>Semestre</th>
-		<th>Turno</th>
+            <thead class="bg-danger text-light">
+		<th>Serial</th>
+		<th>Marca</th>
+		<th>Modelo</th>
+		<th>Estado</th>
 		<th colspan="2">Acciones</th>
 	</thead>
 	<tbody>
@@ -95,18 +92,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			$database = new Connection();
 			$db = $database->open();
 			try{	
-				$sql = 'SELECT * FROM estudiante';
+				$sql = 'SELECT * FROM keyboard';
 				foreach ($db->query($sql) as $row) {
 					?>
 					<tr>
-						<td><?php echo $row['name']; ?></td>
-						<td><?php echo $row['lastname']; ?></td>
-						<td><?php echo $row['age']; ?></td>
-						<td><?php echo $row['profession']; ?></td>
-						<td><?php echo $row['enroll']; ?></td>
-						<td><?php echo $row['period']; ?></td>
-						<td><?php echo $row['sem']; ?></td>
-						<td><?php echo $row['turn']; ?></td>
+						<td><?php echo $row['serials']; ?></td>
+						<td><?php echo $row['marc']; ?></td>
+						<td><?php echo $row['model']; ?></td>
+						<td><?php echo $row['estado']; ?></td>
 						<td>
 							<a href="#edit_<?php echo $row['id']; ?>" data-toggle="modal"><i class="far fa-edit m-2 btn btn-warning" style="color:black;" data-toggle="tooltip" title="Editar Datos"></i></a>
 							</td>
@@ -142,11 +135,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			</div>
 
 <?php include('AgregarModal.php'); ?>
-<!--script>
+<script>
 setTimeout(function() {
     $('#mensaje').fadeOut('fast');
 }, 3000);
-</script-->
+</script>
+
 	<script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

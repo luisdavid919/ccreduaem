@@ -1,64 +1,30 @@
 <!-- Ventana Editar Registros CRUD -->
 <div class="modal fade" id="edit_<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">                      
-                        <h4 class="modal-title" id="myModalLabel">Agregar Datos</h4>
+                        <h4 class="modal-title" id="myModalLabel">Editar Datos Monitor</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
             <div class="modal-body">
 			<form method="POST" action="EditarRegistro.php?id=<?php echo $row['id']; ?>">
-				<div class="form-group">
-                            <label class="control-label" for="name">Nombre:</label>
-                            <input type="text" class="form-control" name="name" value="<?php echo $row['name']; ?>">
-                        </div>
-				<div class="form-group">
-                            <label class="control-label" for="lastname">Apellidos:</label>
-                            <input type="text" class="form-control" name="lastname" value="<?php echo $row['lastname']; ?>">
-                        </div>
-                <div class="form-group">
-                            <label class="control-label" for="age">Edad:</label>
-                            <input type="text" class="form-control" name="age" value="<?php echo $row['age']; ?>">
-                        </div>
-                <div class="form-group">
-                            <label class="control-label" for="profession">Profesión:</label>
-                            <input type="text" class="form-control" name="profession" value="<?php echo $row['profession']; ?>">
+                         <div class="form-group">
+                            <label class="control-label" for="serials">Serial:</label>
+                            <input type="text" class="form-control" name="serials" id="serials" value="<?php echo $row['serials']; ?>">
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="enroll">Matrícula:</label>
-                            <input type="text" class="form-control" name="enroll" value="<?php echo $row['enroll']; ?>">
+                            <label class="control-label" for="marc">Marca:</label>
+                            <input type="text" class="form-control" name="marc" id="marc" value="<?php echo $row['marc']; ?>">
                         </div>
                         <div class="form-group">
-                             <label class="control-label" for="period">Periodo:</label>
-                             <select id="period" class="form-control" name="period" value="<?php echo $row['period']; ?>">
-                                <option selected>Enero-Junio 2019</option>
-                                <option>Agosto-Diciembre 2019</option>
-                                <option>Enero-Junio 2020</option>
-                                <option>Agosto-Diciembre 2020</option>
-                                <option>Enero-Junio 2021</option>
-                                <option>Agosto-Diciembre 2021</option>
-                                <option>Enero-Junio 2022</option>
-                                <option>Agosto-Diciembre 2022</option>
-                                <option>Enero-Junio 2023</option>
-                                </select>
-                        </div> 
-                <div class="form-group">
-                             <label class="control-label" for="sem">Semestre:</label>
-                             <select id="sem" class="form-control" name="sem" value="<?php echo $row['sem']; ?>">
-                                <option selected>4° Semestre</option>
-                                <option>5° Semestre</option>
-                                <option>6° Semestre</option>
-                                <option>7° Semestre</option>
-                                <option>8° Semestre</option>
-                                <option>Egresado</option>
-                                </select>
+                            <label class="control-label" for="model">Modelo:</label>
+                            <input type="text" class="form-control" name="model" id="model" value="<?php echo $row['model']; ?>">
                         </div>
-                <div class="form-group">
-                             <label class="control-label" for="turn">Turno:</label>
-                             <select id="turn" class="form-control" name="turn" value="<?php echo $row['turn']; ?>">
-                                <option selected>Matutino</option>
-                                <option>Vespertino</option>
-                                </select>
+                        <div class="form-group">
+                        <label for="estado" class="control-label">Estado:</label>
+                        <label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno" value="<?php echo $row['estado']; ?>">Bueno</label>
+                        <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular" value="<?php echo $row['estado']; ?>">Regular</label>
+                        <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo" value="<?php echo $row['estado']; ?>">Malo</label>
                         </div>
 			</div>
             <div class="modal-footer">
@@ -81,8 +47,8 @@
                     </div>
             <div class="modal-body">	
             	<p class="text-center">¿Esta seguro de Borrar este registro?</p>
-                <p>Aviso: Se borrarán los datos de manera permanente.</p>
-				<h4 class="text-center"><?php echo $row['name']; ?></h4>
+                <p class="text-center">Aviso: Se borrarán los datos de manera permanente.</p>
+				<h4 class="text-center"><?php echo $row['serials']; ?></h4>
 			</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>

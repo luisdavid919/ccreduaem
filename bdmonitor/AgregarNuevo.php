@@ -7,11 +7,11 @@ if(isset($_POST['agregar'])){
 	$db = $database->open();
 	try{
 		//hacer uso de una declaración preparada para prevenir la inyección de sql
-		$stmt = $db->prepare("INSERT INTO estudiante (name, lastname, age, profession, enroll, period, sem, turn) VALUES (:name, :lastname, :age, :profession, :enroll, :period, :sem, :turn)");
+		$stmt = $db->prepare("INSERT INTO monitor (serials, marc, model, estado) VALUES (:serials, :marc, :model, :estado)");
 		//instrucción if-else en la ejecución de nuestra declaración preparada
-		$_SESSION['message'] = ( $stmt->execute(array(':name' => $_POST['name'] , ':lastname' => $_POST['lastname'] , ':age' => $_POST['age'], ':profession' => $_POST['profession'], ':enroll' => $_POST['enroll'], ':period' => $_POST['period'], ':sem' => $_POST['sem'], ':turn' => $_POST['turn'])) ) ? '¡Datos Agregados Correctamente!' : 'Algo salió mal. No se puede agregar datos';	
-	
+		$_SESSION['message'] = ( $stmt->execute(array(':serials' => $_POST['serials'] , ':marc' => $_POST['marc'] , ':model' => $_POST['model'], ':estado' => $_POST['estado'])) ) ? '¡Datos Agregados Correctamente!' : 'Algo salió mal. No se puede agregar datos';	
 	}
+	
 	catch(PDOException $e){
 		$_SESSION['message'] = $e->getMessage();
 	}
@@ -24,6 +24,6 @@ else{
 	$_SESSION['message'] = 'Llene el formulario';
 }
 
-header('location: consulta_users.php');
+header('location: consulta_monitor.php');
 	
 ?>

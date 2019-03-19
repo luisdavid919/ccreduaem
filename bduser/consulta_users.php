@@ -140,11 +140,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			</div>
 
 <?php include('AgregarModal.php'); ?>
-<!--script>
+<script>
 setTimeout(function() {
     $('#mensaje').fadeOut('fast');
 }, 3000);
-</script-->
+</script>
 	<script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

@@ -22,14 +22,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
-	.hide {
-  display: none;
-}
-textarea {
-  resize: none;
-}
-</style>
 </head>
 <body>
 	 <!--*****************LOGOS PRINCIPALES*****************-->
@@ -60,6 +52,7 @@ textarea {
   	<div class="row">
   		<div class="col">
   			<a href="#addnew" class="btn btn-success" data-toggle="modal"><i class="fas fa-plus-square"></i> Agregar Datos</a>
+  			<a href="#addreport" class="btn btn-warning" data-toggle="modal"><i class="fas fa-plus-square"></i> Crear Reporte</a>
   			<a href="http://localhost/ccreduaem/bdpc/consulta_pc.php" class="btn btn-info bg-primary" role="button"><i class="fas fa-hdd"></i> CPU</a>
   			<a href="http://localhost/ccreduaem/bdkey/consulta_key.php" class="btn btn-dark" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
   			<a href="http://localhost/ccreduaem/bdmouse/consulta_mouse.php" class="btn btn-light" role="button"><i class="fas fa-mouse-pointer"></i> Mouse's</a>
@@ -85,14 +78,10 @@ textarea {
           <div class="col mt-2">
         <table class="table table-striped table-info table-hover text-center">
             <thead class="bg-warning">
-		<th>Nombre</th>
-		<th>Apellidos</th>
-		<th>Edad</th>
-		<th>Carrera</th>
-		<th>Matrícula</th>
-		<th>Periodo</th>
-		<th>Semestre</th>
-		<th>Turno</th>
+		<th>Serial</th>
+		<th>Marca</th>
+		<th>Modelo</th>
+		<th>Estado</th>
 		<th colspan="2">Acciones</th>
 	</thead>
 	<tbody>
@@ -103,18 +92,14 @@ textarea {
 			$database = new Connection();
 			$db = $database->open();
 			try{	
-				$sql = 'SELECT * FROM estudiante';
+				$sql = 'SELECT * FROM monitor';
 				foreach ($db->query($sql) as $row) {
 					?>
 					<tr>
-						<td><?php echo $row['name']; ?></td>
-						<td><?php echo $row['lastname']; ?></td>
-						<td><?php echo $row['age']; ?></td>
-						<td><?php echo $row['profession']; ?></td>
-						<td><?php echo $row['enroll']; ?></td>
-						<td><?php echo $row['period']; ?></td>
-						<td><?php echo $row['sem']; ?></td>
-						<td><?php echo $row['turn']; ?></td>
+						<td><?php echo $row['serials']; ?></td>
+						<td><?php echo $row['marc']; ?></td>
+						<td><?php echo $row['model']; ?></td>
+						<td><?php echo $row['estado']; ?></td>
 						<td>
 							<a href="#edit_<?php echo $row['id']; ?>" data-toggle="modal"><i class="far fa-edit m-2 btn btn-warning" style="color:black;" data-toggle="tooltip" title="Editar Datos"></i></a>
 							</td>
@@ -154,16 +139,6 @@ textarea {
 setTimeout(function() {
     $('#mensaje').fadeOut('fast');
 }, 3000);
-
-function show1(){
-  document.getElementById('div1').style.display ='none';
-}
-function show2(){
-  document.getElementById('div1').style.display = 'none';
-}
-function show3(){
-  document.getElementById('div1').style.display = 'block';
-}
 </script>
 
 	<script src="../js/jquery-3.3.1.min.js"></script>

@@ -62,7 +62,7 @@
                     </div>
             </div> 
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger bg-danger" data-dismiss="modal">Cancelar</button>
                 <button type="submit" name="agregar" class="btn btn-success">Agregar</button>
 			</form>
             </div>

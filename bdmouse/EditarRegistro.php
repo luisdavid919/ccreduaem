@@ -12,7 +12,7 @@
 			$model=$_POST['model'];
 			$estado=$_POST['estado'];
 
-			$sql = "UPDATE keyboard SET serials = '$serials', marc = '$marc', model = '$model', estado = '$estado' WHERE id = '$id'";
+			$sql = "UPDATE mouse SET serials = '$serials', marc = '$marc', model = '$model', estado = '$estado' WHERE id = '$id'";
 			//if-else statement in executing our query
 			$_SESSION['message'] = ( $db->exec($sql) ) ? '¡Datos Actualizados Correctamente!' : 'No se Actualizaron Los Datos';
 
@@ -28,6 +28,6 @@
 		$_SESSION['message'] = 'Complete el formulario de edición';
 	}
 
-	header('location: consulta_key.php');
+	header('location: consulta_mouse.php');
 
 ?>

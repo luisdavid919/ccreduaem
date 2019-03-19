@@ -43,7 +43,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
       	<h3>EQUIPOS</h3>
-      	<h2>Teclados</h2>
+      	<h2>Mouse's</h2>
 	</div>
     </div>
   </div>
@@ -54,8 +54,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   			<a href="#addnew" class="btn btn-success" data-toggle="modal"><i class="fas fa-plus-square"></i> Agregar Datos</a>
   			<a href="#addreport" class="btn btn-warning" data-toggle="modal"><i class="fas fa-plus-square"></i> Crear Reporte</a>
   			<a href="http://localhost/ccreduaem/bdpc/consulta_pc.php" class="btn btn-info bg-primary" role="button"><i class="fas fa-hdd"></i> CPU</a>
-			<a href="http://localhost/ccreduaem/bdmonitor/consulta_monitor.php" class="btn btn-dark" role="button"><i class="fas fa-desktop"></i> Monitores</a>
-			<a href="http://localhost/ccreduaem/bdmouse/consulta_mouse.php" class="btn btn-light" role="button"><i class="fas fa-mouse-pointer"></i> Mouse's</a>
+  			<a href="http://localhost/ccreduaem/bdmonitor/consulta_monitor.php" class="btn btn-dark" role="button"><i class="fas fa-desktop"></i> Monitores</a>
+  			<a href="http://localhost/ccreduaem/bdkey/consulta_key.php" class="btn btn-light" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
   		<?php 
 	if(isset($_SESSION['message'])){
 		?>
@@ -77,7 +77,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="row">
           <div class="col mt-2">
         <table class="table table-striped table-info table-hover text-center">
-            <thead class="bg-danger text-light">
+            <thead class="bg-success text-light">
 		<th>Serial</th>
 		<th>Marca</th>
 		<th>Modelo</th>
@@ -92,7 +92,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			$database = new Connection();
 			$db = $database->open();
 			try{	
-				$sql = 'SELECT * FROM keyboard';
+				$sql = 'SELECT * FROM mouse';
 				foreach ($db->query($sql) as $row) {
 					?>
 					<tr>

@@ -7,7 +7,7 @@
 		$db = $database->open();
 		try{
 			$id = $_GET['id'];
-			$serial=$_POST['serials'];
+			$serials=$_POST['serials'];
 			$marc=$_POST['marc'];
 			$model=$_POST['model'];
 			$estado=$_POST['estado'];

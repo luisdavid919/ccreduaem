@@ -59,11 +59,12 @@ textarea {
   <div class="container">
   	<div class="row">
   		<div class="col">
-  			<a href="#addnew" class="btn btn-success" data-toggle="modal"><i class="fas fa-plus-square"></i> Agregar Datos</a>
-  			<a href="#addreport" class="btn btn-warning" data-toggle="modal"><i class="fas fa-plus-square"></i> Crear Reporte</a>
-  			<a href="http://localhost/ccreduaem/bdmonitor/consulta_monitor.php" class="btn btn-info bg-primary" role="button"><i class="fas fa-desktop"></i> Monitores</a>
-  			<a href="http://localhost/ccreduaem/bdkey/consulta_key.php" class="btn btn-dark" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
-  			<a href="http://localhost/ccreduaem/bdmouse/consulta_mouse.php" class="btn btn-light" role="button"><i class="fas fa-mouse-pointer"></i> Mouse's</a>
+  			<a href="#addnew" class="btn btn-success m-1" data-toggle="modal"><i class="fas fa-plus-square"></i> Agregar Datos</a>
+  			<a href="http://localhost/ccreduaem/bdreporte/consulta_reporte.php" class="btn btn-warning m-1"><i class="fas fa-plus-square"></i> Crear Reporte</a>
+  			<a href="http://localhost/ccreduaem/bdmonitor/consulta_monitor.php" class="btn btn-info bg-primary m-1" role="button"><i class="fas fa-desktop"></i> Monitores</a>
+  			<a href="http://localhost/ccreduaem/bdkey/consulta_key.php" class="btn btn-dark m-1" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
+  			<a href="http://localhost/ccreduaem/bdmouse/consulta_mouse.php" class="btn btn-light m-1" role="button"><i class="fas fa-mouse-pointer"></i> Mouse's</a>
+  			<a href="http://localhost/ccreduaem/bddispositivos/consulta_dispositivos.php" class="btn btn-secondary m-1"><i class="fas fa-print"></i> Otros Dispositivos</a>
   		<?php 
 	if(isset($_SESSION['message'])){
 		?>
@@ -83,7 +84,7 @@ textarea {
   </div>
 <div class="container">
         <div class="row">
-          <div class="col mt-2">
+          <div class="col mt-2 table-responsive">
         <table class="table table-striped table-info table-hover text-center">
             <thead class="bg-primary text-light">
 		<th>Clave</th>

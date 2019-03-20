@@ -51,8 +51,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="container">
   	<div class="row">
   		<div class="col">
-  			<a href="#addnew" class="btn btn-success" data-toggle="modal"><i class="fas fa-plus-square"></i> Agregar Datos</a>
-  			<a href="http://localhost/ccreduaem/bdadmin/consulta_admin.php" class="btn btn-info" role="button"><i class="fas fa-users"></i> Ver Aministradores</a>
+  			<a href="#addnew" class="btn btn-success m-1" data-toggle="modal"><i class="fas fa-plus-square"></i> Agregar Datos</a>
+  			<a href="http://localhost/ccreduaem/bdadmin/consulta_admin.php" class="btn btn-info m-1" role="button"><i class="fas fa-users"></i> Ver Aministradores</a>
   		<?php 
 	if(isset($_SESSION['message'])){
 		?>
@@ -72,7 +72,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </div>
 <div class="container">
         <div class="row">
-          <div class="col mt-2">
+          <div class="col mt-2 table-responsive">
         <table class="table table-striped table-info table-hover text-center">
             <thead class="thead-light">
 		<th>Nombre</th>

@@ -3,14 +3,34 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
         	<div class="modal-header">                      
-                        <h4 class="modal-title" id="myModalLabel">Agregar Datos Del Teclado</h4>
+                        <h4 class="modal-title" id="myModalLabel">Solicitar Reporte</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
             <div class="modal-body">
 			<form method="POST" action="AgregarNuevo.php">
 			             <div class="form-group">
-                            <label class="control-label" for="serials">Serial:</label>
+                             <label class="control-label" for="so">Equipo que desea verificar:</label>
+                             <select id="so" class="form-control" name="so" required>
+                                <option>CPU</option>
+                                <option>Monitor</option>
+                                <option>Teclado</option>
+                                <option selected>Mouse</option>
+                                <option>Impresora</option>
+                                <option>Proyector</option>
+                                <option>Switch</option>
+                                </select>
+                        </div>
+                         <div class="form-group">
+                            <label class="control-label" for="serials">Clave/Serial:</label>
                             <input type="text" class="form-control" name="serials" id="serials" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="marc">IP:</label>
+                            <input type="text" class="form-control" name="marc" id="marc" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="marc">MAC:</label>
+                            <input type="text" class="form-control" name="marc" id="marc" required>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="marc">Marca:</label>
@@ -21,10 +41,8 @@
                             <input type="text" class="form-control" name="model" id="model" required>
                         </div>
                         <div class="form-group">
-                        <label for="estado" class="control-label">Estado:</label>
-                        <label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno">Bueno</label>
-                        <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular">Regular</label>
-                        <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo">Malo</label>
+                            <label class="control-label" for="activ">Describa el problema del equipo:</label>
+                            <textarea type="time" class="form-control" name="activ" id="activ"></textarea>
                         </div>
             </div> 
             <div class="modal-footer">

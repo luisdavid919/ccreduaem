@@ -25,6 +25,7 @@
                         <label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno">Bueno</label>
                         <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular">Regular</label>
                         <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo">Malo</label>
+                        <p class="text-center"><strong>Si el Teclado se encuentra en mal estado por favor solicite su reporte.</strong></p>
                         </div>
             </div> 
             <div class="modal-footer">

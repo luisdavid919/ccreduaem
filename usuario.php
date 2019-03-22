@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-        <h3>PRACTICANTE</h3>
+        <h3>Servicios-Prácticas</h3>
       </div>
     </div>
   </div>
@@ -53,21 +53,21 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\monitor.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-      <a class="btn btn-primary" href="http://localhost/ccreduaem/usuario_equipos.php" role="button">Equipos</a>
+      <a class="btn btn-primary" href="http://localhost/ccreduaem/bduserequipos/vista_equipos.php" role="button">Equipos</a>
       </div>
       </div>
 <!--*****************DISPOSITIVOS*****************-->
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
-        <img class= "imglogo img-fluid" src="images\printer.png"/>
+        <img class= "imglogo img-fluid" src="images\lista.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-      <a class="btn btn-primary" href="http://localhost/ccreduaem/consulta_impresiones.php" role="button">Impresiones</a>
+      <a class="btn btn-primary" href="http://localhost/ccreduaem/bduserreportes/vista_reportes.php" role="button">Reportes</a>
       </div>
       </div>
 <!--*****************BITÁCORA*****************-->
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\bitacora.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-        <a class="btn btn-primary" href="http://localhost/ccreduaem/consulta_bituser.php" role="button">Bitácora</a>
+        <a class="btn btn-primary" href="http://localhost/ccreduaem/bduserbituser/vista_bituser.php" role="button">Bitácora</a>
       </div>
       </div>
     </div>

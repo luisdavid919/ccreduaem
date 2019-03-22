@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">                      
-                        <h4 class="modal-title" id="myModalLabel">Editar Datos CPU</h4>
+                        <h4 class="modal-title" id="myModalLabel">Editar Datos Del Dispositivo</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
             <div class="modal-body">
@@ -14,7 +14,7 @@
                              <select id="disp" class="form-control" name="disp" value="<?php echo $row['disp']; ?>">
                                 <option>Impresora</option>
                                 <option>Proyector</option>
-                                <option selected>Switch</option>
+                                <option>Switch</option>
                                 </select>
                         </div>
                         <div class="form-group col-lg-6">
@@ -37,9 +37,10 @@
                         </div>
                         <div class="form-group col-lg-6">
                         <label for="estado" class="control-label">Estado:</label>
-                        <label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno" value="<?php echo $row['estado']; ?>">Bueno</label>
-                        <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular" value="<?php echo $row['estado']; ?>">Regular</label>
-                        <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo" value="<?php echo $row['estado']; ?>">Malo</label>
+                        <label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno" >Bueno</label>
+                        <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular" >Regular</label>
+                        <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo">Malo</label>
+                        <p><strong>Usted afirmó que el estado del dispositivo es: "<?php echo $row['estado']; ?>"</strong></p>
                         </div>
                     </div>
             </div>

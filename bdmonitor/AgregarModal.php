@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
         	<div class="modal-header">                      
-                        <h4 class="modal-title" id="myModalLabel">Agregar Datos Del Teclado</h4>
+                        <h4 class="modal-title" id="myModalLabel">Agregar Datos Del Monitor</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
             <div class="modal-body">
@@ -25,6 +25,7 @@
                         <label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno">Bueno</label>
                         <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular">Regular</label>
                         <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo">Malo</label>
+                        <p class="text-center"><strong>Si el Monitor se encuentra en mal estado por favor solicite su reporte.</strong></p>
                         </div>
             </div> 
             <div class="modal-footer">

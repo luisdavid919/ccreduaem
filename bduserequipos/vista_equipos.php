@@ -22,11 +22,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
-	textarea {
-  resize: none;
-}
-</style>
 </head>
 <body>
 	 <!--*****************LOGOS PRINCIPALES*****************-->
@@ -47,8 +42,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-      	<h3>Reportes</h3>
-      	<h5>Solicite su reporte para dar mantenimiento al equipo.</h5>
+      	<h3>EQUIPOS</h3>
+      	<h2>CPU</h2>
 	</div>
     </div>
   </div>
@@ -56,17 +51,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="container">
   	<div class="row">
   		<div class="col">
-  			<a href="#addnew" class="btn btn-success m-1" data-toggle="modal"><i class="fas fa-plus-square"></i> Solicitar Reporte</a>
-  			<a href="http://localhost/ccreduaem/bdpc/consulta_pc.php" class="btn btn-info bg-dark m-1" role="button"><i class="fas fa-hdd"></i> CPU</a>
   			<a href="http://localhost/ccreduaem/bdmonitor/consulta_monitor.php" class="btn btn-info bg-primary m-1" role="button"><i class="fas fa-desktop"></i> Monitores</a>
-  			<a href="http://localhost/ccreduaem/bdkey/consulta_key.php" class="btn btn-warning m-1" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
+  			<a href="http://localhost/ccreduaem/bdkey/consulta_key.php" class="btn btn-dark m-1" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
   			<a href="http://localhost/ccreduaem/bdmouse/consulta_mouse.php" class="btn btn-light m-1" role="button"><i class="fas fa-mouse-pointer"></i> Mouse's</a>
   			<a href="http://localhost/ccreduaem/bddispositivos/consulta_dispositivos.php" class="btn btn-secondary m-1"><i class="fas fa-print"></i> Otros Dispositivos</a>
   		<?php 
 	if(isset($_SESSION['message'])){
 		?>
-		<div class="alert text-center alert-warning alert-dismissible fade show mt-3" role="alert" id="mensaje">
-  		<strong ><?php echo $_SESSION['message']; ?></strong>
+		<div class="alert alert-warning text-center alert-dismissible fade show mt-3" role="alert" id="mensaje">
+  		<strong><?php echo $_SESSION['message']; ?></strong>
   		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
     	<span aria-hidden="true">&times;</span>
   		</button>
@@ -83,14 +76,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="row">
           <div class="col mt-2 table-responsive">
         <table class="table table-striped table-info table-hover text-center">
-            <thead class="bg-info">
-		<th>Equipo</th>
-		<th>Clave/Serial</th>
+            <thead class="bg-primary text-light">
+		<th>Clave</th>
 		<th>IP</th>
 		<th>MAC</th>
-		<th>Marca</th>
 		<th>Modelo</th>
-		<th>Descripción</th>
+		<th>Marca</th>
+		<th>S.O</th>
+		<th>Express</th>
+		<th>Tag</th>
+		<th>Estado</th>
 		<th colspan="2">Acciones</th>
 	</thead>
 	<tbody>
@@ -101,21 +96,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			$database = new Connection();
 			$db = $database->open();
 			try{	
-				$sql = 'SELECT * FROM report';
+				$sql = 'SELECT * FROM pc';
 				foreach ($db->query($sql) as $row) {
 					?>
 					<tr>
-						<td><?php echo $row['equipo']; ?></td>
-						<td><?php echo $row['claser']; ?></td>
+						<td><?php echo $row['clave']; ?></td>
 						<td><?php echo $row['ip']; ?></td>
 						<td><?php echo $row['mac']; ?></td>
-						<td><?php echo $row['marc']; ?></td>
 						<td><?php echo $row['model']; ?></td>
-						<td><?php echo $row['describ']; ?></td>
-							<td>
-							<a href="#delete_<?php echo $row['id']; ?>" data-toggle="modal"><i class="fas fa-trash-alt m-2 btn bg-danger" style='color:black;' data-toggle="tooltip" title="Eliminar Datos"></i></a>
-						</td>
-						<?php include('BorrarEditarModal.php'); ?>
+						<td><?php echo $row['marc']; ?></td>
+						<td><?php echo $row['so']; ?></td>
+						<td><?php echo $row['express']; ?></td>
+						<td><?php echo $row['tag']; ?></td>
+						<td><?php echo $row['estado']; ?></td>
 					</tr>
 					<?php 
 				}
@@ -142,13 +135,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			    </div>
 			  </div>
 			</div>
-
-<?php include('AgregarModal.php'); ?>
-<script>
-setTimeout(function() {
-    $('#mensaje').fadeOut('fast');
-}, 3000);
-</script>
 
 	<script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/popper.min.js"></script>

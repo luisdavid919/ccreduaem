@@ -43,7 +43,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
       	<h3>EQUIPOS</h3>
-      	<h2>CPU</h2>
+      	<h2>Mouse's</h2>
 	</div>
     </div>
   </div>
@@ -51,26 +51,21 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="container">
   	<div class="row">
   		<div class="col">
-  			<a href="http://localhost/ccreduaem/bduserequipos/vista_monitor.php" class="btn btn-info bg-primary m-1" role="button"><i class="fas fa-desktop"></i> Monitores</a>
-  			<a href="http://localhost/ccreduaem/bduserequipos/vista_teclado.php" class="btn btn-dark m-1" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
-  			<a href="http://localhost/ccreduaem/bduserequipos/vista_mouse.php" class="btn btn-light m-1" role="button"><i class="fas fa-mouse-pointer"></i> Mouse's</a>
+  			<a href="http://localhost/ccreduaem/bduserequipos/vista_equipos.php" class="btn btn-info bg-primary m-1" role="button"><i class="fas fa-hdd"></i> CPU</a>
+  			<a href="http://localhost/ccreduaem/bduserequipos/vista_monitor.php" class="btn btn-dark m-1" role="button"><i class="fas fa-desktop"></i> Monitores</a>
+  			<a href="http://localhost/ccreduaem/bduserequipos/vista_teclado.php" class="btn btn-light m-1" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
   			<a href="http://localhost/ccreduaem/bduserequipos/vista_dispositivos.php" class="btn btn-secondary m-1"><i class="fas fa-print"></i> Otros Dispositivos</a>
 </div>
   	</div>
   </div>
 <div class="container">
         <div class="row">
-          <div class="col mt-2 table-responsive">
+          <div class="col mt-2">
         <table class="table table-striped table-info table-hover text-center">
-            <thead class="bg-primary text-light">
-		<th>Clave</th>
-		<th>IP</th>
-		<th>MAC</th>
-		<th>Modelo</th>
+            <thead class="bg-success text-light">
+		<th>Serial</th>
 		<th>Marca</th>
-		<th>S.O</th>
-		<th>Express</th>
-		<th>Tag</th>
+		<th>Modelo</th>
 		<th>Estado</th>
 	</thead>
 	<tbody>
@@ -81,18 +76,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			$database = new Connection();
 			$db = $database->open();
 			try{	
-				$sql = 'SELECT * FROM pc';
+				$sql = 'SELECT * FROM mouse';
 				foreach ($db->query($sql) as $row) {
 					?>
 					<tr>
-						<td><?php echo $row['clave']; ?></td>
-						<td><?php echo $row['ip']; ?></td>
-						<td><?php echo $row['mac']; ?></td>
-						<td><?php echo $row['model']; ?></td>
+						<td><?php echo $row['serials']; ?></td>
 						<td><?php echo $row['marc']; ?></td>
-						<td><?php echo $row['so']; ?></td>
-						<td><?php echo $row['express']; ?></td>
-						<td><?php echo $row['tag']; ?></td>
+						<td><?php echo $row['model']; ?></td>
 						<td><?php echo $row['estado']; ?></td>
 					</tr>
 					<?php 

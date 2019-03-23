@@ -7,11 +7,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
             <div class="modal-body">
-			<form method="POST" action="registrarme.php">
-                <div class="form-group">
-                            <label class="control-label" for="email">Correo:</label>
-                            <input type="text" class="form-control" name="email" id="email" required>
-                        </div>
+			<form method="POST" action="registro.php">
 				<div class="form-group">
                             <label class="control-label" for="usuario">Usuario:</label>
                             <input type="text" class="form-control" name="usuario" id="usuario" required>

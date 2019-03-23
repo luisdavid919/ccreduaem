@@ -116,7 +116,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <h1><small>Centro De Cómputo De Redes FCAeI</small></h1>
     </div>
     <div class="col col-md-2 d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mt-3">
-      <img class="img img-fluid" id"logo" src="images\uaem_logo.png"/>
+      <img class="img img-fluid" id="logo" src="images\uaem_logo.png"/>
     </div>
   </div>
 </div>

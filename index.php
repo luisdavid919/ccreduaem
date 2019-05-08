@@ -1,4 +1,4 @@
-<?php
+<?php  
 // Initialize the session
 session_start();
 
@@ -8,8 +8,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     exit;
 }
 
-// Include config file
-require_once "conexion.php";
+require_once 'conexion.php';
 
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -19,23 +18,23 @@ $username_err = $password_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Check if username is empty
-    if(empty(trim($_POST["usuario"]))){
-        $username_err = "Porfavor ingresa el usuario.";
+    if(empty(trim($_POST["username"]))){
+        $username_err = 'Porfavor ingresa tu usuario';
     } else{
-        $username = trim($_POST["usuario"]);
+        $username = trim($_POST["username"]);
     }
 
     // Check if password is empty
-    if(empty(trim($_POST["password"]))){
-        $password_err = "Por favor ingresa el password.";
+    if(empty(trim($_POST['password']))){
+        $password_err = 'Porfavor ingresa tu password';
     } else{
-        $password = trim($_POST["password"]);
+        $password = trim($_POST['password']);
     }
 
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, usuario, password FROM login WHERE usuario = ?";
+        $sql = "SELECT usuario, clave FROM login WHERE usuario = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -52,13 +51,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Check if username exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
-                            // Password is correct, so start a new session
-                            session_start();
-
-                            // Store data in session variables
+                            /* Password is correct, so start a new session and
+                            save the username to the session */
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["usuario"] = $username;
@@ -67,15 +64,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: admin.php");
                         } else{
                             // Display an error message if password is not valid
-                            $password_err = "El password es inválido";
+                            $password_err = 'El password que ingresaste no es válido';
                         }
                     }
                 } else{
-                    // Mensaje en Caso de que no exista el usuario
-                    $username_err = "¡Usted No Está Registrado!";
+                    // Display an error message if username doesn't exist
+                    $username_err = 'No existe la cuenta asociada con ese usuario';
                 }
             } else{
-                echo "Oops! Algo falló";
+                echo "Oops! Algo salió mal, porfavor intenta de nuevo";
             }
         }
 
@@ -145,7 +142,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <div class="form-group row justify-content-center <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-6 text-center mt-2">
               <label><strong>Usuario:</strong></label>
-              <input type="text" name="usuario" class="form-control text-center" placeholder="Usuario" required value="<?php echo $username; ?>">
+              <input type="text" name="username" class="form-control text-center" placeholder="Usuario" required value="<?php echo $username; ?>">
               <span class="help-block"><?php echo $username_err; ?></span>
             </div>
           </div>
@@ -164,7 +161,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <br>
       </form>
         <p class="form-text text-center"><strong>Si Usted No Está Registrado, Por Favor Regístrese de Acuerdo a su servicio</p></strong>
-        <p class="text-center"><strong><a href="#registrar" data-toggle="modal">¡Registrarme!</a></strong></p>
+        <p class="text-center"><strong><a href="registro.php">¡Registrarme!</a></strong></p>
     </div>
   </div>
 </div>
@@ -174,17 +171,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">
-    <br><br>© 2018 Universidad Autónoma Del Estado De Morelos.
+    <br><br>© 2019 Universidad Autónoma Del Estado De Morelos.
   </div>
   <!-- Copyright -->
 
 </footer>
-<?php include('RegistrarmeModal.php'); ?>
-<script>
-setTimeout(function() {
-    $('#mensaje').fadeOut('fast');
-}, 3000);
-</script>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>

@@ -19,14 +19,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
-        $username_err = 'Porfavor ingresa tu usuario';
+        $username_err = "<span style=\"color: #FF0000\"><strong>Por Favor, Ingrese su Usuario.</strong></span>";
     } else{
         $username = trim($_POST["username"]);
     }
 
     // Check if password is empty
     if(empty(trim($_POST['password']))){
-        $password_err = 'Porfavor ingresa tu password';
+        $password_err = "<span style=\"color: #FF0000\"><strong>Por Favor, Ingrese su Contraseña.</strong></span>";
     } else{
         $password = trim($_POST['password']);
     }
@@ -64,12 +64,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: admin.php");
                         } else{
                             // Display an error message if password is not valid
-                            $password_err = 'El password que ingresaste no es válido';
+                            $password_err = "<span style=\"color: #FF0000\"><strong>La Contraseña que ingresaste no es válida.</strong></span>";
                         }
                     }
                 } else{
                     // Display an error message if username doesn't exist
-                    $username_err = 'No existe la cuenta asociada con ese usuario';
+                    $username_err = "<span style=\"color: #FF0000\"><strong>Esta Cuenta NO Existe.</strong></span>";
                 }
             } else{
                 echo "Oops! Algo salió mal, porfavor intenta de nuevo";
@@ -172,10 +172,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">
     <br><br>© 2019 Universidad Autónoma Del Estado De Morelos.
+    <br>Desarrollador: Antonio de Jesús
+    <br>Idea Original: Luis David
   </div>
   <!-- Copyright -->
 
 </footer>
+
+<script>
+setTimeout(function() {
+    $('#mensaje').fadeOut('fast');
+}, 3000);
+</script>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>

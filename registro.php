@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Validate username
     if(empty(trim($_POST["username"]))){
-        $username_err = "Porfavor ingresa un nombre de usuario";
+        $username_err = "<span style=\"color: #FF0000\"><strong>Por Favor, Ingrese su Nombre de usuario.</strong></span>";
     } else{
         // Prepare a select statement
         $sql = "SELECT id FROM login WHERE usuario = ?";
@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 mysqli_stmt_store_result($stmt);
 
                 if(mysqli_stmt_num_rows($stmt) == 1){
-                    $username_err = "Este nombre de usuario ya existe";
+                    $username_err = "<span style=\"color: #FF0000\"><strong>Este nombre de usuario ya existe</strong></span>";
                 } else{
                     $username = trim($_POST["username"]);
                 }
@@ -54,18 +54,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST['password']))){
         $password_err = "Ingresa Password";
     } elseif(strlen(trim($_POST['password'])) < 8){
-        $password_err = "Password debe contener al menos 6 caracteres";
+        $password_err = "<span style=\"color: #FF0000\"><strong>La Contraseña debe tener al menos 8 carácteres</strong></span>";
     } else{
         $password = trim($_POST['password']);
     }
 
     // Confirmando Contraseña
     if(empty(trim($_POST["confirm_password"]))){
-        $confirm_password_err = 'Reingresa el password';
+        $confirm_password_err = '<span style=\"color: #FF0000\"><strong>Confirmar Contraseña</strong></span>';
     } else{
         $confirm_password = trim($_POST['confirm_password']);
         if($password != $confirm_password){
-            $confirm_password_err = 'La Contraseña No Coincide';
+            $confirm_password_err = "<span style=\"color: #FF0000\"><strong>La Contraseña no coincide</strong></span>";
         }
     }
 
@@ -172,7 +172,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group row justify-content-center <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
               <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-6 text-center mt-2">
                 <label><strong>Confirmar Contraseña:</strong></label>
-                <input type="password" name="confirm_password" class="form-control" required value="<?php echo $confirm_password; ?>">
+                <input type="password" name="confirm_password" class="form-control text-center" required value="<?php echo $confirm_password; ?>">
                       <span class="help-block alerta"><?php echo $confirm_password_err; ?></span>
               </div>
             </div>
@@ -196,10 +196,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">
     <br><br>© 2019 Universidad Autónoma Del Estado De Morelos.
+    <br>Desarrollador: Antonio de Jesús
+    <br>Idea Original: Luis David
   </div>
   <!-- Copyright -->
 
 </footer>
+
+<script>
+setTimeout(function() {
+    $('#mensaje').fadeOut('fast');
+}, 3000);
+</script>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-03-2019 a las 02:32:19
+-- Tiempo de generación: 09-05-2019 a las 23:55:16
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.11
 
@@ -39,6 +39,13 @@ CREATE TABLE `bitadmin` (
   `salida` varchar(200) DEFAULT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `bitadmin`
+--
+
+INSERT INTO `bitadmin` (`id`, `dias`, `entrada`, `activ`, `salida`, `time`) VALUES
+(1, '2019-05-02', '12:00', NULL, NULL, '2019-05-08 18:44:20');
 
 -- --------------------------------------------------------
 
@@ -136,19 +143,17 @@ CREATE TABLE `keyboard` (
 
 DROP TABLE IF EXISTS `login`;
 CREATE TABLE `login` (
-  `ID` int(11) NOT NULL,
-  `enrolls` varchar(200) NOT NULL,
-  `correo` varchar(45) NOT NULL,
+  `id` int(11) NOT NULL,
   `usuario` varchar(45) NOT NULL,
-  `password` varchar(200) NOT NULL
+  `clave` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `login`
 --
 
-INSERT INTO `login` (`ID`, `enrolls`, `correo`, `usuario`, `password`) VALUES
-(1, '20144009076', 'daft_punk2000@hotmail.com', 'ToniR', '$2y$10$dmnJLytiZCGPWBDiaa85eOqtWpcCE/Y1ZfxCjYy.rXN/THjyDfd6e');
+INSERT INTO `login` (`id`, `usuario`, `clave`) VALUES
+(9, 'ToniR', '$2y$10$MHGPzdDUZZXZX6SdsaCQMeHLA9ElpEb4UtY002vU/kgaptVOlc.BC');
 
 -- --------------------------------------------------------
 
@@ -267,7 +272,7 @@ ALTER TABLE `keyboard`
 -- Indices de la tabla `login`
 --
 ALTER TABLE `login`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `monitor`
@@ -301,7 +306,7 @@ ALTER TABLE `report`
 -- AUTO_INCREMENT de la tabla `bitadmin`
 --
 ALTER TABLE `bitadmin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `bituser`
@@ -337,7 +342,7 @@ ALTER TABLE `keyboard`
 -- AUTO_INCREMENT de la tabla `login`
 --
 ALTER TABLE `login`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `monitor`

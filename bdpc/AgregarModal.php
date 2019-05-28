@@ -7,7 +7,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
             <div class="modal-body">
-			<form method="POST" action="AgregarNuevo.php" enctype="multipart/form-data">
+			<form method="POST" action="AgregarNuevo.php">
                 <div class="row">
 			             <div class="form-group col-lg-6">
                             <label class="control-label" for="clave">Clave:</label>
@@ -59,10 +59,6 @@
                         <label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular">Regular</label>
                         <label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo">Malo</label>
                         <p class="text-center"><strong>Si el CPU se encuentra en mal estado por favor solicite su reporte.</strong></p>
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <label class="control-label" for="img">Agregar Imagen:</label>
-                            <input type="file" name="img" id="img" required>
                         </div>
                     </div>
             </div> 

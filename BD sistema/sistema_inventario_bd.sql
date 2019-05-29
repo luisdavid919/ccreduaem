@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-05-2019 a las 23:55:16
+-- Tiempo de generación: 29-05-2019 a las 02:55:33
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.11
 
@@ -96,6 +96,7 @@ CREATE TABLE `dispositivos` (
   `model` varchar(200) NOT NULL,
   `marc` varchar(500) NOT NULL,
   `estado` varchar(500) NOT NULL,
+  `img` blob NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -132,6 +133,7 @@ CREATE TABLE `keyboard` (
   `marc` varchar(500) NOT NULL,
   `model` varchar(200) NOT NULL,
   `estado` varchar(500) NOT NULL,
+  `img` blob NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -168,6 +170,7 @@ CREATE TABLE `monitor` (
   `marc` varchar(500) NOT NULL,
   `model` varchar(200) NOT NULL,
   `estado` varchar(500) NOT NULL,
+  `img` blob NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -184,6 +187,7 @@ CREATE TABLE `mouse` (
   `marc` varchar(500) NOT NULL,
   `model` varchar(200) NOT NULL,
   `estado` varchar(500) NOT NULL,
+  `img` blob NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -196,7 +200,7 @@ CREATE TABLE `mouse` (
 DROP TABLE IF EXISTS `pc`;
 CREATE TABLE `pc` (
   `id` int(11) NOT NULL,
-  `clave` varchar(500) NOT NULL,
+  `claver` varchar(500) NOT NULL,
   `ip` varchar(500) NOT NULL,
   `mac` varchar(500) NOT NULL,
   `model` varchar(200) NOT NULL,

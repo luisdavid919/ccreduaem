@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2019 a las 02:55:33
+-- Tiempo de generación: 30-05-2019 a las 02:08:42
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.11
 
@@ -78,6 +78,8 @@ CREATE TABLE `consult` (
   `profession` varchar(200) NOT NULL,
   `period` varchar(500) NOT NULL,
   `turn` varchar(255) NOT NULL,
+  `enroll` varchar(500) NOT NULL,
+  `img` blob NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -117,6 +119,7 @@ CREATE TABLE `estudiante` (
   `period` varchar(500) NOT NULL,
   `sem` varchar(50) NOT NULL,
   `turn` varchar(255) NOT NULL,
+  `img` blob NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -328,7 +331,7 @@ ALTER TABLE `consult`
 -- AUTO_INCREMENT de la tabla `dispositivos`
 --
 ALTER TABLE `dispositivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `estudiante`

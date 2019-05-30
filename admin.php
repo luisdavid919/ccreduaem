@@ -16,7 +16,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <title>Centro De Cómputo Redes FCAeI</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="css/fontello.css">
   <link rel="shortcut icon" type="image/x-icon" href="images/fcaei.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -71,7 +70,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\user.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-        <a class="btn btn-primary bg-primary" href="http://localhost/ccreduaem/bdadmin/consulta_admin.php" role="button">Usuarios</a>
+        <a class="btn btn-primary bg-primary" href="http://localhost/ccreduaem/adminDAT.php" role="button">Usuarios</a>
       </div>
       </div>
 <!--*****************BITÁCORA*****************-->

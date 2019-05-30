@@ -225,7 +225,7 @@ switch ($accion) {
   			<a href="http://localhost/ccreduaem/adminPC.php" class="btn btn-info bg-primary m-1" role="button"><i class="fas fa-hdd"></i> CPU</a>
   			<a href="http://localhost/ccreduaem/adminMON.php" class="btn btn-dark m-1" role="button"><i class="fas fa-desktop"></i> Monitores</a>
   			<a href="http://localhost/ccreduaem/adminKEY.php" class="btn btn-light m-1" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
-  			<a href="http://localhost/ccreduaem/bddispositivos/consulta_dispositivos.php" class="btn btn-secondary m-1"><i class="fas fa-print"></i> Otros Dispositivos</a>
+  			<a href="http://localhost/ccreduaem/adminDISP.php" class="btn btn-secondary m-1"><i class="fas fa-print"></i> Otros Dispositivos</a>
  		</div>
   	</div>
   </div>
@@ -238,7 +238,7 @@ switch ($accion) {
  			 <div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
       			<div class="modal-header">
-        			<h5 class="modal-title" id="exampleModalLabel">Datos PC</h5>
+        			<h5 class="modal-title" id="exampleModalLabel">Datos Mouse</h5>
         			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           			<span aria-hidden="true">&times;</span>
         			</button>

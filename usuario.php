@@ -11,12 +11,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
+   <meta charset="utf-8">
   <title>Centro De Cómputo Redes FCAeI</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="css/fontello.css">
   <link rel="shortcut icon" type="image/x-icon" href="images/fcaei.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -74,13 +76,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </div>
 
   <!--*****************CERRAR SESIÓN*****************-->
-  <div class="container-fluid">
-    <div class="row justify-content-end fixed-bottom mb-2">
-      <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
-        <a href="http://localhost/ccreduaem/cerrar.php"><i class="icon-user-times"data-toggle="tooltip" data-placement="top" title="Salir"></i></a>
-      </div>
+<div class="container-fluid">
+  <div class="row justify-content-end fixed-bottom mb-2">
+    <div class="col col-4 col-sm-4 col-md-2 col-lg-2">
+      <a href="http://localhost/ccreduaem/cerrar.php"><i class="fas fa-user-times fa-2x" style="color:red;" data-toggle="tooltip" data-placement="top" title="Salir"></i></a>
     </div>
   </div>
+</div>
   <!--*****************Finaliza Formulario*****************-->
       <script src="js/jquery-3.3.1.min.js"></script>
       <script src="js/popper.min.js"></script>

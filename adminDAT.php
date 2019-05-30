@@ -9,15 +9,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
 $id=(isset($_POST['id']))?$_POST['id']:"";
-$claver=(isset($_POST['claver']))?$_POST['claver']:"";
-$ip=(isset($_POST['ip']))?$_POST['ip']:"";
-$mac=(isset($_POST['mac']))?$_POST['mac']:"";
-$model=(isset($_POST['model']))?$_POST['model']:"";
-$marc=(isset($_POST['marc']))?$_POST['marc']:"";
-$so=(isset($_POST['so']))?$_POST['so']:"";
-$express=(isset($_POST['express']))?$_POST['express']:"";
-$tag=(isset($_POST['tag']))?$_POST['tag']:"";
-$estado=(isset($_POST['estado']))?$_POST['estado']:"";
+$name=(isset($_POST['name']))?$_POST['name']:"";
+$lastname=(isset($_POST['lastname']))?$_POST['lastname']:"";
+$age=(isset($_POST['age']))?$_POST['age']:"";
+$profession=(isset($_POST['profession']))?$_POST['profession']:"";
+$period=(isset($_POST['period']))?$_POST['period']:"";
+$turn=(isset($_POST['turn']))?$_POST['turn']:"";
+$enroll=(isset($_POST['enroll']))?$_POST['enroll']:"";
 $img=(isset($_FILES['img']["name"]))?$_FILES['img']["name"]:"";
 
 $accion=(isset($_POST['accion']))?$_POST['accion']:"";
@@ -33,36 +31,23 @@ include ("crud.php");
 switch ($accion) {
 	case 'btnAgregar':
 
-			if ($claver=="") {
-				$error['claver']="Por Favor, Escriba la Clave UAEM";
+			if ($name=="") {
+				$error['name']="Por Favor, Escriba Su Nombre";
 			}
 
-			if ($ip=="") {
-				$error['ip']="Por Favor, Escriba La Dirección IP";
+			if ($lastname=="") {
+				$error['lastname']="Por Favor, Escriba Sus Apellidos";
+			}
+			if ($age=="") {
+				$error['age']="Por Favor, Escriba Su Edad";
 			}
 
-			if ($mac=="") {
-				$error['mac']="Por Favor, Escriba MAC Address";
-			}
-			if ($model=="") {
-				$error['model']="Por Favor, Escriba Su Modelo";
+			if ($profession=="") {
+				$error['profession']="Por Favor, Escriba Su Carrera";
 			}
 
-			if ($marc=="") {
-				$error['marc']="Por Favor, Escriba Su Marca";
-			}
-
-			if ($express=="") {
-				$error['express']="Por Favor, Escriba El Código Express Service";
-			}
-
-			if ($tag=="") {
-				$error['tag']="Por Favor, Escriba El Código Service Tag";
-			}
-
-
-			if ($estado=="") {
-				$error['estado']="Por Favor, Seleccione el estado del equipo";
+			if ($enroll=="") {
+				$error['enroll']="Por Favor, Escriba Su Control de Trabajo";
 			}
 
 
@@ -75,17 +60,15 @@ switch ($accion) {
 
 
 
-		$sentencia=$pdo->prepare("INSERT INTO pc(claver,ip,mac,model,marc,so,express,tag,estado,img) VALUES (:claver,:ip,:mac,:model,:marc,:so,:express,:tag,:estado,:img)");
+		$sentencia=$pdo->prepare("INSERT INTO consult(name,lastname,age,profession,period,turn,enroll,img) VALUES (:name,:lastname,:age,:profession,:period,:turn,:enroll,:img)");
 
-		$sentencia->bindParam(':claver',$claver);
-		$sentencia->bindParam(':ip',$ip);
-		$sentencia->bindParam(':mac',$mac);
-		$sentencia->bindParam(':model',$model);
-		$sentencia->bindParam(':marc',$marc);
-		$sentencia->bindParam(':so',$so);
-		$sentencia->bindParam(':express',$express);
-		$sentencia->bindParam(':tag',$tag);
-		$sentencia->bindParam(':estado',$estado);
+		$sentencia->bindParam(':name',$name);
+		$sentencia->bindParam(':lastname',$lastname);
+		$sentencia->bindParam(':age',$age);
+		$sentencia->bindParam(':profession',$profession);
+		$sentencia->bindParam(':period',$period);
+		$sentencia->bindParam(':turn',$turn);
+		$sentencia->bindParam(':enroll',$enroll);
 
 		//Para Insertar Imagen En Una Carpeta
 		$Fecha= new DateTime();
@@ -100,31 +83,27 @@ switch ($accion) {
 		$sentencia->bindParam(':img',$nombreArchivo);
 		$sentencia->execute();
 
-		header('Location: adminPC.php');
+		header('Location: adminDAT.php');
 
 		break;
 
 	case 'btnEditar':
-		$sentencia=$pdo->prepare("UPDATE pc SET
-			claver=:claver,
-			ip=:ip,
-			mac=:mac,
-			model=:model,
-			marc=:marc,
-			so=:so,
-			express=:express,
-			tag=:tag,
-			estado=:estado WHERE id=:id");
+		$sentencia=$pdo->prepare("UPDATE consult SET
+			name=:name,
+			lastname=:lastname,
+			age=:age,
+			profession=:profession,
+			period=:period,
+			turn=:turn,
+			enroll=:enroll WHERE id=:id");
 
-		$sentencia->bindParam(':claver',$claver);
-		$sentencia->bindParam(':ip',$ip);
-		$sentencia->bindParam(':mac',$mac);
-		$sentencia->bindParam(':model',$model);
-		$sentencia->bindParam(':marc',$marc);
-		$sentencia->bindParam(':so',$so);
-		$sentencia->bindParam(':express',$express);
-		$sentencia->bindParam(':tag',$tag);
-		$sentencia->bindParam(':estado',$estado);
+		$sentencia->bindParam(':name',$name);
+		$sentencia->bindParam(':lastname',$lastname);
+		$sentencia->bindParam(':age',$age);
+		$sentencia->bindParam(':profession',$profession);
+		$sentencia->bindParam(':period',$period);
+		$sentencia->bindParam(':turn',$turn);
+		$sentencia->bindParam(':enroll',$enroll);
 		$sentencia->bindParam(':id',$id);
 		$sentencia->execute();
 
@@ -137,7 +116,7 @@ switch ($accion) {
 			move_uploaded_file($tmpimg,"imagenes/".$nombreArchivo);
 
 			//Eliminar Imagen y También Donde Se guardó En Una Carpeta Mientras Se Cambia De Imagen
-		$sentencia=$pdo->prepare("SELECT img FROM pc WHERE id=:id");
+		$sentencia=$pdo->prepare("SELECT img FROM consult WHERE id=:id");
 		$sentencia->bindParam(':id',$id);
 		$sentencia->execute();
 		$PC=$sentencia->fetch(PDO::FETCH_LAZY);
@@ -151,7 +130,7 @@ switch ($accion) {
 		}
 
 			//Para Insertar Imagen En Una Carpeta Al Mismo Tiempo Modificando La Imagen
-		$sentencia=$pdo->prepare("UPDATE pc SET
+		$sentencia=$pdo->prepare("UPDATE consult SET
 		img=:img WHERE id=:id");
 
 		$sentencia->bindParam(':img',$nombreArchivo);
@@ -159,12 +138,12 @@ switch ($accion) {
 		$sentencia->execute();
 		}
 
-		header('Location: adminPC.php');
+		header('Location: adminDAT.php');
 		break;
 
 	case 'btnEliminar':
 		//Eliminar Imagen y También Donde Se guardó En Una Carpeta
-		$sentencia=$pdo->prepare("SELECT img FROM pc WHERE id=:id");
+		$sentencia=$pdo->prepare("SELECT img FROM consult WHERE id=:id");
 		$sentencia->bindParam(':id',$id);
 		$sentencia->execute();
 		$PC=$sentencia->fetch(PDO::FETCH_LAZY);
@@ -175,15 +154,15 @@ switch ($accion) {
 			}
 		}
 
-		$sentencia=$pdo->prepare("DELETE FROM pc WHERE id=:id");
+		$sentencia=$pdo->prepare("DELETE FROM consult WHERE id=:id");
 		$sentencia->bindParam(':id',$id);
 		$sentencia->execute();
 
-		header('Location: adminPC.php');
+		header('Location: adminDAT.php');
 		break;
 
 	case 'btnCancelar':
-		header('Location: adminPC.php');
+		header('Location: adminDAT.php');
 		break;
 
 	case 'Editar':
@@ -191,25 +170,23 @@ switch ($accion) {
 		$accionEditar=$accionEliminar=$accionCancelar="";
 		$mostrarModal=true;
 
-		$sentencia=$pdo->prepare("SELECT * FROM pc WHERE id=:id");
+		$sentencia=$pdo->prepare("SELECT * FROM consult WHERE id=:id");
 		$sentencia->bindParam(':id',$id);
 		$sentencia->execute();
 		$PC=$sentencia->fetch(PDO::FETCH_LAZY);
 
-		$claver=$PC['claver'];
-		$ip=$PC['ip'];
-		$mac=$PC['mac'];
-		$model=$PC['model'];
-		$marc=$PC['marc'];
-		$so=$PC['so'];
-		$express=$PC['express'];
-		$tag=$PC['tag'];
-		$estado=$PC['estado'];
+		$name=$PC['name'];
+		$lastname=$PC['lastname'];
+		$age=$PC['age'];
+		$profession=$PC['profession'];
+		$period=$PC['period'];
+		$turn=$PC['turn'];
+		$enroll=$PC['enroll'];
 		$img=$PC['img'];
 		break;
 }
 
-		$sentencia= $pdo->prepare("SELECT * FROM pc WHERE 1");
+		$sentencia= $pdo->prepare("SELECT * FROM consult WHERE 1");
 		$sentencia->execute();
 
 		$listaPC=$sentencia->fetchAll(PDO::FETCH_ASSOC);
@@ -251,8 +228,8 @@ switch ($accion) {
 <div class="container">
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
-      	<h3>EQUIPOS</h3>
-      	<h2>CPU</h2>
+      	<h3>Administradores</h3>
+      	<h5>Encargados de Acuerdo a Su Área de Trabajo.</h5>
 	</div>
     </div>
   </div>
@@ -262,11 +239,7 @@ switch ($accion) {
   		<div class="col">
   			<!-- Button trigger modal -->
 			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus-square"></i> Agregar Datos </button>
-  			<a href="http://localhost/ccreduaem/bdreporte/consulta_reporte.php" class="btn btn-warning m-1"><i class="fas fa-plus-square"></i> Crear Reporte</a>
-  			<a href="http://localhost/ccreduaem/adminMON.php" class="btn btn-info bg-primary m-1" role="button"><i class="fas fa-desktop"></i> Monitores</a>
-  			<a href="http://localhost/ccreduaem/adminKEY.php" class="btn btn-dark m-1" role="button"><i class="fas fa-keyboard"></i> Teclados</a>
-  			<a href="http://localhost/ccreduaem/adminMOU.php" class="btn btn-light m-1" role="button"><i class="fas fa-mouse-pointer"></i> Mouse's</a>
-  			<a href="http://localhost/ccreduaem/adminDISP.php" class="btn btn-secondary m-1"><i class="fas fa-print"></i> Otros Dispositivos</a>
+  			<a href="http://localhost/ccreduaem/adminUSERDAT.php" class="btn btn-info m-1" role="button"><i class="fas fa-users"></i> Ver Usuarios</a>
  		</div>
   	</div>
   </div>
@@ -279,7 +252,7 @@ switch ($accion) {
  			 <div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
       			<div class="modal-header">
-        			<h5 class="modal-title" id="exampleModalLabel">Datos PC</h5>
+        			<h5 class="modal-title" id="exampleModalLabel">Datos Administrador</h5>
         			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           			<span aria-hidden="true">&times;</span>
         			</button>
@@ -288,77 +261,59 @@ switch ($accion) {
         			<div class="form-row">
         				<input type="hidden" class="form-control" name="id" id="id" value="<?php echo $id;?>" require>
 						<div class="form-group col-lg-4">
-							<label for="">Clave UAEM:</label>
-							<input type="text" class="form-control <?php echo (isset($error['claver']))?"is-invalid":"";?>" name="claver" id="claver" value="<?php echo $claver;?>">
+							<label for="">Nombre:</label>
+							<input type="text" class="form-control <?php echo (isset($error['name']))?"is-invalid":"";?>" name="name" id="name" value="<?php echo $name;?>">
 							<div class="invalid-feedback">
-								<?php echo (isset($error['claver']))?$error['claver']:"";?>
+								<?php echo (isset($error['name']))?$error['name']:"";?>
 							</div>
 						</div>
 						<div class="form-group col-lg-4">
-							<label for="">IP:</label>
-							<input type="text" class="form-control <?php echo (isset($error['ip']))?"is-invalid":"";?>" name="ip" id="ip" value="<?php echo $ip;?>">
+							<label for="">Apellidos:</label>
+							<input type="text" class="form-control <?php echo (isset($error['lastname']))?"is-invalid":"";?>" name="lastname" id="lastname" value="<?php echo $lastname;?>">
 							<div class="invalid-feedback">
-								<?php echo (isset($error['ip']))?$error['ip']:"";?>
+								<?php echo (isset($error['lastname']))?$error['lastname']:"";?>
 							</div>
 						</div>
 						<div class="form-group col-lg-4">
-							<label for="">MAC:</label>
-							<input type="text" class="form-control <?php echo (isset($error['mac']))?"is-invalid":"";?>" name="mac" id="mac" value="<?php echo $mac;?>">
+							<label for="">Edad:</label>
+							<input type="text" class="form-control <?php echo (isset($error['age']))?"is-invalid":"";?>" name="age" id="age" value="<?php echo $age;?>">
 							<div class="invalid-feedback">
-								<?php echo (isset($error['mac']))?$error['mac']:"";?>
+								<?php echo (isset($error['age']))?$error['age']:"";?>
 							</div>
 						</div>
 						<div class="form-group col-lg-4">
-							<label for="">Modelo:</label>
-							<input type="text" class="form-control <?php echo (isset($error['model']))?"is-invalid":"";?>" name="model" id="model" value="<?php echo $model;?>">
+							<label for="">Carrera:</label>
+							<input type="text" class="form-control <?php echo (isset($error['profession']))?"is-invalid":"";?>" name="profession" id="profession" value="<?php echo $profession;?>">
 							<div class="invalid-feedback">
-								<?php echo (isset($error['model']))?$error['model']:"";?>
+								<?php echo (isset($error['profession']))?$error['profession']:"";?>
 							</div>
 						</div>
 						<div class="form-group col-lg-4">
-							<label for="">Marca:</label>
-							<input type="text" class="form-control <?php echo (isset($error['marc']))?"is-invalid":"";?>" name="marc" id="marc" value="<?php echo $marc;?>">
-							<div class="invalid-feedback">
-								<?php echo (isset($error['marc']))?$error['marc']:"";?>
-							</div>
+							<label for="">Periodo:</label>
+							<select class="form-control" name="period" id="period" value="<?php echo $period;?>">
+                                <option>Agosto-Diciembre 2019</option>
+                                <option>Enero-Junio 2020</option>
+                                <option>Agosto-Diciembre 2020</option>
+                                <option selected>Enero-Junio 2021</option>
+                                <option>Agosto-Diciembre 2021</option>
+                                <option>Enero-Junio 2022</option>
+                                <option>Agosto-Diciembre 2022</option>
+                                <option>Enero-Junio 2023</option>
+                                <option>Agosto-Diciembre 2023</option>
+                             </select>
 						</div>
 						<div class="form-group col-lg-4">
-							<label for="">Sistema Operativo:</label>
-							<select class="form-control" name="so" id="so" value="<?php echo $so;?>">
-              				<option>Windows 7 x32</option>
-              				<option selected>Windows 8 x32</option>
-              				<option>Windows 10 x32</option>
-              				<option>Linux x32</option>
-              				<option disabled="disabled">----</option>
-              				<option>Windows 7</option>
-              				<option>Windows 10</option>
-              				<option>Linux</option>
-              				<option>Macintosh</option>
-              				<option>Otro</option>
-              				
-             				</select>
+							<label for="">Turno:</label>
+							<select class="form-control" name="turn" id="turn" value="<?php echo $turn;?>">
+                                <option>Matutino</option>
+                                <option>Vespertino</option>
+                             </select>
 						</div>
 						<div class="form-group col-lg-4">
-							<label for="">Express Service Code:</label>
-							<input type="text" class="form-control <?php echo (isset($error['express']))?"is-invalid":"";?>" name="express" id="express" value="<?php echo $express;?>">
+							<label for="">Control Matrícula:</label>
+							<input type="text" class="form-control <?php echo (isset($error['enroll']))?"is-invalid":"";?>" name="enroll" id="enroll" value="<?php echo $enroll;?>">
 							<div class="invalid-feedback">
-								<?php echo (isset($error['express']))?$error['express']:"";?>
-							</div>
-						</div>
-						<div class="form-group col-lg-4">
-							<label for="">Service Tag:</label>
-							<input type="text" class="form-control <?php echo (isset($error['tag']))?"is-invalid":"";?>" name="tag" id="tag" value="<?php echo $tag;?>">
-							<div class="invalid-feedback">
-								<?php echo (isset($error['tag']))?$error['tag']:"";?>
-							</div>
-						</div>
-						<div class="form-group col-lg-8">
-							<label for="<?php echo (isset($error['estado']))?"is-invalid":"";?>">Estado:</label>
-							<label style="color:green;"><input type="radio" name="estado" id="estado" value="Bueno">Bueno </label>
-            				<label style="color:orange;"><input type="radio" name="estado" id="estado" value="Regular">Regular </label>
-            				<label style="color:red;"><input type="radio" name="estado" id="estado" value="Malo">Malo </label>
-            				<div class="invalid-feedback">
-								<?php echo (isset($error['estado']))?$error['estado']:"";?>
+								<?php echo (isset($error['enroll']))?$error['enroll']:"";?>
 							</div>
 						</div>
 						<div class="form-group col-lg-12">
@@ -386,18 +341,16 @@ switch ($accion) {
         <div class="row">
           	<div class="col mt-2">
         		<table class="table table-striped table-info table-hover text-center">
-            <thead class="bg-primary text-light">
+            <thead class="thead-dark">
 					<tr>
-						<th>Imagen PC</th>
-						<th>Clave UAEM</th>
-						<th>IP</th>
-						<th>MAC</th>
-						<th>Modelo</th>
-						<th>Marca</th>
-						<th>S.O.</th>
-						<th>Express Service</th>
-						<th>Service Tag</th>
-						<th>Estado</th>
+						<th>Imagen</th>
+						<th>Nombre</th>
+						<th>Apellidos</th>
+						<th>Edad</th>
+						<th>Profesión</th>
+						<th>Periodo</th>
+						<th>Turno</th>
+						<th>Control Matrícula</th>
 						<th colspan="2">Acciones</th>
 					</tr>
 				</thead>
@@ -405,15 +358,13 @@ switch ($accion) {
 				<?php foreach($listaPC as $PC){?>
 					<tr>
 						<td><img class="img-thumbnail" onerror="this.style.display='none'" width="200px" src="imagenes/<?php echo $PC['img'];?>"></td>
-						<td><?php echo $PC['claver'];?></td>
-						<td><?php echo $PC['ip'];?></td>
-						<td><?php echo $PC['mac'];?></td>
-						<td><?php echo $PC['model'];?></td>
-						<td><?php echo $PC['marc'];?></td>
-						<td><?php echo $PC['so'];?></td>
-						<td><?php echo $PC['express'];?></td>
-						<td><?php echo $PC['tag'];?></td>
-						<td><?php echo $PC['estado'];?></td>
+						<td><?php echo $PC['name'];?></td>
+						<td><?php echo $PC['lastname'];?></td>
+						<td><?php echo $PC['age'];?></td>
+						<td><?php echo $PC['profession'];?></td>
+						<td><?php echo $PC['period'];?></td>
+						<td><?php echo $PC['turn'];?></td>
+						<td><?php echo $PC['enroll'];?></td>
 
 						<td><form action="" method="POST">
 

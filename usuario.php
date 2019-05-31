@@ -43,6 +43,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
         <h3>Servicios-Prácticas</h3>
+        <a href="" title="Ver Mi Perfil" style="text-decoration:none;"><h4 class="text-left" style="color:#004d40; font-size: 40px;">Bienvenido, <?php echo $_SESSION["usuario"];?></h4></a>
+        <br>
       </div>
     </div>
   </div>
@@ -55,7 +57,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
         <img class= "imglogo img-fluid" src="images\monitor.png"/>
         <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
-      <a class="btn btn-primary" href="http://localhost/ccreduaem/bduserequipos/vista_equipos.php" role="button">Equipos</a>
+      <a class="btn btn-primary" href="http://localhost/ccreduaem/userPC.php" role="button">Equipos</a>
       </div>
       </div>
 <!--*****************DISPOSITIVOS*****************-->

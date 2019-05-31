@@ -44,6 +44,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="row justify-content-center">
       <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 align-self-center d-block d-sm-block d-md-block text-center">
         <h3>ADMINISTRADOR</h3>
+        <a href="" title="Ver Mi Perfil" style="text-decoration:none;"><h4 class="text-left" style="color:#004d40; font-size: 40px;">Bienvenido, <?php echo $_SESSION["usuario"];?></h4></a>
+        <br>
       </div>
     </div>
   </div>

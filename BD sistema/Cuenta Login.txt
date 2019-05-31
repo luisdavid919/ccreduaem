@@ -1,2 +1,6 @@
-Cuenta: ToniR
+1ra Cuenta
+Cuenta: Toni Rosales
 Contraseña: amplificador
+
+2da Cuenta: Luis David
+Contraseña:  auditivo972

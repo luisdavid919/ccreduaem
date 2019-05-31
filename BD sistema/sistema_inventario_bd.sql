@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2019 a las 02:08:42
+-- Tiempo de generación: 31-05-2019 a las 02:20:39
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.11
 
@@ -158,7 +158,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `usuario`, `clave`) VALUES
-(9, 'ToniR', '$2y$10$MHGPzdDUZZXZX6SdsaCQMeHLA9ElpEb4UtY002vU/kgaptVOlc.BC');
+(1, 'Toni Rosales', '$2y$10$P/RtaICxqLEwduxzIelRl.cX6NTOTwgoLkrizLONhirgSDxvt.YIm'),
+(2, 'Luis David', '$2y$10$rxj4yfn6DUp/DH59ccgJkuXqyp/yDSbyJy7NHU3pPvB2kZqQbMQ4a');
 
 -- --------------------------------------------------------
 
@@ -331,7 +332,7 @@ ALTER TABLE `consult`
 -- AUTO_INCREMENT de la tabla `dispositivos`
 --
 ALTER TABLE `dispositivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `estudiante`
@@ -349,7 +350,7 @@ ALTER TABLE `keyboard`
 -- AUTO_INCREMENT de la tabla `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `monitor`

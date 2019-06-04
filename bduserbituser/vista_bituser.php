@@ -25,7 +25,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <style>
 	textarea {
   resize: none;
+		}
+#firma{
+	visibility: hidden;
 }
+</style>
+<style media='print'>
+#accion{display: none;}
+#tage{display: none;}
+#valor1{display: none;}
+#valor2{display: none;}
+a{display: none;}
+#firma{visibility: visible;}
 </style>
 </head>
 <body>
@@ -56,8 +67,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="container">
   	<div class="row">
   		<div class="col">
-  			<a href="#addnew" class="btn btn-success m-1" data-toggle="modal"><i class="fas fa-plus-square"></i> Agregar Entrada</a>
-  			<a href="#addnew" class="btn btn-secondary m-1" data-toggle="modal"><i class="fas fa-print"></i> Imprimir Formato</a>
+  			<a href="#addnew" id="valor1" class="btn btn-success m-1" data-toggle="modal"><i class="fas fa-plus-square"></i> Agregar Entrada</a>
+  			<a href="" id="valor2" class="btn btn-secondary m-1" onclick="javascript:window.print()"><i class="fas fa-print"></i> Imprimir Formato</a>
   		<?php 
 	if(isset($_SESSION['message'])){
 		?>
@@ -84,7 +95,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<th>Entrada</th>
 		<th>Actividad</th>
 		<th>Salida</th>
-		<th colspan="2">Acciones</th>
+		<th colspan="2" id="accion">Acciones</th>
 	</thead>
 	<tbody>
 		<?php
@@ -102,10 +113,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<td><?php echo $row['entrada']; ?></td>
 						<td><?php echo $row['activ']; ?></td>
 						<td><?php echo $row['salida']; ?></td>
-						<td>
+						<td id="tage">
 							<a href="#edit_<?php echo $row['id']; ?>" data-toggle="modal"><i class="far fa-edit m-2 btn btn-warning" style="color:black;" data-toggle="tooltip" title="Agregar Salida"></i></a>
 							</td>
-							<td>
+						<td id="tage">
 							<a href="#delete_<?php echo $row['id']; ?>" data-toggle="modal"><i class="fas fa-trash-alt m-2 btn bg-danger" style='color:black;' data-toggle="tooltip" title="Eliminar Datos"></i></a>
 						</td>
 						<?php include('BorrarEditarModal.php'); ?>
@@ -126,6 +137,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		</div>
 	</div>
 </div>
+
+<div class="container">
+	<div class="row">
+		<div class="col" id="firma">
+			<hr color="black" size=5 width="500">
+			<h5 class="text-center">Firma y Nombre Completo</h5>
+		</div>
+	</div>
+</div>
+
 
 			<!--*****************Regresar*****************-->
 			<div class="container-fluid fixed-bottom">

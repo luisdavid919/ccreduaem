@@ -124,20 +124,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <div class="row justify-content-center">
     <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block mt-5">
         <h2>Iniciar Sesión</h2>
-        <?php 
-  if(isset($_SESSION['message'])){
-    ?>
-    <div class="alert alert-info text-center alert-dismissible fade show mt-3" role="alert" id="mensaje">
-      <strong><?php echo $_SESSION['message']; ?></strong>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-      </button>
-      </div>
-    <?php
-
-    unset($_SESSION['message']);
-  }
-?>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
           <div class="form-group row justify-content-center <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-6 text-center mt-2">
@@ -167,23 +153,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </div>
                                   <!--*****************Finaliza Formulario*****************-->
 
-                                  <footer class="page-footer font-small">
+                                  <footer class="page-footer font-small mt-2">
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">
-    <br><br>© 2019 Universidad Autónoma Del Estado De Morelos.
+    © 2019 Universidad Autónoma Del Estado De Morelos.
     <br>Desarrollador: Antonio de Jesús
     <br>Idea Original: Luis David
   </div>
   <!-- Copyright -->
 
 </footer>
-
-<script>
-setTimeout(function() {
-    $('#mensaje').fadeOut('fast');
-}, 3000);
-</script>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>

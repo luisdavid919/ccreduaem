@@ -138,23 +138,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block mt-5">
-        <h2>Registrarme</h2>
-        <?php 
-  if(isset($_SESSION['message'])){
-    ?>
-    <div class="alert alert-info text-center alert-dismissible fade show mt-3" role="alert" id="mensaje">
-      <strong><?php echo $_SESSION['message']; ?></strong>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-      </button>
-      </div>
-    <?php
-
-    unset($_SESSION['message']);
-  }
-?>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-8 d-block d-sm-block d-md-block">
+        <h3>Registrarme</h3>
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
           <div class="form-group row justify-content-center <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-6 text-center mt-2">
               <label><strong>Agregar Usuario:</strong></label>
@@ -194,8 +180,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                   <footer class="page-footer font-small">
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">
-    <br><br>© 2019 Universidad Autónoma Del Estado De Morelos.
+  <div class="footer-copyright text-center">
+    © 2019 Universidad Autónoma Del Estado De Morelos.
     <br>Desarrollador: Antonio de Jesús
     <br>Idea Original: Luis David
   </div>

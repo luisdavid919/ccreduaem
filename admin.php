@@ -82,8 +82,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <a class="btn btn-primary bg-primary" href="http://localhost/ccreduaem/bdbitadmin/consulta_bitadmin.php" role="button">Bitácora</a>
       </div>
       </div>
+    <!--*****************BITÁCORA*****************-->
+      <div class="col col-4 col-sm-3 col-md-3 col-lg-2">
+        <img class= "imglogo img-fluid" src="images\calendar.png"/>
+        <div class="col col-8 col-sm-8 col-md-6 col-lg-2">
+        <a class="btn btn-primary bg-primary" href="http://localhost/ccreduaem/calendario/calendario.php" role="button">Calendario</a>
+      </div>
+      </div>
     </div>
-  </div>
 
 <!--*****************CERRAR SESIÓN*****************-->
 <div class="container-fluid">

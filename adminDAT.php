@@ -57,9 +57,6 @@ switch ($accion) {
 			}
 
 
-
-
-
 		$sentencia=$pdo->prepare("INSERT INTO consult(name,lastname,age,profession,period,turn,enroll,img) VALUES (:name,:lastname,:age,:profession,:period,:turn,:enroll,:img)");
 
 		$sentencia->bindParam(':name',$name);

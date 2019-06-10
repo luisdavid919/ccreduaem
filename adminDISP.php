@@ -81,7 +81,11 @@ switch ($accion) {
 		$sentencia->bindParam(':img',$nombreArchivo);
 		$sentencia->execute();
 
-		header('Location: adminDISP.php');
+		echo       
+             '<META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://localhost/ccreduaem/adminDISP.php">
+            <script language="javascript">
+                alert("Datos Agregados");
+            </script>';
 
 		break;
 
@@ -134,7 +138,11 @@ switch ($accion) {
 		$sentencia->execute();
 		}
 
-		header('Location: adminDISP.php');
+		echo       
+             '<META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://localhost/ccreduaem/adminDISP.php">
+            <script language="javascript">
+                alert("Datos Actualizados");
+            </script>';
 		break;
 
 	case 'btnEliminar':
@@ -154,7 +162,11 @@ switch ($accion) {
 		$sentencia->bindParam(':id',$id);
 		$sentencia->execute();
 
-		header('Location: adminDISP.php');
+		echo       
+             '<META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://localhost/ccreduaem/adminDISP.php">
+            <script language="javascript">
+                alert("Datos Eliminados");
+            </script>';
 		break;
 
 	case 'btnCancelar':

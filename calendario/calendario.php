@@ -85,14 +85,13 @@ if (isset($_POST['from']))
     justify-content: center;
     align-items: center;
     }
-    .cal-month-box, .call-cell1{
-background-color: #bdbdbd;
-border: 2px;
+    .cal-row-head, .cal-month-box, .call-cell1{
+        background-color: #f1f8e9;
+        border: 2px;
     }
     body{
         background-color: #b6d7a8;
     }
-
     </style>
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-05-2019 a las 02:20:39
+-- Tiempo de generación: 11-06-2019 a las 01:41:32
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.11
 
@@ -39,13 +39,6 @@ CREATE TABLE `bitadmin` (
   `salida` varchar(200) DEFAULT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `bitadmin`
---
-
-INSERT INTO `bitadmin` (`id`, `dias`, `entrada`, `activ`, `salida`, `time`) VALUES
-(1, '2019-05-02', '12:00', NULL, NULL, '2019-05-08 18:44:20');
 
 -- --------------------------------------------------------
 
@@ -122,6 +115,36 @@ CREATE TABLE `estudiante` (
   `img` blob NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `eventos`
+--
+
+DROP TABLE IF EXISTS `eventos`;
+CREATE TABLE `eventos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(150) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `body` text COLLATE utf8_spanish_ci NOT NULL,
+  `url` varchar(150) COLLATE utf8_spanish_ci NOT NULL,
+  `class` varchar(45) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'event-important',
+  `start` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
+  `end` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
+  `inicio_normal` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `final_normal` varchar(50) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `eventos`
+--
+
+INSERT INTO `eventos` (`id`, `title`, `body`, `url`, `class`, `start`, `end`, `inicio_normal`, `final_normal`) VALUES
+(3, 'Prueba 1', 'Probando 1', 'http://localhost/ccreduaem/calendario/descripcion_evento.php?id=3', 'event-info', '1560398100000', '1560517200000', '12/06/2019 23:55', '14/06/2019 9:00'),
+(4, 'Prueba 2', 'Probando 2', 'http://localhost/ccreduaem/calendario/descripcion_evento.php?id=4', 'event-success', '1560330000000', '1561033800000', '12/06/2019 5:00', '20/06/2019 8:30'),
+(5, 'Prueba 3', 'Probando 3', 'http://localhost/ccreduaem/calendario/descripcion_evento.php?id=5', 'event-important', '1560336300000', '1561657800000', '12/06/2019 6:45', '27/06/2019 13:50'),
+(6, 'Prueba 4', 'Probando 4', 'http://localhost/ccreduaem/calendario/descripcion_evento.php?id=6', 'event-warning', '1560350700000', '1561815000000', '12/06/2019 10:45', '29/06/2019 9:30'),
+(7, 'Prueba 5', 'Probando 5', 'http://localhost/ccreduaem/calendario/descripcion_evento.php?id=7', 'event-special', '1560356700000', '1561912200000', '12/06/2019 12:25', '30/06/2019 12:30');
 
 -- --------------------------------------------------------
 
@@ -271,6 +294,12 @@ ALTER TABLE `estudiante`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `keyboard`
 --
 ALTER TABLE `keyboard`
@@ -314,7 +343,7 @@ ALTER TABLE `report`
 -- AUTO_INCREMENT de la tabla `bitadmin`
 --
 ALTER TABLE `bitadmin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `bituser`
@@ -341,6 +370,12 @@ ALTER TABLE `estudiante`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT de la tabla `keyboard`
 --
 ALTER TABLE `keyboard`
@@ -350,7 +385,7 @@ ALTER TABLE `keyboard`
 -- AUTO_INCREMENT de la tabla `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `monitor`
